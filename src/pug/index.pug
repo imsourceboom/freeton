@@ -46,13 +46,17 @@ block main
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
         .send 출금하기
-        .send-container
+        .send-container.on
             .cover
             .wrapper
                 h3 출금하기
                 form(action="")
                     label
-                        p 주소
                         input(type="text")
+                        p 주소
+                    label.mb-5
+                        input(type="text")
+                        p 금액
+                    input(type='submit' value='출 금')
             .close
                 .box
