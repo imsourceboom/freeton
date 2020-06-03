@@ -4,11 +4,7 @@
 
 @import "layout/header", "layout/main", "layout/footer";
 
-@import "pages/home", "pages/contact", "pages/news", "pages/resources",
-  "pages/participate", "pages/members", "pages/community", "pages/login",
-  "pages/join", "pages/clause", "pages/detail";
-
-@import "admin/pages/board";
+@import "pages/home";
 
 @import "components/language-select", "components/coming-soon",
   "components/input-box", "components/radio-button", "components/select-box",
@@ -16,7 +12,3 @@
   "components/grid", "components/spinner", "components/pagination",
   "components/search-box", "components/confirm-button", "components/edit-form",
   "components/file-upload", "components/ie-caution", "components/telegram-login";
-
-@import "admin/layout/main";
-
-@import "admin/style/table_basic";

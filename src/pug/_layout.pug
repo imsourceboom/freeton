@@ -8,19 +8,20 @@ html(lang="ko")
         meta(name="format-detaction", content="telephone=no, address=no, email=no")
         meta(name="referrer" content="strict-origin")
 
-        meta(name="title", content="TON KOREA")
-        meta(name="description", content="for TON KOREA")
+        - var title = 'Free TON'
+        meta(name="title", content= title)
+        meta(name="description", content=`for ${title}`)
         meta(name="keywords", content="ton, tonkorea, 톤, 톤코리아, 블록체인, blockchain")
 
-        meta(property="og:title" content="TON KOREA")
-        meta(property="og:url" content="https://tonkorea.org")
-        meta(property="og:description" content="for TON KOREA")
+        meta(property="og:title" content= title)
+        meta(property="og:url" content="")
+        meta(property="og:description" content=`for ${title}`)
         meta(property="og:image" content="/assets/images/icons/android-chrome-512x512.png")
         meta(property="og:type" content="website")
         
         meta(name="apple-mobile-web-app-capable", content="yes")
         meta(name="apple-mobile-web-app-status-bar-style" content="white")
-        meta(name="apple-mobile-web-app-title" content="TON KOREA")
+        meta(name="apple-mobile-web-app-title" content= title)
         link(link='apple-touch-icon' href="/assets/images/icons/apple-touch-icon.png")
 
         meta(name="mobile-web-app-capable" content="yes")
@@ -35,9 +36,9 @@ html(lang="ko")
         link(rel="manifest", href="/manifest.json")
         meta(name="theme-color" content="#ffffff")
 
-        title TON KOREA
+        title= title
         link(rel="stylesheet", href="/css/main.css")
-        link(rel="preload" href="//fonts.googleapis.com/css?family=Titillium+Web:400,700|Noto+Sans+KR:100,400,500" as="font" crossorigin="crossorigin")
+        link(rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Titillium+Web:wght@200;400;700&display=swap" as="font" crossorigin="crossorigin")
 
         script(src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&flags=gated" async defer) 
         script(src="/js/app.js" defer)
@@ -45,7 +46,7 @@ html(lang="ko")
     body
 
 
-        include layout/header
+        //- include layout/header
 
         main
             block main

@@ -1,4 +1,4 @@
--
+//- -
     var menus = [
         {
             name: '소개',
@@ -29,13 +29,13 @@
             path: 'contact'
         }
     ]
-- var resources = ['TON 블록체인', '커뮤니티', '백서 / 프라이머', '생태계']
-- var participate = ['그램', '노드 / 스테이킹']
-- var news = ['미디어', '업데이트']
+//- - var resources = ['TON 블록체인', '커뮤니티', '백서 / 프라이머', '생태계']
+//- - var participate = ['그램', '노드 / 스테이킹']
+//- - var news = ['미디어', '업데이트']
 footer
-    figure.logo
+    //- figure.logo
         img(src="/assets/images/logos/ton-horizontal-w.svg", alt="Logo")
-    ul.site-map
+    //- ul.site-map
         each m in menus
             if m.name == menus[0].name
                 li
@@ -58,9 +58,9 @@ footer
                             p
                                 a(href="")= sub
     .rest
-        .clause-and-admin
+        //- .clause-and-admin
             a(href="/html/clause.html") 개인정보처리방침
             a(href="/html/admin/board.html")
                 figure
                     img(src="/assets/images/symbols/admin.svg", alt="")
-        p.copy-right Copyright © Ton Korea. All rights Reserved.
+        p.copy-right Copyright © Free TON. All rights Reserved.

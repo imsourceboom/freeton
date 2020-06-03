@@ -1,15 +1,16 @@
 import "./polyfill";
 import "./smoothscroll";
-import "./join";
+import "./withDraw";
+// import "./join";
 // import "./scrollreveal";
-import "./hamburger";
-import "./languageSelect";
-import "./detail";
-import "./checkBox";
-import "./fileUpload";
-import "./fileCount";
-import "./agentCheck";
-import "./ieCaution";
+// import "./hamburger";
+// import "./languageSelect";
+// import "./detail";
+// import "./checkBox";
+// import "./fileUpload";
+// import "./fileCount";
+// import "./agentCheck";
+// import "./ieCaution";
 // import "./telegramBtn";
 // import "./menu";
 
