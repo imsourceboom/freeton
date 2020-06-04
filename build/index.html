@@ -34,11 +34,17 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&amp;flags=gated" async defer> </script>
     <script src="/js/app.js" defer></script>
   </head>
-  <body>
+  <body id="body">
     <main>
       <section id="home">
         <div class="top-container">
-          <div class="balance">
+          <div class="wrapper">
+            <div class="header">
+              <figure class="logo"><img src="" alt=""></figure>
+              <figure class="profile"><img>
+                <figcaption>UserName</figcaption>
+              </figure>
+            </div>
             <dl class="gram">
               <dt>보유수량</dt>
               <dd class="number">2630009.123456789</dd>
@@ -52,8 +58,12 @@
             </div>
           </div>
         </div>
+        <ul class="tab">
+          <li class="withdraw-btn"><span>출금하기</span></li>
+          <li class="staking-btn"><span>스테이킹</span></li>
+        </ul>
         <ul class="list">
-          <li class="withdraw"> 
+          <li class="withdraw-card">
             <dl>
               <dt>출금</dt>
               <dd>완료</dd>
@@ -71,7 +81,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="deposit"> 
+          <li class="deposit-card"> 
             <dl>
               <dt>입금</dt>
               <dd>완료</dd>
@@ -89,7 +99,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="withdraw"> 
+          <li class="withdraw-card">
             <dl>
               <dt>출금</dt>
               <dd>완료</dd>
@@ -107,7 +117,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="deposit"> 
+          <li class="deposit-card"> 
             <dl>
               <dt>입금</dt>
               <dd>완료</dd>
@@ -125,7 +135,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="withdraw"> 
+          <li class="withdraw-card">
             <dl>
               <dt>출금</dt>
               <dd>완료</dd>
@@ -143,7 +153,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="deposit"> 
+          <li class="deposit-card"> 
             <dl>
               <dt>입금</dt>
               <dd>완료</dd>
@@ -161,7 +171,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="withdraw"> 
+          <li class="withdraw-card">
             <dl>
               <dt>출금</dt>
               <dd>완료</dd>
@@ -179,7 +189,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="deposit"> 
+          <li class="deposit-card"> 
             <dl>
               <dt>입금</dt>
               <dd>완료</dd>
@@ -197,7 +207,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="withdraw"> 
+          <li class="withdraw-card">
             <dl>
               <dt>출금</dt>
               <dd>완료</dd>
@@ -215,7 +225,7 @@
               <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
             </dl>
           </li>
-          <li class="deposit"> 
+          <li class="deposit-card"> 
             <dl>
               <dt>입금</dt>
               <dd>완료</dd>
@@ -234,25 +244,22 @@
             </dl>
           </li>
         </ul>
-        <div class="send">출금하기</div>
-        <div class="send-container on">
-          <div class="cover"></div>
-          <div class="wrapper">
-            <h3>출금하기</h3>
+        <div class="send-container">
+          <div class="header"><a class="back" href="#body"><img src="/assets/images/symbols/chevron-left.svg" alt="뒤로가기"></a>
+            <h4 class="title">출금하기</h4><a class="home" href="/index.html"><img src="/assets/images/symbols/home.svg" alt=""></a>
+          </div>
+          <div class="form-wrapper centered">
             <form action="">
               <label>
                 <input type="text">
                 <p>주소</p>
               </label>
-              <label class="mb-5">
+              <label>
                 <input type="text">
                 <p>금액</p>
               </label>
-              <input type="submit" value="출 금">
+              <button type="button">출 금</button>
             </form>
-          </div>
-          <div class="close">
-            <div class="box"></div>
           </div>
         </div>
       </section>

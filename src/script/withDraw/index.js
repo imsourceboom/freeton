@@ -1,16 +1,18 @@
-const button = document.querySelector("#home > .send");
+const withdrawBtn = document.querySelector("#home ul.tab > li.withdraw-btn");
 const container = document.querySelector("#home > .send-container");
-const close = document.querySelector("#home > .send-container > .close > .box");
+const back = document.querySelector(
+  "#home > .send-container > .header > .back"
+);
 
-// console.log(button);
+// console.log(withdrawBtn);
 // console.log(container);
-// console.log(close);
+// console.log(back);
 
 const onToggle = () => {
   container.classList.toggle("on");
 };
 
 if (container !== null) {
-  button.addEventListener("click", onToggle);
-  close.addEventListener("click", onToggle);
+  withdrawBtn.addEventListener("click", onToggle);
+  back.addEventListener("click", onToggle);
 }

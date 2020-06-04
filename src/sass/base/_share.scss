@@ -210,6 +210,13 @@
 .fixed {
   position: fixed;
 }
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .centered-x {
   position: absolute;
   top: 0;

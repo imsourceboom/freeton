@@ -1,10 +1,18 @@
 extends ./_layout
+include ./components/telegramLogin
 
 
 block main
     section#home
         .top-container
-            .balance
+            .wrapper
+                .header
+                    figure.logo
+                        img(src="", alt="")
+                    figure.profile
+                        img
+                        figcaption UserName
+                    
                 dl.gram
                     dt 보유수량
                     dd.number 2630009.123456789
@@ -15,10 +23,15 @@ block main
                         figure.copy-icon
                             img(src="https://icongr.am/clarity/copy.svg?size=22&color=000000", alt="")
                          
+        ul.tab
+            li.withdraw-btn
+                span 출금하기
+            li.staking-btn
+                span 스테이킹
         ul.list
             - for(var i = 0; i < 10; i++)
                 if i % 2 == 0
-                    li.withdraw 
+                    li.withdraw-card
                         dl
                             dt 출금
                             dd 완료
@@ -32,7 +45,7 @@ block main
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
                 else
-                    li.deposit 
+                    li.deposit-card 
                         dl
                             dt 입금
                             dd 완료
@@ -45,18 +58,20 @@ block main
                         dl
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-        .send 출금하기
-        .send-container.on
-            .cover
-            .wrapper
-                h3 출금하기
+        .send-container
+            .header
+                a(href="#body").back
+                    img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
+                h4.title 출금하기
+                a(href="/index.html").home
+                    img(src="/assets/images/symbols/home.svg", alt="")
+
+            .form-wrapper.centered
                 form(action="")
                     label
                         input(type="text")
                         p 주소
-                    label.mb-5
+                    label
                         input(type="text")
                         p 금액
-                    input(type='submit' value='출 금')
-            .close
-                .box
+                    button(type='button') 출 금
