@@ -323,4 +323,46 @@ section#home {
       }
     }
   }
+
+  .staking-container {
+    button {
+      display: block;
+      width: 140px;
+      height: 36px;
+      line-height: 36px;
+      background-color: rgb(106, 190, 241);
+      border: 0;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #eee;
+      margin: 0 auto;
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .invest-container {
+    z-index: 100;
+
+    button {
+      display: block;
+      width: 140px;
+      height: 36px;
+      line-height: 36px;
+      background-color: rgb(106, 190, 241);
+      border: 0;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #eee;
+      margin: 0 auto;
+      cursor: pointer;
+
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
 }
