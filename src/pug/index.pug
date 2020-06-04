@@ -1,5 +1,6 @@
 extends ./_layout
 include ./components/telegramLogin
+include ./components/slideHeader
 
 
 block main
@@ -58,14 +59,8 @@ block main
                         dl
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-        .send-container
-            .header
-                a(href="#body").back
-                    img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
-                h4.title 출금하기
-                a(href="/index.html").home
-                    img(src="/assets/images/symbols/home.svg", alt="")
-
+        .send-container.sliding
+            +slideHeader('출금하기')
             .form-wrapper.centered
                 form(action="")
                     label
@@ -75,3 +70,7 @@ block main
                         input(type="text")
                         p 금액
                     button(type='button') 출 금
+        .staking-container.sliding
+            +slideHeader('스테이킹')
+        //- .invest-container.sliding
+            +slideHeader('스테이킹 투자하기')
