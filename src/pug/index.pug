@@ -70,27 +70,34 @@ block main
                         input(type="text")
                         p 금액
                     button(type='button') 출 금
-        .staking-container.sliding
+        .staking-container.sliding.on
             +slideHeader('스테이킹')
             .wrapper
-                h4 자주 묻는 질문
-                ul.accordion
-                    li.list
-                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
-                            img(src="/assets/images/symbols/chevron-right.svg")
-                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
-                    li.list
-                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
-                            img(src="/assets/images/symbols/chevron-right.svg")
-                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
-                    li.list
-                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
-                            img(src="/assets/images/symbols/chevron-right.svg")
-                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
-                    li.list
-                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
-                            img(src="/assets/images/symbols/chevron-right.svg")
-                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
-            button(type='button') 스테이킹 참여하기
+                .title-set
+                    img(src="/assets/images/gram.png", alt="TON Logo")
+                    h2 그램 스테이킹
+                    strong.return 수익율 
+                        b 7%
+                button(type='button') 스테이킹 참여하기
+                .faq-set
+                    h4 자주 묻는 질문
+                    ul.accordion
+                        li.list
+                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                        li.list
+                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                        li.list
+                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                        li.list
+                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                //- button(type='button') 스테이킹 참여하기
         .invest-container.sliding
             +slideHeader('스테이킹 참여하기').invest

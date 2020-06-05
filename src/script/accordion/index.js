@@ -5,7 +5,6 @@ const accordionList = Array.from(
 if (accordionList !== null) {
   accordionList.map((list) => {
     list.addEventListener("click", function (e) {
-      console.log(e.currentTarget);
       list.classList.toggle("on");
     });
   });

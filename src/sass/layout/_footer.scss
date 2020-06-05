@@ -1,14 +1,17 @@
 footer {
   position: relative;
-  /* z-index: 999; */
+  // z-index: 999;
   // background-color: #0088cc;
   // color: white;
   // padding: 70px 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
   background-color: #eeeeee;
   color: #555;
   padding: 15px 20px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     // padding: 70px 30px;
