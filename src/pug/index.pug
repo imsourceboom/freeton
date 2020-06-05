@@ -15,7 +15,8 @@ block main
                         figcaption UserName
                     
                 dl.gram
-                    dt 보유수량
+                    // 지갑이 활성화가 되면 active 클래스를 붙인다.
+                    dt.active 보유수량
                     dd.number 2630009.123456789
                 .receive
                     p 그램주소
@@ -71,6 +72,25 @@ block main
                     button(type='button') 출 금
         .staking-container.sliding
             +slideHeader('스테이킹')
-            button(type='button').centered 스테이킹 참여하기
+            .wrapper
+                h4 자주 묻는 질문
+                ul.accordion
+                    li.list
+                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                            img(src="/assets/images/symbols/chevron-right.svg")
+                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                    li.list
+                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                            img(src="/assets/images/symbols/chevron-right.svg")
+                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                    li.list
+                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                            img(src="/assets/images/symbols/chevron-right.svg")
+                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                    li.list
+                        strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                            img(src="/assets/images/symbols/chevron-right.svg")
+                        p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+            button(type='button') 스테이킹 참여하기
         .invest-container.sliding
             +slideHeader('스테이킹 참여하기').invest
