@@ -2,6 +2,7 @@ import "./polyfill";
 import "./smoothscroll";
 import "./slideContainer";
 import "./loading";
+import "./clipboard";
 // import "./join";
 // import "./scrollreveal";
 // import "./hamburger";
