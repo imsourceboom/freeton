@@ -60,7 +60,7 @@ block main
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
         .send-container.sliding
-            +slideHeader('출금하기')
+            +slideHeader('출금하기').send
             .form-wrapper.centered
                 form(action="")
                     label
@@ -70,8 +70,8 @@ block main
                         input(type="text")
                         p 금액
                     button(type='button') 출 금
-        .staking-container.sliding.on
-            +slideHeader('스테이킹')
+        .staking-container.sliding
+            +slideHeader('스테이킹').staking
             .wrapper
                 .title-set
                     img(src="/assets/images/gram.png", alt="TON Logo")
