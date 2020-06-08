@@ -51,20 +51,20 @@ body {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: rgba(112, 112, 112, 0.4);
       opacity: 1;
-      font-size: 0.9rem;
+      font-size: 0.95em;
       /* Firefox */
     }
 
     &:-ms-input-placeholder {
       /* Internet Explorer 10-11 */
       color: rgba(112, 112, 112, 0.4);
-      font-size: 0.9rem;
+      font-size: 0.95em;
     }
 
     &::-ms-input-placeholder {
       /* Microsoft Edge */
       color: rgba(112, 112, 112, 0.4);
-      font-size: 0.9rem;
+      font-size: 0.95em;
     }
   }
 }

@@ -29,7 +29,7 @@ block main
                 span 출금하기
             li.staking-btn
                 span 스테이킹
-        ul.list
+        ul.transaction-list
             - for(var i = 0; i < 10; i++)
                 if i % 2 == 0
                     li.withdraw-card
@@ -59,6 +59,8 @@ block main
                         dl
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
+
+        //- 출금
         .send-container.sliding
             +slideHeader('출금하기').send
             .form-wrapper.centered
@@ -70,8 +72,48 @@ block main
                         input(type="text")
                         p 금액
                     button(type='button') 출 금
+
+        //- 스테이킹
         .staking-container.sliding.on
             +slideHeader('스테이킹').staking
+            .wrap-dashboard
+                dl.staked
+                    dt 스테이킹 참여 수량
+                    dd 30000.023456789
+                dl.total-reward
+                    dt 총 보상 수량
+                    dd 1000.023456789
+                dl.next-reward
+                    dt 다음 사이클 보상 예상 수량
+                    dd 80.023456789
+                button(type='button').move-info-btn
+                    img(src="https://icongr.am/clarity/error.svg?size=22&color=000000", alt="")
+            form(action="").participation-set
+                .box
+                    dl
+                        dt 참여 가능한 수량
+                        dd 200006.023456789
+                    .input-group
+                        input(type="text" placeholder="0")
+                        span 참여하기
+            .reward-set
+                .title 보상내역
+                ul.list
+                    - for (var i = 0; i < 10; i++)
+                        li 
+                            dl.date
+                                dt 기간 
+                                dd 2020.6.8 ~ 2020.6.15
+                            dl.rate
+                                dt 수익율
+                                dd 6.17%
+                            dl.return
+                                dt 수량
+                                dd 27.024567899
+
+        //- FAQ
+        .info-container.sliding
+            +slideHeader('스테이킹 참여하기').invest
             .wrapper
                 .title-set
                     img(src="/assets/images/gram.png", alt="TON Logo")
@@ -87,7 +129,11 @@ block main
                     h4 자주 묻는 질문
                     ul.accordion
                         li.list
-                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                            strong.title 스테이킹이 무엇인가요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                        li.list
+                            strong.title 어떻게 그램 스테이킹에 참여할 수 있나요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
                             p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
                         li.list
@@ -95,13 +141,7 @@ block main
                                 img(src="/assets/images/symbols/chevron-right.svg")
                             p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
                         li.list
-                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
-                                img(src="/assets/images/symbols/chevron-right.svg")
-                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
-                        li.list
-                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                            strong.title 보상 시점은 언제인가요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
                             p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
                 //- button(type='button') 스테이킹 참여하기
-        .invest-container.sliding
-            +slideHeader('스테이킹 참여하기').invest

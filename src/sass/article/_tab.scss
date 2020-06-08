@@ -1,0 +1,31 @@
+ul.tab {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 10px;
+
+  li {
+    width: 120px;
+    height: 32px;
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.22);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+
+    &.withdraw-btn {
+      background-color: lightcoral;
+    }
+
+    &.staking-btn {
+      background-color: rgb(106, 190, 241);
+    }
+
+    span {
+      margin-bottom: -2px;
+    }
+  }
+}

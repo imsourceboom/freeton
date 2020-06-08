@@ -3,9 +3,9 @@ const stakingBtn = document.querySelector("#home ul.tab > li.staking-btn");
 const participationBtn = document.querySelector(".staking-container button");
 const sendContainer = document.querySelector("#home > .send-container");
 const stakingContainer = document.querySelector("#home > .staking-container");
-const investContainer = document.querySelector("#home > .invest-container");
+const infoContainer = document.querySelector("#home > .info-container");
 // const back = Array.from(document.querySelectorAll(".slide-header > .back"));
-const investBack = document.querySelector(".slide-header.invest > .back");
+const infoBack = document.querySelector(".slide-header.invest > .back");
 const sendBack = document.querySelector(".slide-header.send > .back");
 const stakingBack = document.querySelector(".slide-header.staking > .back");
 
@@ -21,8 +21,8 @@ const stakingContainerOnToggle = () => {
   stakingContainer.classList.add("on");
 };
 
-const investContainerOnToggle = () => {
-  investContainer.classList.add("on");
+const infoContainerOnToggle = () => {
+  infoContainer.classList.add("on");
 };
 
 if (sendContainer !== null) {
@@ -39,10 +39,10 @@ if (stakingContainer !== null) {
   });
 }
 
-if (investContainer !== null) {
-  participationBtn.addEventListener("click", investContainerOnToggle);
-  investBack.addEventListener("click", function () {
-    investContainer.classList.remove("on");
+if (infoContainer !== null) {
+  participationBtn.addEventListener("click", infoContainerOnToggle);
+  infoBack.addEventListener("click", function () {
+    infoContainer.classList.remove("on");
   });
   // back.map((b) => {
   //   b.addEventListener("click", (e) => {
