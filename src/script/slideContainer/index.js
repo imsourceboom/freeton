@@ -1,17 +1,18 @@
 const withdrawBtn = document.querySelector("#home ul.tab > li.withdraw-btn");
 const stakingBtn = document.querySelector("#home ul.tab > li.staking-btn");
-const participationBtn = document.querySelector(".staking-container button");
+
+const goInfoBtn = document.querySelector(".staking-container .move-info-btn");
+const goParticipationBtn = document.querySelector(
+  ".info-container .go-staking"
+);
+
 const sendContainer = document.querySelector("#home > .send-container");
 const stakingContainer = document.querySelector("#home > .staking-container");
 const infoContainer = document.querySelector("#home > .info-container");
-// const back = Array.from(document.querySelectorAll(".slide-header > .back"));
+
 const infoBack = document.querySelector(".slide-header.invest > .back");
 const sendBack = document.querySelector(".slide-header.send > .back");
 const stakingBack = document.querySelector(".slide-header.staking > .back");
-
-// console.log(withdrawBtn);
-// console.log(container);
-// console.log(back);
 
 const sendContainerOnToggle = () => {
   sendContainer.classList.add("on");
@@ -33,6 +34,7 @@ if (sendContainer !== null) {
 }
 
 if (stakingContainer !== null) {
+  goInfoBtn.addEventListener("click", infoContainerOnToggle);
   stakingBtn.addEventListener("click", stakingContainerOnToggle);
   stakingBack.addEventListener("click", function () {
     stakingContainer.classList.remove("on");
@@ -40,13 +42,10 @@ if (stakingContainer !== null) {
 }
 
 if (infoContainer !== null) {
-  participationBtn.addEventListener("click", infoContainerOnToggle);
+  goParticipationBtn.addEventListener("click", function () {
+    infoContainer.classList.remove("on");
+  });
   infoBack.addEventListener("click", function () {
     infoContainer.classList.remove("on");
   });
-  // back.map((b) => {
-  //   b.addEventListener("click", (e) => {
-  //     investContainer.classList.remove("on");
-  //   });
-  // });
 }
