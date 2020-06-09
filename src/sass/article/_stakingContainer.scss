@@ -68,12 +68,15 @@
 
     button.move-info-btn {
       position: absolute;
-      bottom: 16px;
-      right: 20px;
+      bottom: 15px;
+      right: 18px;
       border: 0;
       background-color: white;
       opacity: 0.5;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
     }
   }
 

@@ -82,3 +82,32 @@ ul.transaction-list {
     }
   }
 }
+
+button.more-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  height: 43px;
+  background-color: rgb(243, 243, 243);
+  border: 0;
+  border-radius: 2px;
+  margin: 30px auto 50px;
+  font-size: 14px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    // margin-top: -2px;
+    opacity: 0.5;
+    background-image: url("/assets/images/symbols/chevron-down.svg");
+    background-size: contain;
+    background-position: contain;
+    background-repeat: no-repeat;
+  }
+}

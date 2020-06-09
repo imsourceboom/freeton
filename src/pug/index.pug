@@ -24,11 +24,15 @@ block main
                         #address -1:d88335c70d437a2a9201383b1b17c6a88d80416d6d79c244505708dfe179885d
                         figure.copy-icon(data-clipboard-target="#address")
                             img(src="https://icongr.am/clarity/copy.svg?size=22&color=000000", alt="")
+
+        //- 버튼
         ul.tab
             li.withdraw-btn
                 span 출금하기
             li.staking-btn
                 span 스테이킹
+
+        //- 거래내역
         ul.transaction-list
             - for(var i = 0; i < 10; i++)
                 if i % 2 == 0
@@ -59,6 +63,7 @@ block main
                         dl
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
+        button(type="button").more-btn 더보기
 
         //- 출금
         .send-container.sliding
@@ -87,7 +92,8 @@ block main
                     dt 다음 사이클 보상 예상 수량
                     dd 80.023456789
                 button(type='button').move-info-btn
-                    img(src="https://icongr.am/clarity/error.svg?size=26&color=000000", alt="")
+                    | <img src="https://icongr.am/clarity/error.svg?size=26&color=000000", alt=""/>
+                    | 스테이킹? 
             form(action="").participation-set
                 .box
                     dl
@@ -110,6 +116,7 @@ block main
                             dl.return
                                 dt 수량
                                 dd 27.024567899
+                button(type="button").more-btn 더보기
 
         //- FAQ
         .info-container.sliding
