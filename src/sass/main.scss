@@ -13,3 +13,14 @@
   "components/search-box", "components/confirm-button", "components/edit-form",
   "components/file-upload", "components/ie-caution", "components/telegram-login",
   "components/slide-header";
+
+body {
+  overflow: auto;
+
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

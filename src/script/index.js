@@ -4,6 +4,7 @@ import "./slideContainer";
 import "./loading";
 import "./clipboard";
 import "./accordion";
+import "./withDraw";
 // import "./join";
 // import "./scrollreveal";
 // import "./hamburger";

@@ -66,7 +66,7 @@ block main
         button(type="button").more-btn 더보기
 
         //- 출금
-        .send-container.sliding
+        //- .send-container.sliding
             +slideHeader('출금하기').send
             .form-wrapper.centered
                 form(action="")
@@ -77,6 +77,21 @@ block main
                         input(type="text")
                         p 금액
                     button(type='button') 출 금
+        
+        //- 출금 컴포넌트
+        .send-component
+            .cover
+            .wrapper
+                h4 출금하기
+                form(action="")
+                    .input-group
+                        input(type="text" placeholder=" ")
+                        p 주소
+                    .input-group
+                        input(type="text" placeholder=" ")
+                        p 수량
+                    button(type='button') 출 금
+
 
         //- 스테이킹
         .staking-container.sliding
