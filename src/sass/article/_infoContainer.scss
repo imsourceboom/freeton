@@ -63,12 +63,32 @@
       margin: 60px 0 20px;
     }
 
-    strong {
-      color: rgb(42, 129, 184);
-      font-size: 16px;
+    div {
+      line-height: 1.8;
 
-      @media (min-width: 768px) {
-        font-size: 18px;
+      strong {
+        color: rgb(43, 94, 233);
+        font-size: 17px;
+        font-weight: bold;
+
+        @media (min-width: 768px) {
+          font-size: 19px;
+        }
+
+        span {
+          font-size: 1rem;
+          font-weight: normal;
+          color: #000;
+        }
+      }
+
+      .time {
+        padding-bottom: 20px;
+
+        time {
+          font-size: 24px;
+          font-weight: bold;
+        }
       }
     }
   }

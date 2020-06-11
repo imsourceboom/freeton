@@ -64,19 +64,6 @@ block main
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
         button(type="button").more-btn 더보기
-
-        //- 출금
-        //- .send-container.sliding
-            +slideHeader('출금하기').send
-            .form-wrapper.centered
-                form(action="")
-                    label
-                        input(type="text")
-                        p 주소
-                    label
-                        input(type="text")
-                        p 금액
-                    button(type='button') 출 금
         
         //- 출금 컴포넌트
         .send-component
@@ -94,7 +81,7 @@ block main
 
 
         //- 스테이킹
-        .staking-container.sliding.on
+        .staking-container.sliding
             +slideHeader('스테이킹').staking
             .wrap-dashboard
                 dl.staked
@@ -172,7 +159,7 @@ block main
 
         //- FAQ
         .info-container.sliding
-            +slideHeader('스테이킹 참여하기').invest
+            +slideHeader('스테이킹?').invest
             .wrapper
                 .title-set
                     img(src="/assets/images/gram.png", alt="TON Logo")
@@ -181,13 +168,15 @@ block main
                         b 6~8%
                 button(type='button').go-staking 스테이킹 참여하기
                 .info-set
-                    //- p 
-                        strong 현재 밸리데이터
-                        span 2020년 06월 08일 11시 00분 까지
-                    p 
-                        strong 다음 밸리데이터
-                        <time>2일 20시간 54분 31초 </time>남았습니다.
-                    p 정해진 시간에 스냅샷을 촬영합니다. 스냅샷을 통해 고객 보유자산을 확인하고, 보유자산을 기반으로 리워드를 지급합니다.
+                    div 
+                        strong 다음 사이클 
+                            span &nbsp;2020년 6월 18일 14시 00분까지
+                        p.time
+                            time 2일 20시간 54분 31초
+                            | &nbsp;남았습니다.
+                    div 
+                        | 정해진 시간에 스테이킹이 시작됩니다.
+                        <br/> 내역을 통해 고객 보유자산을 확인하고, 보유자산을 기반으로 보상을 지급합니다.
                 .faq-set
                     h4 자주 묻는 질문
                     ul.accordion
@@ -198,13 +187,12 @@ block main
                         li.list
                             strong.title 어떻게 그램 스테이킹에 참여할 수 있나요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
-                            p.description 스테이킹 페이지의 입력창에 수량을 적으시고 참여하기를 클릭하시면 바로 시작하실 수 있습니다.
+                            p.description 스테이킹 페이지의 입력창에 수량을 적으시고 참여하기를 클릭하시면 다음 사이클에 참여됩니다.
                         li.list
                             strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
-                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                            p.description FreeTON 블록체인 정책에 따라 사이클당 약 7% 이상의 수익 발생이 예상됩니다.
                         li.list
                             strong.title 보상 시점은 언제인가요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
-                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
-                //- button(type='button') 스테이킹 참여하기
+                            p.description 참여한 사이클 끝나고 두 번의 사이클이 더 지난 후 지급됩니다.
