@@ -5,6 +5,8 @@ import "./loading";
 import "./clipboard";
 import "./accordion";
 import "./withDraw";
+import "./joinCancel";
+import "./rewardJoinCancelList";
 // import "./join";
 // import "./scrollreveal";
 // import "./hamburger";

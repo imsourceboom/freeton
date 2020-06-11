@@ -94,7 +94,7 @@ block main
 
 
         //- 스테이킹
-        .staking-container.sliding
+        .staking-container.sliding.on
             +slideHeader('스테이킹').staking
             .wrap-dashboard
                 dl.staked
@@ -108,18 +108,31 @@ block main
                     dd 80.023456789
                 button(type='button').move-info-btn
                     | <img src="https://icongr.am/clarity/error.svg?size=26&color=000000", alt=""/>
-                    | 스테이킹? 
+                    | 스테이킹 
             form(action="").participation-set
                 .box
-                    dl
-                        dt 참여 가능한 수량
-                        dd 200006.023456789
-                    .input-group
-                        input(type="text" placeholder="0")
-                        span 참여하기
+                    ul
+                        li.join-btn.on 참여하기
+                        li.cancel-btn 참여 취소하기
+                    .join.on
+                        dl
+                            dt 참여 가능한 수량
+                            dd 200006.023456789
+                        .input-group
+                            input(type="text" placeholder="0")
+                            span 참여하기
+                    .cancel
+                        dl
+                            dt 취소 가능한 수량
+                            dd 200006.023456789
+                        .input-group
+                            input(type="text" placeholder="0")
+                            span 취소하기
             .reward-set
-                .title 보상내역
-                ul.list
+                .title 
+                    strong.reward-btn.on 보상내역
+                    strong.join-cancel-btn 참여/취소내역
+                ul.reward-list.on
                     - for (var i = 0; i < 10; i++)
                         li 
                             dl.date
@@ -131,6 +144,30 @@ block main
                             dl.return
                                 dt 수량
                                 dd 27.024567899
+                ul.join-cancel-list
+                    - for (var i = 0; i < 10; i++)
+                        if i % 2 == 0
+                            li 
+                                dl.kind.join
+                                    dt 참여 
+                                    dd
+                                dl.date
+                                    dt 날짜 
+                                    dd 2020월 6월 15일 16:24:09
+                                dl.return
+                                    dt 수량
+                                    dd 27.024567899
+                        else
+                            li 
+                                dl.kind.cancel
+                                    dt 취소 
+                                    dd
+                                dl.date
+                                    dt 날짜 
+                                    dd 2020월 6월 15일 16:24:09
+                                dl.return
+                                    dt 수량
+                                    dd 27.024567899
                 button(type="button").more-btn 더보기
 
         //- FAQ
@@ -141,12 +178,15 @@ block main
                     img(src="/assets/images/gram.png", alt="TON Logo")
                     h2 그램 스테이킹
                     strong.return 수익율 
-                        b 7%
+                        b 6~8%
                 button(type='button').go-staking 스테이킹 참여하기
                 .info-set
-                    p 다음 사이클 
-                        <span>2020년 06월 08일 11시 00분 </span>까지
-                    p 2일 20시간 54분 31초 남았습니다.
+                    //- p 
+                        strong 현재 밸리데이터
+                        span 2020년 06월 08일 11시 00분 까지
+                    p 
+                        strong 다음 밸리데이터
+                        <time>2일 20시간 54분 31초 </time>남았습니다.
                     p 정해진 시간에 스냅샷을 촬영합니다. 스냅샷을 통해 고객 보유자산을 확인하고, 보유자산을 기반으로 리워드를 지급합니다.
                 .faq-set
                     h4 자주 묻는 질문
@@ -158,7 +198,7 @@ block main
                         li.list
                             strong.title 어떻게 그램 스테이킹에 참여할 수 있나요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
-                            p.description FreeTON 블록체인 정책에 따라 약 연 7% 이상의 수익 발생이 예상됩니다.
+                            p.description 스테이킹 페이지의 입력창에 수량을 적으시고 참여하기를 클릭하시면 바로 시작하실 수 있습니다.
                         li.list
                             strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
                                 img(src="/assets/images/symbols/chevron-right.svg")
