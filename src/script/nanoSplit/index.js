@@ -1,5 +1,3 @@
-import numeral from "numeral";
-
 const nanos = Array.from(document.querySelectorAll(".nano"));
 // const inputs = Array.from(document.querySelectorAll(".input-value"));
 
