@@ -12,12 +12,12 @@ block main
                         img(src="", alt="")
                     figure.profile
                         img
-                        figcaption UserName
+                        figcaption UserName !
                     
                 dl.gram
                     // 지갑이 활성화가 되면 active 클래스를 붙인다.
                     dt.active 보유수량
-                    dd.number 2630009.123456789
+                    dd.number.nano 2630009123456789
                 .receive
                     p 그램주소
                     .box
@@ -42,7 +42,7 @@ block main
                             dd 완료
                         dl
                             dt 금액
-                            dd 9999.99999999
+                            dd.nano 234234999999999999
                         dl
                             dt 날짜
                             dd 2020.06.03 14:36:48
@@ -56,7 +56,7 @@ block main
                             dd 완료
                         dl
                             dt 금액
-                            dd 9999.99999999
+                            dd.nano 9940000
                         dl
                             dt 날짜
                             dd 2020.06.03 14:36:48
@@ -64,7 +64,9 @@ block main
                             dt 거래ID
                             dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
         button(type="button").more-btn 더보기
-        
+
+        a(href="").top-btn
+
         //- 출금 컴포넌트
         .send-component
             .cover
@@ -75,24 +77,24 @@ block main
                         input(type="text" placeholder=" ")
                         p 주소
                     .input-group
-                        input(type="text" placeholder=" ")
+                        input(type="text" placeholder=" ").input-value
                         p 수량
                     button(type='button') 출 금
 
 
         //- 스테이킹
         .staking-container.sliding
-            +slideHeader('스테이킹').staking
+            +slideHeader('스테이킹').staking#staking-top
             .wrap-dashboard
                 dl.staked
                     dt 스테이킹 참여 수량
-                    dd 30000.023456789
+                    dd.nano 30000023456789
                 dl.total-reward
                     dt 총 보상 수량
-                    dd 1000.023456789
+                    dd.nano 1000023456789
                 dl.next-reward
                     dt 다음 사이클 보상 예상 수량
-                    dd 80.023456789
+                    dd.nano 80023456789
                 button(type='button').move-info-btn
                     | <img src="https://icongr.am/clarity/error.svg?size=26&color=000000", alt=""/>
                     | 스테이킹 
@@ -104,16 +106,16 @@ block main
                     .join.on
                         dl
                             dt 참여 가능한 수량
-                            dd 200006.023456789
+                            dd.nano 200006023456789
                         .input-group
-                            input(type="text" placeholder="0")
+                            input(type="text" placeholder="0").input-value
                             span 참여하기
                     .cancel
                         dl
                             dt 취소 가능한 수량
-                            dd 200006.023456789
+                            dd.nano 3342340234789
                         .input-group
-                            input(type="text" placeholder="0")
+                            input(type="text" placeholder="0").input-value
                             span 취소하기
             .reward-set
                 .title 
@@ -130,7 +132,7 @@ block main
                                 dd 6.17%
                             dl.return
                                 dt 수량
-                                dd 27.024567899
+                                dd.nano 2134237024567899
                 ul.join-cancel-list
                     - for (var i = 0; i < 10; i++)
                         if i % 2 == 0
@@ -143,7 +145,7 @@ block main
                                     dd 2020월 6월 15일 16:24:09
                                 dl.return
                                     dt 수량
-                                    dd 27.024567899
+                                    dd.nano 992343234567899
                         else
                             li 
                                 dl.kind.cancel
@@ -154,12 +156,12 @@ block main
                                     dd 2020월 6월 15일 16:24:09
                                 dl.return
                                     dt 수량
-                                    dd 27.024567899
+                                    dd.nano 3234345252567899
                 button(type="button").more-btn 더보기
 
         //- FAQ
         .info-container.sliding
-            +slideHeader('스테이킹?').invest
+            +slideHeader('스테이킹?').invest#info-top
             .wrapper
                 .title-set
                     img(src="/assets/images/gram.png", alt="TON Logo")

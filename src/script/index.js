@@ -7,6 +7,8 @@ import "./accordion";
 import "./withDraw";
 import "./joinCancel";
 import "./rewardJoinCancelList";
+import "./scrollTop";
+import "./nanoSplit";
 // import "./join";
 // import "./scrollreveal";
 // import "./hamburger";
