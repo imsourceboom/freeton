@@ -1,4 +1,5 @@
 const topButton = document.querySelector(".top-btn");
+
 import {
   stakingBtn,
   goInfoBtn,
