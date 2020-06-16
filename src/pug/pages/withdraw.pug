@@ -1,0 +1,24 @@
+extends ../_layout
+include ../components/slideHeader
+
+block title
+    - var page = '출금하기'
+
+block main
+    section#withdraw.transition-slide
+        //- 출금 컴포넌트
+        .withdraw-container
+            +slideHeader('출금하기').invest#info-top
+            .wrapper
+                dl
+                    dt 출금가능
+                    dd.nano 3456009348353
+                form(action="")
+                    .input-group
+                        input(type="text" placeholder=" ")
+                        p 주소
+                    .input-group
+                        input(type="text" placeholder=" ").input-value
+                        p 수량
+                    button(type='button' disabled) 출 금
+

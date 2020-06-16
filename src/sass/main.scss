@@ -4,7 +4,10 @@
 
 @import "layout/header", "layout/main", "layout/footer";
 
-@import "pages/home", "pages/login", "pages/loading";
+@import "pages/home", "pages/login", "pages/loading", "pages/staking",
+  "pages/staking-info", "pages/withdraw";
+
+@import "library/swup";
 
 @import "components/language-select", "components/coming-soon",
   "components/input-box", "components/radio-button", "components/select-box",

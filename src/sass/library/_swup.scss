@@ -1,0 +1,20 @@
+.transition-slide {
+  opacity: 1;
+  transition: 450ms;
+  transform: translateX(0);
+  transform-origin: left;
+}
+
+html.is-animating .transition-slide {
+  opacity: 1;
+  transform: translateX(100px);
+
+  &#home {
+    transform: translateY(10px);
+  }
+}
+
+html.is-leaving .transition-slide {
+  opacity: 0.3;
+  transform: translateX(100px);
+}

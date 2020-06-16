@@ -1,3 +1,6 @@
+section#withdraw,
+section#staking-info,
+section#staking,
 section#home {
   max-width: 800px;
   margin: 0 auto;
@@ -6,10 +9,6 @@ section#home {
   @import "../article/topContainer";
   @import "../article/tab";
   @import "../article/transactionList";
-  // @import "../article/sendContainer";
-  @import "../article/sendComponent";
-  @import "../article/stakingContainer";
-  @import "../article/infoContainer";
 
   .sliding {
     position: fixed;

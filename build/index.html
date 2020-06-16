@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detaction" content="telephone=no, address=no, email=no">
     <meta name="referrer" content="strict-origin">
-    <meta name="title" content="Free TON">
-    <meta name="description" content="for Free TON">
-    <meta name="keywords" content="ton, tonkorea, 톤, 톤코리아, 블록체인, blockchain">
-    <meta property="og:title" content="Free TON">
+    <meta name="title" content="홈 - 1stOn">
+    <meta name="description" content="for 홈 - 1stOn">
+    <meta name="keywords" content="ton, 톤, 블록체인, blockchain">
+    <meta property="og:title" content="홈 - 1stOn">
     <meta property="og:url" content="">
-    <meta property="og:description" content="for Free TON">
+    <meta property="og:description" content="for 홈 - 1stOn">
     <meta property="og:image" content="/assets/images/icons/android-chrome-512x512.png">
     <meta property="og:type" content="website">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="apple-mobile-web-app-title" content="Free TON">
+    <meta name="apple-mobile-web-app-title" content="홈 - 1stOn">
     <link link="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icons/android-chrome-512x512.png">
@@ -28,7 +28,7 @@
     <meta name="msapplication-TileImage" content="/assets/images/icons/mstile-150x150.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
-    <title>Free TON</title>
+    <title>홈 - 1stOn</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&amp;family=Titillium+Web:wght@200;400;700&amp;display=swap" as="font" crossorigin="crossorigin">
     <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
@@ -36,14 +36,14 @@
     <script src="/js/app.js" defer></script>
   </head>
   <body id="body">
-    <main>
-      <section id="home">
+    <main id="swup">
+      <section class="transition-slide" id="home">
         <div class="top-container">
           <div class="wrapper">
             <div class="header">
               <figure class="logo"><img src="" alt=""></figure>
-              <figure class="profile"><img>
-                <figcaption>UserName !</figcaption>
+              <figure class="profile"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/600px-Telegram_logo.svg.png">
+                <figcaption>UserName</figcaption>
               </figure>
             </div>
             <dl class="gram">
@@ -61,8 +61,8 @@
           </div>
         </div>
         <ul class="tab">
-          <li class="withdraw-btn"><span>출금하기</span></li>
-          <li class="staking-btn"><span>스테이킹</span></li>
+          <li class="withdraw-btn"><a href="/html/withdraw.html">출금하기</a></li>
+          <li class="staking-btn"><a href="/html/staking.html">스테이킹</a></li>
         </ul>
         <ul class="transaction-list">
           <li class="withdraw-card">
@@ -246,398 +246,7 @@
             </dl>
           </li>
         </ul>
-        <button class="more-btn" type="button">더보기</button><a class="top-btn" href=""></a>
-        <div class="send-component">
-          <div class="cover"></div>
-          <div class="wrapper">
-            <h4>출금하기</h4>
-            <form action="">
-              <div class="input-group">
-                <input type="text" placeholder=" ">
-                <p>주소</p>
-              </div>
-              <div class="input-group">
-                <input class="input-value" type="text" placeholder=" ">
-                <p>수량</p>
-              </div>
-              <button type="button">출 금</button>
-            </form>
-          </div>
-        </div>
-        <div class="staking-container sliding">
-          <div class="slide-header staking" id="staking-top"><a class="back" href="#body"><img src="/assets/images/symbols/chevron-left.svg" alt="뒤로가기"/></a>
-            <h4 class="title">스테이킹</h4><a class="home" href="/index.html"><img src="/assets/images/symbols/home.svg" alt=""/></a>
-          </div>
-          <div class="wrap-dashboard">
-            <dl class="staked">
-              <dt>스테이킹 참여 수량</dt>
-              <dd class="nano">30000023456789</dd>
-            </dl>
-            <dl class="total-reward">
-              <dt>총 보상 수량</dt>
-              <dd class="nano">1000023456789</dd>
-            </dl>
-            <dl class="next-reward">
-              <dt>다음 사이클 보상 예상 수량</dt>
-              <dd class="nano">80023456789</dd>
-            </dl>
-            <button class="move-info-btn" type="button">
-              <img src="https://icongr.am/clarity/error.svg?size=26&color=000000", alt=""/>
-              스테이킹 
-            </button>
-          </div>
-          <form class="participation-set" action="">
-            <div class="box">
-              <ul>
-                <li class="join-btn on">참여하기</li>
-                <li class="cancel-btn">참여 취소하기</li>
-              </ul>
-              <div class="join on">
-                <dl>
-                  <dt>참여 가능한 수량</dt>
-                  <dd class="nano">200006023456789</dd>
-                </dl>
-                <div class="input-group">
-                  <input class="input-value" type="text" placeholder="0"><span>참여하기</span>
-                </div>
-              </div>
-              <div class="cancel">
-                <dl>
-                  <dt>취소 가능한 수량</dt>
-                  <dd class="nano">3342340234789</dd>
-                </dl>
-                <div class="input-group">
-                  <input class="input-value" type="text" placeholder="0"><span>취소하기</span>
-                </div>
-              </div>
-            </div>
-          </form>
-          <div class="reward-set">
-            <div class="title"> <strong class="reward-btn on">보상내역</strong><strong class="join-cancel-btn">참여/취소내역</strong></div>
-            <ul class="reward-list on">
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="date">
-                  <dt>기간 </dt>
-                  <dd>2020.6.8 ~ 2020.6.15</dd>
-                </dl>
-                <dl class="rate">
-                  <dt>수익율</dt>
-                  <dd>6.17%</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">1000000000</dd>
-                </dl>
-              </li>
-            </ul>
-            <ul class="join-cancel-list">
-              <li> 
-                <dl class="kind join">
-                  <dt>참여 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">23456790</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind cancel">
-                  <dt>취소 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">3234345252567899</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind join">
-                  <dt>참여 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">23456790</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind cancel">
-                  <dt>취소 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">3234345252567899</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind join">
-                  <dt>참여 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">23456790</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind cancel">
-                  <dt>취소 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">3234345252567899</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind join">
-                  <dt>참여 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">23456790</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind cancel">
-                  <dt>취소 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">3234345252567899</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind join">
-                  <dt>참여 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">23456790</dd>
-                </dl>
-              </li>
-              <li> 
-                <dl class="kind cancel">
-                  <dt>취소 </dt>
-                  <dd></dd>
-                </dl>
-                <dl class="date">
-                  <dt>날짜 </dt>
-                  <dd>2020월 6월 15일 16:24:09</dd>
-                </dl>
-                <dl class="return">
-                  <dt>수량</dt>
-                  <dd class="nano">3234345252567899</dd>
-                </dl>
-              </li>
-            </ul>
-            <button class="more-btn" type="button">더보기</button>
-          </div>
-        </div>
-        <div class="info-container sliding">
-          <div class="slide-header invest" id="info-top"><a class="back" href="#body"><img src="/assets/images/symbols/chevron-left.svg" alt="뒤로가기"/></a>
-            <h4 class="title">스테이킹?</h4><a class="home" href="/index.html"><img src="/assets/images/symbols/home.svg" alt=""/></a>
-          </div>
-          <div class="wrapper">
-            <div class="title-set"><img src="/assets/images/gram.png" alt="TON Logo">
-              <h2>그램 스테이킹</h2><strong class="return">수익율 <b>6~8%</b></strong>
-            </div>
-            <button class="go-staking" type="button">스테이킹 참여하기</button>
-            <div class="info-set">
-              <div> <strong>다음 사이클 <span>&nbsp;2020년 6월 18일 14시 00분까지</span></strong>
-                <p class="time">
-                  <time>2일 20시간 54분 31초</time>&nbsp;남았습니다.
-                </p>
-              </div>
-              <div>
-                 정해진 시간에 스테이킹이 시작됩니다.<br/> 내역을 통해 고객 보유자산을 확인하고, 보유자산을 기반으로 보상을 지급합니다.</div>
-            </div>
-            <div class="faq-set">
-              <h4>자주 묻는 질문</h4>
-              <ul class="accordion">
-                <li class="list"><strong class="title">스테이킹이 무엇인가요?<img src="/assets/images/symbols/chevron-right.svg"></strong>
-                  <p class="description">스테이킹 서비스란 저축과 유사한 개념으로 사용자가 가진 암호화폐를 블록체인 네트워크 운영에 활용할 수 있도록 맡기고, 그 대가로 수익 보상을 받는 서비스 입니다.</p>
-                </li>
-                <li class="list"><strong class="title">어떻게 그램 스테이킹에 참여할 수 있나요?<img src="/assets/images/symbols/chevron-right.svg"></strong>
-                  <p class="description">스테이킹 페이지의 입력창에 수량을 적으시고 참여하기를 클릭하시면 다음 사이클에 참여됩니다.</p>
-                </li>
-                <li class="list"><strong class="title">그램 스테이킹에 따른 예상수익율은 얼마일까요?<img src="/assets/images/symbols/chevron-right.svg"></strong>
-                  <p class="description">FreeTON 블록체인 정책에 따라 사이클당 약 7% 이상의 수익 발생이 예상됩니다.</p>
-                </li>
-                <li class="list"><strong class="title">보상 시점은 언제인가요?<img src="/assets/images/symbols/chevron-right.svg"></strong>
-                  <p class="description">참여한 사이클 끝나고 두 번의 사이클이 더 지난 후 지급됩니다.</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <button class="more-btn" type="button">더보기</button><a class="top-btn" href="#body"></a>
       </section>
     </main>
     <footer>

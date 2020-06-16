@@ -8,10 +8,12 @@ html(lang="ko")
         meta(name="format-detaction", content="telephone=no, address=no, email=no")
         meta(name="referrer" content="strict-origin")
 
-        - var title = 'Free TON'
+        block title
+            - var page
+        - var title = `${page} - 1stOn`
         meta(name="title", content= title)
         meta(name="description", content=`for ${title}`)
-        meta(name="keywords", content="ton, tonkorea, 톤, 톤코리아, 블록체인, blockchain")
+        meta(name="keywords", content="ton, 톤, 블록체인, blockchain")
 
         meta(property="og:title" content= title)
         meta(property="og:url" content="")
@@ -49,7 +51,7 @@ html(lang="ko")
 
         //- include layout/header
 
-        main
+        main#swup
             block main
 
         include layout/footer

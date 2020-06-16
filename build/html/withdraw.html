@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detaction" content="telephone=no, address=no, email=no">
     <meta name="referrer" content="strict-origin">
-    <meta name="title" content="로그인 - 1stOn">
-    <meta name="description" content="for 로그인 - 1stOn">
+    <meta name="title" content="출금하기 - 1stOn">
+    <meta name="description" content="for 출금하기 - 1stOn">
     <meta name="keywords" content="ton, 톤, 블록체인, blockchain">
-    <meta property="og:title" content="로그인 - 1stOn">
+    <meta property="og:title" content="출금하기 - 1stOn">
     <meta property="og:url" content="">
-    <meta property="og:description" content="for 로그인 - 1stOn">
+    <meta property="og:description" content="for 출금하기 - 1stOn">
     <meta property="og:image" content="/assets/images/icons/android-chrome-512x512.png">
     <meta property="og:type" content="website">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="white">
-    <meta name="apple-mobile-web-app-title" content="로그인 - 1stOn">
+    <meta name="apple-mobile-web-app-title" content="출금하기 - 1stOn">
     <link link="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/icons/android-chrome-512x512.png">
@@ -28,7 +28,7 @@
     <meta name="msapplication-TileImage" content="/assets/images/icons/mstile-150x150.png">
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#ffffff">
-    <title>로그인 - 1stOn</title>
+    <title>출금하기 - 1stOn</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&amp;family=Titillium+Web:wght@200;400;700&amp;display=swap" as="font" crossorigin="crossorigin">
     <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
@@ -37,9 +37,28 @@
   </head>
   <body id="body">
     <main id="swup">
-      <section id="login">
-        <div class="container">
-          <div class="login-wrapper">login</div>
+      <section class="transition-slide" id="withdraw">
+        <div class="withdraw-container">
+          <div class="slide-header invest" id="info-top"><a class="back" href="/index.html"><img src="/assets/images/symbols/chevron-left.svg" alt="뒤로가기"/></a>
+            <h4 class="title">출금하기</h4><a class="home" href="/index.html"><img src="/assets/images/symbols/home.svg" alt=""/></a>
+          </div>
+          <div class="wrapper">
+            <dl>
+              <dt>출금가능</dt>
+              <dd class="nano">3456009348353</dd>
+            </dl>
+            <form action="">
+              <div class="input-group">
+                <input type="text" placeholder=" ">
+                <p>주소</p>
+              </div>
+              <div class="input-group">
+                <input class="input-value" type="text" placeholder=" ">
+                <p>수량</p>
+              </div>
+              <button type="button" disabled>출 금</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>

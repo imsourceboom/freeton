@@ -1,0 +1,47 @@
+extends ../_layout
+include ../components/slideHeader
+
+block title
+    - var page = '스테이킹 정보'
+
+block main
+    section#staking-info.transition-slide
+        //- FAQ
+        .info-container
+            +slideHeader('스테이킹?').invest#info-top
+            .wrapper
+                .title-set
+                    img(src="/assets/images/gram.png", alt="TON Logo")
+                    h2 그램 스테이킹
+                    strong.return 수익율 
+                        b 6~8%
+                a(href='/html/staking.html').go-staking 스테이킹 참여하기
+                .info-set
+                    div 
+                        strong 다음 사이클 
+                            span &nbsp;2020년 6월 18일 14시 00분까지
+                        p.time
+                            time 2일 20시간 54분 31초
+                            | &nbsp;남았습니다.
+                    div 
+                        | 정해진 시간에 스테이킹이 시작됩니다.
+                        <br/> 내역을 통해 고객 보유자산을 확인하고, 보유자산을 기반으로 보상을 지급합니다.
+                .faq-set
+                    h4 자주 묻는 질문
+                    ul.accordion
+                        li.list
+                            strong.title 스테이킹이 무엇인가요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description 스테이킹 서비스란 저축과 유사한 개념으로 사용자가 가진 암호화폐를 블록체인 네트워크 운영에 활용할 수 있도록 맡기고, 그 대가로 수익 보상을 받는 서비스 입니다.
+                        li.list
+                            strong.title 어떻게 그램 스테이킹에 참여할 수 있나요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description 스테이킹 페이지의 입력창에 수량을 적으시고 참여하기를 클릭하시면 다음 사이클에 참여됩니다.
+                        li.list
+                            strong.title 그램 스테이킹에 따른 예상수익율은 얼마일까요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description FreeTON 블록체인 정책에 따라 사이클당 약 7% 이상의 수익 발생이 예상됩니다.
+                        li.list
+                            strong.title 보상 시점은 언제인가요?
+                                img(src="/assets/images/symbols/chevron-right.svg")
+                            p.description 참여한 사이클이 끝나고 두 번의 사이클이 더 지난 후 지급됩니다.

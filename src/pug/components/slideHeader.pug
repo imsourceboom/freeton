@@ -1,7 +1,17 @@
 mixin slideHeader(title)
     .slide-header&attributes(attributes)
-        a(href="#body").back
-            img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
-        h4.title= title
-        a(href="/index.html").home
-            img(src="/assets/images/symbols/home.svg", alt="")
+        - var href
+        if title == '스테이킹' || title == '출금하기'
+            - var href = '/index'
+            a(href=`${href}.html`).back
+                img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
+            h4.title= title
+            a(href="/index.html").home
+                img(src="/assets/images/symbols/home.svg", alt="")
+        if title == '스테이킹?'
+            - var href = '/html/staking'
+            a(href=`${href}.html`).back
+                img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
+            h4.title= title
+            a(href="/index.html").home
+                img(src="/assets/images/symbols/home.svg", alt="")
