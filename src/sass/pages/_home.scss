@@ -1,10 +1,12 @@
 section#withdraw,
+section#staking-apply,
 section#staking-info,
 section#staking,
 section#home {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 70px !important;
 
   @import "../article/topContainer";
   @import "../article/tab";

@@ -1,0 +1,15 @@
+section#staking-apply {
+  .agree-wrap {
+    input[id="participate-agree"] + label {
+      &::before {
+        content: "위 참여 안내 및 주의사항을 읽고 동의합니다" !important;
+      }
+    }
+  }
+
+  button.withdraw-btn {
+    &.active {
+      background-color: #6abef1 !important;
+    }
+  }
+}

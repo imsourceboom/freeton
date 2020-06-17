@@ -1,5 +1,6 @@
+section#staking-apply,
 section#withdraw {
-  padding: 0 12px;
+  padding: 0 12px 50px;
 
   .wrapper {
     // display: flex;
@@ -180,6 +181,7 @@ section#withdraw {
     .agree-wrap {
       padding: 10px 0;
 
+      input[id="participate-agree"] + label,
       input[id="agree"] + label {
         position: relative;
         // display: inline-block;
@@ -205,6 +207,7 @@ section#withdraw {
         }
       }
 
+      input[id="participate-agree"]:checked + label,
       input[id="agree"]:checked + label {
         background-color: #f4f5f8;
 

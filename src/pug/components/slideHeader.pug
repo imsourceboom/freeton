@@ -8,7 +8,7 @@ mixin slideHeader(title)
             h4.title= title
             a(href="/index.html").home
                 img(src="/assets/images/symbols/home.svg", alt="")
-        if title == '스테이킹?'
+        if title == '스테이킹?' || title == '스테이킹 참여'
             - var href = '/html/staking'
             a(href=`${href}.html`).back
                 img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
