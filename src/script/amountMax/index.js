@@ -5,9 +5,6 @@ function amountMax() {
   const maxBtn = Array.from(document.querySelectorAll(".amount-max"));
 
   if (possibles !== null || maxBtn !== null) {
-    console.log(possibles);
-    console.log(maxBtn);
-
     maxBtn.map((btn) => {
       btn.addEventListener("click", () => {
         possibles.map((possible) => {
