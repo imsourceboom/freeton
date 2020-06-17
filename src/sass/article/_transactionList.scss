@@ -56,11 +56,16 @@ ul.transaction-list {
         align-items: center;
 
         dt {
-          font-size: 16px;
+          font-size: 15px;
+
+          @media (min-width: 768px) {
+            font-size: 16px;
+          }
         }
 
         dd {
           opacity: 1;
+          font-size: 1em;
         }
       }
 
@@ -71,6 +76,7 @@ ul.transaction-list {
       dt {
         min-width: 40px;
         margin-right: 16px;
+        color: #484d55;
       }
 
       dd {

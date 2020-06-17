@@ -10,6 +10,8 @@ import "./joinCancel";
 import "./rewardJoinCancelList";
 // import "./scrollTop";
 import "./nanoSplit";
+import "./agreeCheckBtn";
+import "./amountMax";
 
 // import "./join";
 // import "./scrollreveal";

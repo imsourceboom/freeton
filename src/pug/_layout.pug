@@ -40,7 +40,7 @@ html(lang="ko")
 
         title= title
         link(rel="stylesheet", href="/css/main.css")
-        link(rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&family=Titillium+Web:wght@200;400;700&display=swap" as="font" crossorigin="crossorigin")
+        link(rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" as="font" crossorigin="crossorigin")
         link(href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css')
 
         script(src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&flags=gated" async defer) 
@@ -54,6 +54,7 @@ html(lang="ko")
         main#swup
             block main
 
+        a(href="#swup" data-no-swup).top-btn
         include layout/footer
 
         

@@ -81,9 +81,13 @@ section#staking-info {
           }
 
           span {
-            font-size: 1rem;
             font-weight: normal;
             color: #000;
+            font-size: 14px;
+
+            @media (min-width: 768px) {
+              font-size: 15px;
+            }
           }
         }
 
