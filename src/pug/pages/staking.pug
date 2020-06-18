@@ -22,25 +22,7 @@ block main
                 a(href='/html/staking-info.html').move-info-btn
                     | <img src="https://icongr.am/clarity/error.svg?size=26&color=000000", alt=""/>
                     | 스테이킹 
-            form(action="").participation-set
-                .box
-                    ul
-                        li.join-btn.on 참여하기
-                        li.cancel-btn 참여 취소하기
-                    .join.on
-                        dl
-                            dt 참여 가능한 수량
-                            dd.nano 200006023456789
-                        .input-group
-                            input(type="text" placeholder="0").input-value
-                            span 참여하기
-                    .cancel
-                        dl
-                            dt 취소 가능한 수량
-                            dd.nano 3342340234789
-                        .input-group
-                            input(type="text" placeholder="0").input-value
-                            span 취소하기
+            a(href='/html/staking-apply.html').go-staking 스테이킹 참여하기
             .reward-set
                 .title 
                     strong.reward-btn.on 보상내역

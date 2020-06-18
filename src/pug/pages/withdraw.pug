@@ -7,42 +7,39 @@ block title
 block main
     section#withdraw.transition-slide
         //- 출금 컴포넌트
-        .withdraw-container
-            +slideHeader('출금하기').invest#info-top
-            .wrapper
-                .form-box
-                    dl
-                        dt 출금가능
-                        dd.nano.withdraw-possible 3456009348353
-                    form(action="")
-                        .label-group
-                            p.title 출금 수량
-                            .input-group
-                                input(type="text" placeholder="수량입력")
-                                p.amount-max 최대
-                        .label-group
-                            p.title 출금 주소
-                            .input-group
-                                input(type="text" placeholder="출금 주소를 입력하세요").input-value
-                                //- p 수량
-                        span.annotation 입력한 주소가 정확한지 반드시 확인바랍니다
-                .caution-box
-                    .bundle
-                        p.title 출금 주의사항
-                        -
-                            var lists = [
-                                '암호화폐 특성상 출금신청이 완료되면 취소할 수 없습니다. 보내기 전 주소와 수량을 꼭 확인해주세요.',
-                                '출금신청 완료 이후의 송금 과정은 블록체인 네트워크에서 처리됩니다. 이 과정에서 발생할 수 있는 송금 지연 등의 문제는 처리가 불가능합니다.',
-                                '암호화폐 입금 주소와 출금 주소는 다릅니다. 목적에 맞게 확인 후 사용하시기 바랍니다',
-                                '그램은 그램 지갑으로만 송금 가능합니다. 다른 디지털 자산 지갑으로 잘못 송금하는 경우 도와드릴 수 있는 부분이 없습니다.',
-                                '소수점 9자리까지 출금 가능합니다.',
-                            ]
-                        ul.caution-list-wrap
-                            - for (var i = 0; i < lists.length; i++)
-                                li= lists[i] 
-                    .agree-wrap
-                        input(type='checkbox' id="agree" hidden)
-                        label(for="agree")
-                    button(type='button' disabled).withdraw-btn 출금하기
-
-
+        +slideHeader('출금하기').invest#info-top
+        .wrapper
+            .form-box
+                dl
+                    dt 출금가능
+                    dd.nano.withdraw-possible 3456009348353
+                form(action="")
+                    .label-group
+                        p.title 출금 수량
+                        .input-group
+                            input(type="text" placeholder="수량입력")
+                            p.amount-max 최대
+                    .label-group
+                        p.title 출금 주소
+                        .input-group
+                            input(type="text" placeholder="출금 주소를 입력하세요").input-value
+                            //- p 수량
+                    span.annotation 입력한 주소가 정확한지 반드시 확인바랍니다
+            .caution-box
+                .bundle
+                    p.title 출금 주의사항
+                    -
+                        var lists = [
+                            '암호화폐 특성상 출금신청이 완료되면 취소할 수 없습니다. 보내기 전 주소와 수량을 꼭 확인해주세요.',
+                            '출금신청 완료 이후의 송금 과정은 블록체인 네트워크에서 처리됩니다. 이 과정에서 발생할 수 있는 송금 지연 등의 문제는 처리가 불가능합니다.',
+                            '암호화폐 입금 주소와 출금 주소는 다릅니다. 목적에 맞게 확인 후 사용하시기 바랍니다',
+                            '그램은 그램 지갑으로만 송금 가능합니다. 다른 디지털 자산 지갑으로 잘못 송금하는 경우 도와드릴 수 있는 부분이 없습니다.',
+                            '소수점 9자리까지 출금 가능합니다.',
+                        ]
+                    ul.caution-list-wrap
+                        - for (var i = 0; i < lists.length; i++)
+                            li= lists[i] 
+                .agree-wrap
+                    input(type='checkbox' id="agree" hidden)
+                    label(for="agree")
+                button(type='button' disabled).withdraw-btn 출금하기

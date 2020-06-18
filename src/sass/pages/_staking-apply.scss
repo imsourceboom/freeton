@@ -1,15 +1,106 @@
 section#staking-apply {
-  .agree-wrap {
-    input[id="participate-agree"] + label {
-      &::before {
-        content: "위 참여 안내 및 주의사항을 읽고 동의합니다" !important;
+  .participation-set {
+    // padding: 15px 0px 15px;
+    margin-bottom: 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .box {
+      width: 100%;
+      border-radius: 3px;
+      // padding: 24px 0;
+      background-color: white;
+
+      @media (min-width: 768px) {
+        // padding: 26px 24px;
+        max-width: 450px;
+      }
+
+      ul.nav {
+        display: flex;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+        margin-bottom: 28px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50%;
+          height: 2px;
+          background-color: rgba(0, 0, 0, 0.7);
+          transition: 0.2s;
+        }
+
+        &.on {
+          &::after {
+            transform: translate(100%, 0);
+          }
+        }
+
+        li {
+          flex: 1;
+          text-align: center;
+          padding-bottom: 12px;
+          color: rgba(0, 0, 0, 0.4);
+          cursor: pointer;
+
+          &.on {
+            color: rgba(0, 0, 0, 1);
+            // font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .join,
+    .cancel {
+      position: relative;
+      display: none;
+
+      &.on {
+        display: block;
+      }
+
+      form {
+        margin-bottom: 3.5rem;
       }
     }
   }
 
-  button.withdraw-btn {
-    &.active {
-      background-color: #6abef1 !important;
+  .join {
+    .agree-wrap {
+      input[id="participate-agree"] + label {
+        &::before {
+          content: "위 참여 안내 및 주의사항을 읽고 동의합니다" !important;
+        }
+      }
+    }
+    button.withdraw-btn {
+      &.active {
+        background-color: #6abef1 !important;
+      }
+    }
+  }
+  .cancel {
+    .agree-wrap {
+      input[id="cancel-agree"] + label {
+        &::before {
+          content: "위 취소 안내 및 주의사항을 읽고 동의합니다" !important;
+        }
+      }
+    }
+    button.withdraw-btn {
+      &.active {
+        background-color: white !important;
+        border: 1px solid lightcoral;
+        color: lightcoral !important;
+      }
     }
   }
 }

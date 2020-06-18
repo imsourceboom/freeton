@@ -38,6 +38,7 @@ section#withdraw {
     }
   }
 
+  .participation-set,
   .form-box {
     margin-bottom: 3.5rem;
 
@@ -181,6 +182,7 @@ section#withdraw {
     .agree-wrap {
       padding: 10px 0;
 
+      input[id="cancel-agree"] + label,
       input[id="participate-agree"] + label,
       input[id="agree"] + label {
         position: relative;
@@ -207,6 +209,7 @@ section#withdraw {
         }
       }
 
+      input[id="cancel-agree"]:checked + label,
       input[id="participate-agree"]:checked + label,
       input[id="agree"]:checked + label {
         background-color: #f4f5f8;
@@ -218,7 +221,7 @@ section#withdraw {
           display: inline-block;
           width: 100%;
           height: 100%;
-          background-image: url("https://icongr.am/feather/check.svg?size=18&color=546de5");
+          background-image: url("/assets/images/symbols/check.svg");
           background-size: 100%;
           background-position: center;
           background-repeat: no-repeat;
