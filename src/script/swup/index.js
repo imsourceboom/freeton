@@ -1,6 +1,7 @@
 import Swup from "swup";
 import SwupScriptsPlugin from "@swup/scripts-plugin";
 import SwupHeadPlugin from "@swup/head-plugin";
+import SwupScrollPlugin from "@swup/scroll-plugin";
 
 import { scroll } from "../smoothscroll";
 import { stakingLinkFunc } from "../rewardJoinCancelList";
@@ -12,7 +13,14 @@ import { agree } from "../agreeCheckBtn";
 import { accordionFunc } from "../accordion";
 
 export const swup = new Swup({
-  plugins: [new SwupScriptsPlugin({ optin: true }), new SwupHeadPlugin()],
+  plugins: [
+    new SwupScriptsPlugin({ optin: true }),
+    new SwupHeadPlugin(),
+    new SwupScrollPlugin({
+      doScrollingRightAway: false,
+      animateScroll: false,
+    }),
+  ],
 });
 
 swup.on("contentReplaced", scroll);
