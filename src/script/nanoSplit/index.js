@@ -1,6 +1,4 @@
-import { swup } from "../swup";
-
-function commaFunc() {
+export function commaFunc() {
   const nanos = Array.from(document.querySelectorAll(".nano"));
 
   if (nanos !== null) {
@@ -22,5 +20,3 @@ function commaFunc() {
 }
 
 commaFunc();
-
-swup.on("contentReplaced", commaFunc);

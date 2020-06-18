@@ -1,6 +1,4 @@
-import { swup } from "../swup";
-
-function stakingLinkFunc() {
+export function stakingLinkFunc() {
   const rewardBtn = document.querySelector(
     ".reward-set .title strong.reward-btn"
   );
@@ -30,5 +28,3 @@ function stakingLinkFunc() {
 }
 
 stakingLinkFunc();
-
-swup.on("contentReplaced", stakingLinkFunc);

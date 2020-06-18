@@ -1,6 +1,4 @@
-import { swup } from "../swup";
-
-function amountMax() {
+export function amountMax() {
   const possibles = Array.from(document.querySelectorAll(".withdraw-possible"));
   const maxBtn = Array.from(document.querySelectorAll(".amount-max"));
 
@@ -16,5 +14,3 @@ function amountMax() {
 }
 
 amountMax();
-
-swup.on("contentReplaced", amountMax);

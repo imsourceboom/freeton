@@ -1,8 +1,6 @@
-import { swup } from "../swup";
-
 import Clipboard from "Clipboard";
 
-function copied() {
+export function copied() {
   const clipButton = document.querySelector(".copy-icon");
 
   if (clipButton !== null) {
@@ -26,5 +24,3 @@ function copied() {
 }
 
 copied();
-
-swup.on("contentReplaced", copied);

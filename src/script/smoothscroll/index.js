@@ -1,7 +1,6 @@
 import SmoothScroll from "smooth-scroll";
-import { swup } from "../swup";
 
-function scroll() {
+export function scroll() {
   new SmoothScroll('a[href*="#"]', {
     speed: 300,
     speedAsDuration: true,
@@ -9,5 +8,3 @@ function scroll() {
 }
 
 scroll();
-
-swup.on("contentReplaced", scroll);

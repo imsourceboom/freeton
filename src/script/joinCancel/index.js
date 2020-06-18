@@ -1,6 +1,4 @@
-import { swup } from "../swup";
-
-function joinCancel() {
+export function joinCancel() {
   const ul = document.querySelector(".participation-set ul");
   const joinNav = document.querySelector(".participation-set ul li.join-btn");
   const cancelNav = document.querySelector(
@@ -24,9 +22,6 @@ function joinCancel() {
   const cancelButton = document.querySelector(
     ".participation-set .cancel button"
   );
-
-  console.log(joinButton);
-  console.log(cancelButton);
 
   if (joinNav !== null || cancelNav !== null) {
     joinNav.addEventListener("click", function () {
@@ -56,5 +51,3 @@ function joinCancel() {
 }
 
 joinCancel();
-
-swup.on("contentReplaced", joinCancel);

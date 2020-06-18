@@ -1,6 +1,4 @@
-import { swup } from "../swup";
-
-function agree() {
+export function agree() {
   const checks = Array.from(document.querySelectorAll(".agree-wrap"));
 
   if (checks !== null) {
@@ -21,5 +19,3 @@ function agree() {
 }
 
 agree();
-
-swup.on("contentReplaced", agree);

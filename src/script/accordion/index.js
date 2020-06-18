@@ -1,6 +1,4 @@
-import { swup } from "../swup";
-
-function accordionFunc() {
+export function accordionFunc() {
   const accordionList = Array.from(
     document.querySelectorAll("ul.accordion li.list")
   );
@@ -15,5 +13,3 @@ function accordionFunc() {
 }
 
 accordionFunc();
-
-swup.on("contentReplaced", accordionFunc);
