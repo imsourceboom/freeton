@@ -5,7 +5,7 @@ export function amountMax() {
     maxBtn.map((btn) => {
       btn.addEventListener("click", () => {
         btn.previousElementSibling.value =
-          btn.parentNode.parentNode.parentNode.previousElementSibling.children[1].textContent;
+          btn.parentElement.parentElement.parentElement.previousElementSibling.children[1].textContent;
       });
     });
   }
