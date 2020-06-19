@@ -17,6 +17,14 @@
     .header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
+      figure.logo {
+        img {
+          width: 70px;
+          height: 18.77px;
+        }
+      }
 
       figure.profile {
         display: flex;
