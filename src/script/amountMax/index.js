@@ -1,13 +1,11 @@
 export function amountMax() {
-  const possibles = Array.from(document.querySelectorAll(".withdraw-possible"));
   const maxBtn = Array.from(document.querySelectorAll(".amount-max"));
 
-  if (possibles !== null || maxBtn !== null) {
+  if (maxBtn !== null) {
     maxBtn.map((btn) => {
       btn.addEventListener("click", () => {
-        possibles.map((possible) => {
-          btn.previousElementSibling.value = possible.textContent;
-        });
+        btn.previousElementSibling.value =
+          btn.parentNode.parentNode.parentNode.previousElementSibling.children[1].textContent;
       });
     });
   }
