@@ -22,11 +22,14 @@
       a.logo {
         img {
           width: 70px;
-          height: 18.77px;
+          // height: 18.77px;
+          height: 27.72px;
+          margin-bottom: -7px;
 
           @media (min-width: 768px) {
-            width: 75px;
-            height: 20.11px;
+            width: 80px;
+            // height: 20.11px;
+            height: 31.69px;
           }
         }
       }
