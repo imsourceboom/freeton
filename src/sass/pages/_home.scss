@@ -12,27 +12,27 @@ section#home {
   @import "../article/tab";
   @import "../article/transactionList";
 
-  .sliding {
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    right: 0;
-    transform: translate(100%, 0);
-    width: 100%;
-    max-width: 800px;
-    height: 100vh;
-    background-color: white;
-    overflow-y: scroll;
-    padding: 0 12px;
-    transition: 0.25s;
+  // .sliding {
+  //   position: fixed;
+  //   z-index: 99;
+  //   top: 0;
+  //   right: 0;
+  //   transform: translate(100%, 0);
+  //   width: 100%;
+  //   max-width: 800px;
+  //   height: 100vh;
+  //   background-color: white;
+  //   overflow-y: scroll;
+  //   padding: 0 12px;
+  //   transition: 0.25s;
 
-    &.on {
-      transform: translate(0, 0);
+  //   &.on {
+  //     transform: translate(0, 0);
 
-      @media (min-width: 1024px) {
-        right: 50%;
-        transform: translate(50%, 0);
-      }
-    }
-  }
+  //     @media (min-width: 1024px) {
+  //       right: 50%;
+  //       transform: translate(50%, 0);
+  //     }
+  //   }
+  // }
 }

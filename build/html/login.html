@@ -39,7 +39,10 @@
     <main id="swup">
       <section id="login">
         <div class="container">
-          <div class="login-wrapper">login</div>
+          <div class="login-wrapper">
+            <!-- 텔레그램 로그인 스크립트 login-component 형제 태그로-->
+            <div class="login-component"><img src="/assets/images/sns/telegram.svg" alt=""><span>텔레그램 로그인</span></div>
+          </div>
         </div>
       </section>
     </main><a class="top-btn" href="#swup" data-no-swup></a>
@@ -48,5 +51,13 @@
         <p class="copy-right">Copyright © Free TON. All rights Reserved.</p>
       </div>
     </footer>
+    <!-- 출금하기 페이지에서 send 클래스를 스테이킹 참여페이지에서 staking 클래스를 붙여준다.-->
+    <div class="loading-cover">
+      <div class="withdraw-page">
+        <div class="loading-pulse"></div>
+        <p class="send-comment">송금 중입니다</p>
+        <p class="staking-comment">신청 중입니다</p>
+      </div>
+    </div>
   </body>
 </html>

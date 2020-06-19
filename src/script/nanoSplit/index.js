@@ -13,7 +13,7 @@ export function commaFunc() {
         let divide = text.split(".");
         divide[0] = Number(divide[0]).toLocaleString();
         const value = `${divide[0]}.${divide[1]}`;
-        nano.textContent = value;
+        nano.innerText = value;
       }
     });
   }

@@ -23,9 +23,9 @@ export const swup = new Swup({
   ],
 });
 
+swup.on("contentReplaced", commaFunc);
 swup.on("contentReplaced", scroll);
 swup.on("contentReplaced", stakingLinkFunc);
-swup.on("contentReplaced", commaFunc);
 swup.on("contentReplaced", joinCancel);
 swup.on("contentReplaced", copied);
 swup.on("contentReplaced", amountMax);
