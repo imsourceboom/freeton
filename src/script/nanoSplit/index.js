@@ -3,18 +3,18 @@ export function commaFunc() {
 
   if (nanos !== null) {
     nanos.map((nano) => {
-      let text = Number(nano.textContent);
+      let text = nano.textContent;
+      text = text.replace(/,/gi, "");
+      text = text.replace(/\./gi, "");
+      text = parseFloat(text);
       text = text / 1000000000;
-      text = String(text);
+      text = text.toFixed(9);
+      text = text.toString();
 
-      if (text.indexOf(".") == -1) {
-        nano.textContent = `${text}.000000000`;
-      } else {
-        let divide = text.split(".");
-        divide[0] = Number(divide[0]).toLocaleString();
-        const value = `${divide[0]}.${divide[1]}`;
-        nano.innerText = value;
-      }
+      let divide = text.split(".");
+      divide[0] = parseFloat(divide[0]).toLocaleString();
+      const value = `${divide[0]}.${divide[1]}`;
+      nano.innerText = value;
     });
   }
 }
