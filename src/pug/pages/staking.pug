@@ -27,40 +27,43 @@ block main
                 .title 
                     strong.reward-btn.on 보상내역
                     strong.join-cancel-btn 참여/취소내역
-                ul.reward-list.on
-                    - for (var i = 0; i < 10; i++)
-                        li 
-                            dl.date
-                                dt 기간 
-                                dd 2020.6.8 ~ 2020.6.15
-                            dl.rate
-                                dt 수익율
-                                dd 6.17%
-                            dl.return
-                                dt 수량
-                                dd.nano 1000000000
-                ul.join-cancel-list
-                    - for (var i = 0; i < 10; i++)
-                        if i % 2 == 0
+                .reward-bundle
+                    ul.reward-list.on
+                        - for (var i = 0; i < 10; i++)
                             li 
-                                dl.kind.join
-                                    dt 참여 
-                                    dd
                                 dl.date
-                                    dt 날짜 
-                                    dd 2020월 6월 15일 16:24:09
+                                    dt 기간 
+                                    dd 2020.6.8 ~ 2020.6.15
+                                dl.rate
+                                    dt 수익율
+                                    dd 6.17%
                                 dl.return
                                     dt 수량
-                                    dd.nano 23456790
-                        else
-                            li 
-                                dl.kind.cancel
-                                    dt 취소 
-                                    dd
-                                dl.date
-                                    dt 날짜 
-                                    dd 2020월 6월 15일 16:24:09
-                                dl.return
-                                    dt 수량
-                                    dd.nano 3234345252567899
-                button(type="button").more-btn 더보기
+                                    dd.nano 1000000000
+                    button(type="button")#reward_more-btn.more-btn 더보기
+                .join-cancel-bundle
+                    ul.join-cancel-list
+                        - for (var i = 0; i < 10; i++)
+                            if i % 2 == 0
+                                li 
+                                    dl.kind.join
+                                        dt 참여 
+                                        dd
+                                    dl.date
+                                        dt 날짜 
+                                        dd 2020월 6월 15일 16:24:09
+                                    dl.return
+                                        dt 수량
+                                        dd.nano 23456790
+                            else
+                                li 
+                                    dl.kind.cancel
+                                        dt 취소 
+                                        dd
+                                    dl.date
+                                        dt 날짜 
+                                        dd 2020월 6월 15일 16:24:09
+                                    dl.return
+                                        dt 수량
+                                        dd.nano 3234345252567899
+                    button(type="button")#join_more-btn.more-btn 더보기

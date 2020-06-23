@@ -137,8 +137,16 @@ section#staking {
       ul {
         display: none;
 
+        & + button {
+          display: none;
+        }
+
         &.on {
           display: block;
+
+          & + button {
+            display: block;
+          }
         }
 
         &.join-cancel-list {
