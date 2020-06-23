@@ -4,8 +4,7 @@ export function commaFunc() {
   if (nanos !== null) {
     nanos.map((nano) => {
       let text = nano.textContent;
-      text = text.replace(/,/gi, "");
-      text = text.replace(/\./gi, "");
+      text = text.replace(/,|\./gi, "");
       text = parseFloat(text);
       text = text / 1000000000;
       text = text.toFixed(9);

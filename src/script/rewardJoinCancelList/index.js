@@ -9,6 +9,7 @@ export function stakingLinkFunc() {
   const joinCancelList = document.querySelector(
     ".reward-set ul.join-cancel-list"
   );
+  const moreBtn = document.querySelector(".reward-set button.more-btn");
 
   if (rewardBtn !== null || joinCancelBtn !== null) {
     rewardBtn.addEventListener("click", () => {
@@ -16,6 +17,7 @@ export function stakingLinkFunc() {
       rewardList.classList.add("on");
       joinCancelBtn.classList.remove("on");
       joinCancelList.classList.remove("on");
+      moreBtn.setAttribute("id", "reward_more-btn");
     });
 
     joinCancelBtn.addEventListener("click", () => {
@@ -23,7 +25,12 @@ export function stakingLinkFunc() {
       rewardList.classList.remove("on");
       joinCancelBtn.classList.add("on");
       joinCancelList.classList.add("on");
+      moreBtn.setAttribute("id", "join_more-btn");
     });
+
+    if (moreBtn !== null) {
+      moreBtn.setAttribute("id", "reward_more-btn");
+    }
   }
 }
 
