@@ -2,6 +2,7 @@ import Swup from "swup";
 import SwupScriptsPlugin from "@swup/scripts-plugin";
 import SwupHeadPlugin from "@swup/head-plugin";
 import SwupScrollPlugin from "@swup/scroll-plugin";
+import SwupPreloadPlugin from "@swup/preload-plugin";
 
 import { scroll } from "../smoothscroll";
 import { stakingLinkFunc } from "../rewardJoinCancelList";
@@ -20,6 +21,7 @@ export const swup = new Swup({
       doScrollingRightAway: false,
       animateScroll: false,
     }),
+    new SwupPreloadPlugin(),
   ],
 });
 
