@@ -1,4 +1,5 @@
 import "./polyfill";
+import "./ieBlockPage";
 import "./swup";
 import "./smoothscroll";
 // import "./slideContainer";
