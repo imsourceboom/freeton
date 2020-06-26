@@ -63,11 +63,18 @@ document.addEventListener("DOMContentLoaded", function () {
       imageTag.setAttribute("src", image);
       nameTag.textContent = name;
 
+      liTag.addEventListener("mouseover", function () {
+        liTag.style.opacity = 1;
+      });
+      liTag.addEventListener("mouseout", function () {
+        liTag.style.opacity = 0.7;
+      });
+
       liTag.style.cssText = `
       width: 25%;
       float: left;
       text-align: center;
-      opacity: .75;
+      opacity: .7;
       -webkit-transition: .3s;
       -ms-transition: .3s;
       transition: .3s;
