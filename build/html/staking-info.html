@@ -47,6 +47,37 @@
     <script src="/js/app.js" defer></script>
   </head>
   <body id="body">
+    <header>
+      <div class="wrapper">
+        <figure><a href="/index.html"><img src="/assets/images/firston.svg" alt="Logo"></a></figure>
+        <div class="box">
+          <nav class="desktop">
+            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
+            <ul>
+              <li class="active"><a href="/index.html">Mypage</a></li>
+              <li><a href="/html/wallet.html">Wallet</a></li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="mobile-nav-back"></div>
+          <div class="mobile-nav"><img class="close" src="/assets/images/symbols/chevron-right-orange.svg" alt="back">
+            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
+                <div class="telegram-login-component">
+                  <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
+                  <div class="login-wrapper"></div>
+                </div>
+            <ul>
+              <li class="active"><a href="/index.html">Mypage</a></li>
+              <li><a href="/html/wallet.html">Wallet</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main id="swup">
       <section class="transition-slide" id="staking-info">
         <div class="info-container">

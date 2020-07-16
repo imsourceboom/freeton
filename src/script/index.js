@@ -13,10 +13,11 @@ import "./rewardJoinCancelList";
 import "./nanoSplit";
 import "./agreeCheckBtn";
 import "./amountMax";
+import "./swiper";
 
 // import "./join";
 // import "./scrollreveal";
-// import "./hamburger";
+import "./hamburger";
 // import "./languageSelect";
 // import "./detail";
 // import "./checkBox";

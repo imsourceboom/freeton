@@ -21,7 +21,8 @@ main {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 100%;
   box-shadow: 2px 5px 15px rgba(169, 239, 241, 0.432);
-  background-color: white;
+  backdrop-filter: blur(4px);
+  // background-color: white;
   background-image: url("https://icongr.am/clarity/angle-double.svg?size=30&color=818181");
   background-position: center;
   background-size: 30px;

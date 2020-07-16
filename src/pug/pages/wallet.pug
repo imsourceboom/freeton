@@ -1,0 +1,69 @@
+extends ../_layout
+include ../components/telegramLogin
+include ../components/slideHeader
+
+block title
+    - var page = '지갑'
+
+block main
+    section#wallet.transition-slide
+        .top-container
+            .wrapper
+                .header
+                    a(href="/index.html").logo
+                        img(src="/assets/images/firstonwallet.svg", alt="로고")
+                    figure.profile
+                        img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/600px-Telegram_logo.svg.png" alt="텔레그램 아이콘")
+                        figcaption UserName
+                    
+                dl.gram
+                    // 지갑이 활성화가 되면 active 클래스를 붙인다.
+                    dt.active 보유수량
+                    dd.number.nano 2630009123456789
+                .receive
+                    p 그램주소
+                    .box
+                        #address -1:d88335c70d437a2a9201383b1b17c6a88d80416d6d79c244505708dfe179885d
+                        figure.copy-icon(data-clipboard-target="#address")
+                            img(src="https://icongr.am/clarity/copy.svg?size=22&color=000000", alt="복사 아이콘")
+
+        //- 버튼
+        ul.tab
+            li.withdraw-btn
+                a(href='/html/withdraw.html' data-swup-preload) 출금하기
+            li.staking-btn
+                a(href="/html/staking.html" data-swup-preload) 스테이킹
+
+        //- 거래내역
+        ul.transaction-list
+            - for(var i = 0; i < 10; i++)
+                if i % 2 == 0
+                    li.withdraw-card
+                        dl
+                            dt 출금
+                            dd 완료
+                        dl
+                            dt 금액
+                            dd.nano 2567383423400000
+                        dl
+                            dt 날짜
+                            dd 2020.06.03 14:36:48
+                        dl
+                            dt 거래ID
+                            dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
+                else
+                    li.deposit-card 
+                        dl
+                            dt 입금
+                            dd 완료
+                        dl
+                            dt 금액
+                            dd.nano 98
+                        dl
+                            dt 날짜
+                            dd 2020.06.03 14:36:48
+                        dl
+                            dt 거래ID
+                            dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
+        button(type="button").more-btn 더보기
+

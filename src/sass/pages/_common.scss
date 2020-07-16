@@ -1,0 +1,15 @@
+section#withdraw,
+section#staking-apply,
+section#staking-info,
+section#staking,
+section#wallet,
+section#home {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 70px !important;
+
+  &.max-width-reset {
+    max-width: none;
+  }
+}

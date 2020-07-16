@@ -1,45 +1,22 @@
 include ../components/telegramLogin
-include ../components/languageSelect
 
 -
     var menus = [
         {
-            name: '소개',
-            path: ''
+            name: 'Mypage',
+            path: 'mypage'
         }, 
         {
-            name: '참고자료',
-            path: 'resources'
+            name: 'Wallet',
+            path: 'wallet'
         }, 
-        {
-            name: '참여',
-            path: 'participate'
-        }, 
-        {
-            name: '멤버십',
-            path: 'members'
-        }, 
-        {
-            name: '커뮤니티',
-            path: 'community'
-        }, 
-        {
-            name: '뉴스', 
-            path: 'news'
-        },
-        {
-            name: '문의/연락처',
-            path: 'question'
-        }
     ]
 header
     .wrapper
         figure
             a(href="/index.html")
-                img(src="/assets/images/logos/ton-symbol.svg" alt="Logo")
+                img(src="/assets/images/firston.svg" alt="Logo")
         .box
-            +telegramLogin()
-            +languageSelect()
             nav.desktop
                 // 해당 페이지 li 태그에 active 클래스 추가
                 ul
@@ -56,8 +33,10 @@ header
                 div
             .mobile-nav-back
             .mobile-nav
-                div.close
+                //- div.close
+                img(src="/assets/images/symbols/chevron-right-orange.svg" alt="back").close
                 // 해당 페이지 li 태그에 active 클래스 추가
+                +telegramLogin()
                 ul
                     each m in menus
                         if m.name == menus[0].name

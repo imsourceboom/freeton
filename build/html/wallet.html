@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detaction" content="telephone=no, address=no, email=no">
+    <meta name="referrer" content="strict-origin">
+    <meta name="title" content="지갑 - 1stOn">
+    <meta name="description" content="for 지갑 - 1stOn">
+    <meta name="keywords" content="ton, 톤, 블록체인, blockchain">
+    <meta property="og:title" content="지갑 - 1stOn">
+    <meta property="og:url" content="">
+    <meta property="og:description" content="for 지갑 - 1stOn">
+    <meta property="og:image" content="/assets/images/icons/android-icon-512x512.png">
+    <meta property="og:type" content="website">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="지갑 - 1stOn">
+    <link link="apple-touch-icon" size="57x57" href="/assets/images/icons/apple-icon-57x57.png">
+    <link link="apple-touch-icon" size="60x60" href="/assets/images/icons/apple-icon-60x60.png">
+    <link link="apple-touch-icon" size="72x72" href="/assets/images/icons/apple-icon-72x72.png">
+    <link link="apple-touch-icon" size="76x76" href="/assets/images/icons/apple-icon-76x76.png">
+    <link link="apple-touch-icon" size="114x114" href="/assets/images/icons/apple-icon-114x114.png">
+    <link link="apple-touch-icon" size="120x120" href="/assets/images/icons/apple-icon-120x120.png">
+    <link link="apple-touch-icon" size="144x144" href="/assets/images/icons/apple-icon-144x144.png">
+    <link link="apple-touch-icon" size="152x152" href="/assets/images/icons/apple-icon-152x152.png">
+    <link link="apple-touch-icon" size="180x180" href="/assets/images/icons/apple-icon-180x180.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-70x70.png">
+    <meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-150x150.png">
+    <meta name="msapplication-TileImage" content="/assets/images/icons/ms-icon-310x310.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <title>지갑 - 1stOn</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&amp;display=swap" as="font" crossorigin="crossorigin">
+    <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&amp;flags=gated" async defer> </script>
+    <script src="/js/app.js" defer></script>
+  </head>
+  <body id="body">
+    <header>
+      <div class="wrapper">
+        <figure><a href="/index.html"><img src="/assets/images/firston.svg" alt="Logo"></a></figure>
+        <div class="box">
+          <nav class="desktop">
+            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
+            <ul>
+              <li class="active"><a href="/index.html">Mypage</a></li>
+              <li><a href="/html/wallet.html">Wallet</a></li>
+            </ul>
+          </nav>
+          <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="mobile-nav-back"></div>
+          <div class="mobile-nav"><img class="close" src="/assets/images/symbols/chevron-right-orange.svg" alt="back">
+            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
+                <div class="telegram-login-component">
+                  <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
+                  <div class="login-wrapper"></div>
+                </div>
+            <ul>
+              <li class="active"><a href="/index.html">Mypage</a></li>
+              <li><a href="/html/wallet.html">Wallet</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="swup">
+      <section class="transition-slide" id="wallet">
+        <div class="top-container">
+          <div class="wrapper">
+            <div class="header"><a class="logo" href="/index.html"><img src="/assets/images/firstonwallet.svg" alt="로고"></a>
+              <figure class="profile"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/600px-Telegram_logo.svg.png" alt="텔레그램 아이콘">
+                <figcaption>UserName</figcaption>
+              </figure>
+            </div>
+            <dl class="gram">
+              <!-- 지갑이 활성화가 되면 active 클래스를 붙인다.-->
+              <dt class="active">보유수량</dt>
+              <dd class="number nano">2630009123456789</dd>
+            </dl>
+            <div class="receive">
+              <p>그램주소</p>
+              <div class="box">
+                <div id="address">-1:d88335c70d437a2a9201383b1b17c6a88d80416d6d79c244505708dfe179885d</div>
+                <figure class="copy-icon" data-clipboard-target="#address"><img src="https://icongr.am/clarity/copy.svg?size=22&amp;color=000000" alt="복사 아이콘"></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="tab">
+          <li class="withdraw-btn"><a href="/html/withdraw.html" data-swup-preload>출금하기</a></li>
+          <li class="staking-btn"><a href="/html/staking.html" data-swup-preload>스테이킹</a></li>
+        </ul>
+        <ul class="transaction-list">
+          <li class="withdraw-card">
+            <dl>
+              <dt>출금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">2567383423400000</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="deposit-card"> 
+            <dl>
+              <dt>입금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">98</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="withdraw-card">
+            <dl>
+              <dt>출금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">2567383423400000</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="deposit-card"> 
+            <dl>
+              <dt>입금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">98</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="withdraw-card">
+            <dl>
+              <dt>출금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">2567383423400000</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="deposit-card"> 
+            <dl>
+              <dt>입금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">98</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="withdraw-card">
+            <dl>
+              <dt>출금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">2567383423400000</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="deposit-card"> 
+            <dl>
+              <dt>입금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">98</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="withdraw-card">
+            <dl>
+              <dt>출금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">2567383423400000</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+          <li class="deposit-card"> 
+            <dl>
+              <dt>입금</dt>
+              <dd>완료</dd>
+            </dl>
+            <dl>
+              <dt>금액</dt>
+              <dd class="nano">98</dd>
+            </dl>
+            <dl>
+              <dt>날짜</dt>
+              <dd>2020.06.03 14:36:48</dd>
+            </dl>
+            <dl>
+              <dt>거래ID</dt>
+              <dd>cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba</dd>
+            </dl>
+          </li>
+        </ul>
+        <button class="more-btn" type="button">더보기</button>
+      </section>
+    </main><a class="top-btn" href="#swup" data-no-swup></a>
+    <footer>
+      <div class="rest">
+        <p class="copy-right">Copyright © Free TON. All rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- 출금하기 페이지에서 send 클래스를 스테이킹 참여페이지에서 staking 클래스를 붙여준다.-->
+    <div class="loading-cover">
+      <div class="withdraw-page">
+        <div class="loading-pulse"></div>
+        <p class="send-comment">송금 중입니다</p>
+        <p class="staking-comment">신청 중입니다</p>
+      </div>
+    </div>
+  </body>
+</html>

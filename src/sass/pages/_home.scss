@@ -1,38 +1,181 @@
-section#withdraw,
-section#staking-apply,
-section#staking-info,
-section#staking,
 section#home {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding-bottom: 70px !important;
+  overflow-x: hidden;
+  padding-bottom: 0 !important;
 
-  @import "../article/topContainer";
-  @import "../article/tab";
-  @import "../article/transactionList";
+  .introduce-container {
+    position: relative;
+    height: 200vh;
 
-  // .sliding {
-  //   position: fixed;
-  //   z-index: 99;
-  //   top: 0;
-  //   right: 0;
-  //   transform: translate(100%, 0);
-  //   width: 100%;
-  //   max-width: 800px;
-  //   height: 100vh;
-  //   background-color: white;
-  //   overflow-y: scroll;
-  //   padding: 0 12px;
-  //   transition: 0.25s;
+    img.bg {
+      position: absolute;
 
-  //   &.on {
-  //     transform: translate(0, 0);
+      &.one {
+        top: 7%;
+        left: -10%;
+      }
+      &.two {
+        top: 30%;
+        right: -10%;
+      }
+      &.three {
+        top: 47%;
+        left: -45%;
+      }
+      &.four {
+        top: 83%;
+        right: -10%;
+      }
+    }
 
-  //     @media (min-width: 1024px) {
-  //       right: 50%;
-  //       transform: translate(50%, 0);
-  //     }
-  //   }
-  // }
+    .wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .box {
+        text-align: center;
+
+        img {
+          width: 120px;
+          margin: 20px auto 0;
+        }
+
+        h3 {
+          font-size: 22px;
+          margin-bottom: 25px;
+
+          b.freedom {
+            color: #e3ad62;
+          }
+          b.creation {
+            color: #23698c;
+          }
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .member-container,
+  .contact-container {
+    h3 {
+      color: #e3ad62;
+      font-size: 25px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
+
+  .member-container {
+    position: relative;
+    padding: 150px 0 250px;
+
+    .swiper-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      padding: 0;
+      z-index: 1;
+
+      .swiper-slide {
+        position: relative;
+        width: 200px;
+        height: calc(200px / 1.2);
+        font-size: 18px;
+        opacity: 0.3;
+
+        &.swiper-slide-active {
+          opacity: 1;
+        }
+
+        figure {
+          position: relative;
+          height: min-content;
+
+          img {
+            margin: 0 auto;
+
+            &.two {
+              margin-top: -11px;
+            }
+            &.three {
+              margin-top: 11px;
+            }
+          }
+
+          figcaption {
+            @include centered();
+          }
+
+          figcaption {
+            color: #fff;
+          }
+        }
+
+        p {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .carousel-button-prev,
+    .carousel-button-next {
+      $size: 50;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: $size + px;
+      height: $size + px;
+      background-color: rgba(0, 0, 0, 0);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    .carousel-button-prev {
+      left: 16px;
+      background-image: url("/assets/images/symbols/chevron-left.svg");
+    }
+    .carousel-button-next {
+      right: 16px;
+      background-image: url("/assets/images/symbols/chevron-right.svg");
+    }
+  }
+
+  .contact-container {
+    padding: 60px 1rem;
+    background-color: #23698c;
+
+    .group {
+      margin-bottom: 45px;
+      p {
+        color: #fff;
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+
+      label {
+        margin-bottom: 16px;
+      }
+
+      textarea {
+        border-radius: 11px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        font-size: 16px;
+        resize: none;
+        height: 200px;
+      }
+    }
+  }
 }

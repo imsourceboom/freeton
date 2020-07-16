@@ -1,69 +1,65 @@
 extends ./_layout
 include ./components/telegramLogin
 include ./components/slideHeader
+include ./components/inputBox
+include ./components/textarea
 
 block title
     - var page = '홈'
 
+block addCDN
+    link(rel="stylesheet", href="https://unpkg.com/swiper/swiper-bundle.min.css")
+
 block main
-    section#home.transition-slide
-        .top-container
-            .wrapper
-                .header
-                    a(href="/index.html").logo
-                        img(src="/assets/images/firstonwallet.svg", alt="로고")
-                    figure.profile
-                        img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/600px-Telegram_logo.svg.png" alt="텔레그램 아이콘")
-                        figcaption UserName
-                    
-                dl.gram
-                    // 지갑이 활성화가 되면 active 클래스를 붙인다.
-                    dt.active 보유수량
-                    dd.number.nano 2630009123456789
-                .receive
-                    p 그램주소
-                    .box
-                        #address -1:d88335c70d437a2a9201383b1b17c6a88d80416d6d79c244505708dfe179885d
-                        figure.copy-icon(data-clipboard-target="#address")
-                            img(src="https://icongr.am/clarity/copy.svg?size=22&color=000000", alt="복사 아이콘")
-
-        //- 버튼
-        ul.tab
-            li.withdraw-btn
-                a(href='/html/withdraw.html' data-swup-preload) 출금하기
-            li.staking-btn
-                a(href="/html/staking.html" data-swup-preload) 스테이킹
-
-        //- 거래내역
-        ul.transaction-list
-            - for(var i = 0; i < 10; i++)
-                if i % 2 == 0
-                    li.withdraw-card
-                        dl
-                            dt 출금
-                            dd 완료
-                        dl
-                            dt 금액
-                            dd.nano 2567383423400000
-                        dl
-                            dt 날짜
-                            dd 2020.06.03 14:36:48
-                        dl
-                            dt 거래ID
-                            dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-                else
-                    li.deposit-card 
-                        dl
-                            dt 입금
-                            dd 완료
-                        dl
-                            dt 금액
-                            dd.nano 98
-                        dl
-                            dt 날짜
-                            dd 2020.06.03 14:36:48
-                        dl
-                            dt 거래ID
-                            dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-        button(type="button").more-btn 더보기
-
+    section#home.transition-slide.max-width-reset
+        .introduce-container
+            img(src="/assets/images/main/main-bg-01.svg", alt="").bg.one
+            img(src="/assets/images/main/main-bg-02.svg", alt="").bg.two
+            img(src="/assets/images/main/main-bg-03.svg", alt="").bg.three
+            img(src="/assets/images/main/main-bg-04.svg", alt="").bg.four
+            .wrapper.first
+                .box
+                    p 개개인이 만들어가는 자유로운 세상
+                    img(src="/assets/images/firston.svg", alt="")
+            .wrapper.second
+                .box
+                    h3 우리는 <b class="freedom">자유</b>를 <b class='creation'>창조</b>합니다.
+                    p
+                        | 개인의 자유를 파괴한 바로 그 자본주의를<br/>
+                        | 이용해 블록체인 네크워크와 자유를 보존합니다.<br/>
+                        | 기업들이 자유로운 세상을 만들어갈 수 있도록<br/>
+                        | 돕는 B2B 서비스를 제공합니다.
+        .member-container
+            h3 Member
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide 
+                        figure
+                            img(src="/assets/images/main/member-bg-01.svg" alt="CEO")
+                            figcaption 김동범
+                        p CEO
+                    .swiper-slide 
+                        figure
+                            img.two(src="/assets/images/main/member-bg-02.svg" alt="CEO")
+                            figcaption 윤서로
+                        p Developer
+                    .swiper-slide 
+                        figure
+                            img.three(src="/assets/images/main/member-bg-03.svg" alt="CEO")
+                            figcaption 안민용
+                        p Developer
+                button(type='button').carousel-button-prev
+                button(type='button').carousel-button-next
+        .contact-container
+            h3 Contact
+            form(action="")
+                .group
+                    +inputBox('text', '이름을 입력하세요.')
+                .group 
+                    p 연락처
+                    +inputBox('text', '텔레그램 아이디')
+                    +inputBox('email', '이메일')
+                    +inputBox('text', '전화번호')
+                .group
+                    p 문의
+                    +textArea()
