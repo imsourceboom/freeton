@@ -18,16 +18,18 @@ section#home {
         right: -10%;
       }
       &.three {
-        top: 47%;
+        top: 52%;
         left: -45%;
       }
       &.four {
-        top: 83%;
+        top: 85%;
         right: -10%;
       }
     }
 
     .wrapper {
+      position: relative;
+      z-index: 2;
       height: 100vh;
       display: flex;
       align-items: center;
