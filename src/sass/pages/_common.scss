@@ -7,7 +7,12 @@ section#home {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  padding-top: $headerHeight + px;
   padding-bottom: 70px !important;
+
+  @media (min-width: 768px) {
+    padding-top: $headerHeight + 10px;
+  }
 
   &.max-width-reset {
     max-width: none;

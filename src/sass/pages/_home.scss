@@ -1,6 +1,7 @@
 section#home {
   overflow-x: hidden;
   padding-bottom: 0 !important;
+  padding-top: 0;
 
   .introduce-container {
     position: relative;
@@ -160,7 +161,10 @@ section#home {
     background-color: #23698c;
 
     .group {
-      margin-bottom: 45px;
+      padding-bottom: 25px;
+      max-width: 380px;
+      margin: 0 auto;
+
       p {
         color: #fff;
         font-size: 16px;
@@ -177,6 +181,19 @@ section#home {
         font-size: 16px;
         resize: none;
         height: 200px;
+      }
+
+      input[type="submit"] {
+        width: 150px;
+        height: 40px;
+        color: white;
+        background-color: $orange;
+        font-size: 17px;
+        font-weight: bold;
+        border-radius: 11px;
+        display: block;
+        margin: 20px auto 0;
+        cursor: pointer;
       }
     }
   }
