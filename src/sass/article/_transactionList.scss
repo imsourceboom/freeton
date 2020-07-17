@@ -1,17 +1,20 @@
 .transaction-list {
-  // width: 96%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  transform: translateY(100%);
   margin: 0 auto;
+  padding: 10px 0px 70px;
   background-color: $turquoise;
-  padding: 40px 12px 70px;
+
+  @media (min-width: 1024px) {
+    margin: 0 16px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  ul {
+    background-color: $turquoise;
+  }
 
   li {
     position: relative;
-    padding: 30px 10px;
+    padding: 30px 14px;
 
     @media (min-width: 768px) {
       padding: 30px 20px;
@@ -28,12 +31,6 @@
       background-color: rgba(255, 255, 255, 0.3);
     }
 
-    // &:last-child {
-    //   &::before {
-    //     content: "";
-    //     display: none;
-    //   }
-    // }
     &.deposit-card,
     &.withdraw-card {
       dl {
@@ -116,7 +113,7 @@
 
 button.more-btn {
   position: relative;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -129,21 +126,4 @@ button.more-btn {
   margin: 50px auto 0;
   font-size: 15px;
   cursor: pointer;
-
-  // &::before {
-  //   content: "+";
-  // }
-
-  // &::after {
-  //   content: "";
-  //   display: inline-block;
-  //   width: 15px;
-  //   height: 15px;
-  //   // margin-top: -2px;
-  //   opacity: 0.5;
-  //   background-image: url("/assets/images/symbols/chevron-down.svg");
-  //   background-size: contain;
-  //   background-position: contain;
-  //   background-repeat: no-repeat;
-  // }
 }

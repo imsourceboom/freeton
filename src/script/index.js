@@ -14,7 +14,7 @@ import "./nanoSplit";
 import "./agreeCheckBtn";
 import "./amountMax";
 import "./swiper";
-import "./confirmList";
+// import "./confirmList";
 
 // import "./join";
 // import "./scrollreveal";

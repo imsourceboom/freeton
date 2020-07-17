@@ -1,63 +1,7 @@
 section#wallet {
-  height: 100vh;
-  overflow: hidden;
   padding-bottom: 0 !important;
-
-  &.list-on {
-    overflow: initial;
-    height: auto;
-
-    a#list-confirm {
-      position: sticky;
-      top: $headerHeight + px;
-
-      @media (min-width: 768px) {
-        top: $headerHeight + 10px;
-      }
-
-      img {
-        transform: rotate(0deg);
-      }
-    }
-
-    .transaction-list {
-      position: relative;
-      left: initial;
-      bottom: initial;
-      transform: initial;
-    }
-
-    button.more-btn {
-      display: flex;
-    }
-  }
 
   @import "../article/topContainer";
   @import "../article/tab";
   @import "../article/transactionList";
-
-  a#list-confirm {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $turquoise;
-    z-index: 10;
-    padding: 20px 0 30px;
-
-    img {
-      width: 30px;
-      margin-bottom: 10px;
-      transform: rotate(180deg);
-      transition: 0.2s;
-    }
-
-    p {
-      color: #fff;
-      font-size: 16px;
-    }
-  }
 }
