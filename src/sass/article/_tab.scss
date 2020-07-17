@@ -12,17 +12,19 @@ ul.tab {
   li {
     width: 120px;
     height: 36px;
-    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.22);
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: white;
     cursor: pointer;
 
     &.withdraw-btn {
-      background-color: lightcoral;
+      // background-color: lightcoral;
+      color: $turquoise;
+      border: 1px solid $turquoise;
     }
 
     &.staking-btn {
-      background-color: rgb(106, 190, 241);
+      background-color: $turquoise;
     }
 
     a {

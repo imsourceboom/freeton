@@ -1,6 +1,13 @@
-ul.transaction-list {
-  width: 96%;
+.transaction-list {
+  // width: 96%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%);
   margin: 0 auto;
+  background-color: $turquoise;
+  padding: 40px 12px 70px;
 
   li {
     position: relative;
@@ -18,13 +25,29 @@ ul.transaction-list {
       transform: translate(-50%, 0);
       width: 220px;
       height: 1px;
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(255, 255, 255, 0.3);
     }
 
-    &:last-child {
-      &::before {
-        content: "";
-        display: none;
+    // &:last-child {
+    //   &::before {
+    //     content: "";
+    //     display: none;
+    //   }
+    // }
+    &.deposit-card,
+    &.withdraw-card {
+      dl {
+        &:first-child {
+          dt {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -6px;
+            border-radius: 4px;
+            padding: 3px 0;
+            color: #fff;
+          }
+        }
       }
     }
 
@@ -32,7 +55,7 @@ ul.transaction-list {
       dl {
         &:first-child {
           dt {
-            color: lightseagreen;
+            background-color: $orange;
           }
         }
       }
@@ -41,7 +64,7 @@ ul.transaction-list {
       dl {
         &:first-child {
           dt {
-            color: lightsalmon;
+            background-color: #62a2e3;
           }
         }
       }
@@ -76,13 +99,15 @@ ul.transaction-list {
       dt {
         min-width: 40px;
         margin-right: 16px;
-        color: #484d55;
+        // color: #484d55;
+        color: #fff;
       }
 
       dd {
         word-break: break-all;
         text-align: right;
         font-size: 0.95em;
+        color: #fff;
         opacity: 0.5;
       }
     }
@@ -91,29 +116,34 @@ ul.transaction-list {
 
 button.more-btn {
   position: relative;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100%;
   max-width: 360px;
   height: 43px;
-  background-color: rgb(247, 247, 247);
+  background-color: $turquoise;
+  color: #fff;
   border: 0;
   border-radius: 2px;
-  margin: 30px auto 0;
-  font-size: 14px;
+  margin: 50px auto 0;
+  font-size: 15px;
   cursor: pointer;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    // margin-top: -2px;
-    opacity: 0.5;
-    background-image: url("/assets/images/symbols/chevron-down.svg");
-    background-size: contain;
-    background-position: contain;
-    background-repeat: no-repeat;
-  }
+  // &::before {
+  //   content: "+";
+  // }
+
+  // &::after {
+  //   content: "";
+  //   display: inline-block;
+  //   width: 15px;
+  //   height: 15px;
+  //   // margin-top: -2px;
+  //   opacity: 0.5;
+  //   background-image: url("/assets/images/symbols/chevron-down.svg");
+  //   background-size: contain;
+  //   background-position: contain;
+  //   background-repeat: no-repeat;
+  // }
 }

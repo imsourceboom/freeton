@@ -13,6 +13,7 @@ import { amountMax } from "../amountMax";
 import { agree } from "../agreeCheckBtn";
 import { accordionFunc } from "../accordion";
 import { carousel } from "../swiper";
+import { confirmList } from "../confirmList";
 
 export const swup = new Swup({
   plugins: [
@@ -35,3 +36,4 @@ swup.on("contentReplaced", amountMax);
 swup.on("contentReplaced", agree);
 swup.on("contentReplaced", accordionFunc);
 swup.on("contentReplaced", carousel);
+swup.on("contentReplaced", confirmList);

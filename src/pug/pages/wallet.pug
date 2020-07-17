@@ -10,9 +10,10 @@ block main
         .top-container
             .wrapper
                 .header
-                    a(href="/index.html").logo
-                        img(src="/assets/images/firstonwallet.svg", alt="로고")
-                    figure.profile
+                    h2 Wallet
+                    //- a(href="/index.html").logo
+                    //-     img(src="/assets/images/firstonwallet.svg", alt="로고")
+                    //- figure.profile
                         img(src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/600px-Telegram_logo.svg.png" alt="텔레그램 아이콘")
                         figcaption UserName
                     
@@ -35,35 +36,39 @@ block main
                 a(href="/html/staking.html" data-swup-preload) 스테이킹
 
         //- 거래내역
-        ul.transaction-list
-            - for(var i = 0; i < 10; i++)
-                if i % 2 == 0
-                    li.withdraw-card
-                        dl
-                            dt 출금
-                            dd 완료
-                        dl
-                            dt 금액
-                            dd.nano 2567383423400000
-                        dl
-                            dt 날짜
-                            dd 2020.06.03 14:36:48
-                        dl
-                            dt 거래ID
-                            dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-                else
-                    li.deposit-card 
-                        dl
-                            dt 입금
-                            dd 완료
-                        dl
-                            dt 금액
-                            dd.nano 98
-                        dl
-                            dt 날짜
-                            dd 2020.06.03 14:36:48
-                        dl
-                            dt 거래ID
-                            dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-        button(type="button").more-btn 더보기
+        a(href="#list-confirm")#list-confirm
+            img(src="/assets/images/symbols/chevron-down.svg", alt="")
+            p 내역 확인하기
+        .transaction-list
+            ul
+                - for(var i = 0; i < 10; i++)
+                    if i % 2 == 0
+                        li.withdraw-card
+                            dl
+                                dt 출금
+                                dd 완료
+                            dl
+                                dt 금액
+                                dd.nano 2567383423400000
+                            dl
+                                dt 날짜
+                                dd 2020.06.03 14:36:48
+                            dl
+                                dt 거래ID
+                                dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
+                    else
+                        li.deposit-card 
+                            dl
+                                dt 입금
+                                dd 완료
+                            dl
+                                dt 금액
+                                dd.nano 98
+                            dl
+                                dt 날짜
+                                dd 2020.06.03 14:36:48
+                            dl
+                                dt 거래ID
+                                dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
+            button(type="button").more-btn + 더보기
 
