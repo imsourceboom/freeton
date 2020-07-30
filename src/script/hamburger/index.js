@@ -4,7 +4,7 @@ export function hamburger() {
   const mobileNavBack = document.querySelector(".mobile-nav-back");
   const mobileNav = document.querySelector(".mobile-nav");
   const close = document.querySelector(".mobile-nav .close");
-  const mobileMenu = Array.from(document.querySelectorAll(".mobile-nav ul li"));
+  const mobileMenu = Array.from(document.querySelectorAll(".mobile-nav ul a"));
 
   if (header !== null) {
     const trigger = (e) => {
