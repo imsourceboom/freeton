@@ -267,5 +267,26 @@ header {
         }
       }
     }
+
+    li.wallet {
+      display: flex;
+
+      img {
+        width: 24px;
+        margin-right: 8px;
+        animation: bounce 1.5s infinite alternate;
+
+        @keyframes bounce {
+          from {
+            opacity: 1;
+            transform: scale(1);
+          }
+          to {
+            opacity: 0.7;
+            transform: scale(0.96);
+          }
+        }
+      }
+    }
   }
 }

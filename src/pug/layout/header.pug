@@ -21,7 +21,8 @@ header
             nav.desktop.logined
                 ul
                     each m in menus
-                        li(class=`active`)
+                        li(class=`active`).wallet
+                            img(src="/assets/images/header/gram-wallet.svg", alt="")
                             a(href=`/html/${m.path}.html`)= m.name
                 +telegramLogin()
                 a(href="").log-out 로그아웃
@@ -39,5 +40,6 @@ header
                     a(href="").log-out 로그아웃
                 ul
                     each m in menus
-                        li(class=`active`)
+                        li(class=`active`).wallet
+                            img(src="/assets/images/header/gram-wallet.svg", alt="")
                             a(href=`/html/${m.path}.html`)= m.name
