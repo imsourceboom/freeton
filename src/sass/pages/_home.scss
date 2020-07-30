@@ -1,11 +1,12 @@
 section#home {
   overflow-x: hidden;
-  // padding-bottom: 0;
+  padding-bottom: 0 !important;
   padding-top: 0;
 
   .introduce-container {
     position: relative;
     height: 200vh;
+    overflow: hidden;
 
     img.bg {
       position: absolute;
@@ -23,8 +24,28 @@ section#home {
         left: -45%;
       }
       &.four {
-        top: 88%;
+        top: 85%;
         right: -10%;
+      }
+
+      @media (min-width: 768px) {
+        &.one {
+          width: 40vw;
+          left: 0;
+        }
+        &.two {
+          width: 55vw;
+          right: 0;
+        }
+        &.three {
+          width: 45vw;
+          left: 0;
+        }
+        &.four {
+          width: 25vw;
+          top: 73%;
+          right: 0;
+        }
       }
     }
 
