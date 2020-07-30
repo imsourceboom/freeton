@@ -8,6 +8,20 @@
     border-radius: 8px 8px 0 0;
   }
 
+  &.empty {
+    .comment {
+      display: block;
+      padding-top: 4em;
+      color: #fff;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+  }
+
+  .comment {
+    display: none;
+  }
+
   ul {
     background-color: $turquoise;
   }
