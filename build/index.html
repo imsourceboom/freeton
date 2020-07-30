@@ -50,14 +50,21 @@
   <body id="body">
     <header>
       <div class="wrapper">
-        <figure><a href="/index.html"><img src="/assets/images/firston.svg" alt="Logo"></a></figure>
+        <figure class="logo"><a href="/index.html"><img src="/assets/images/firston.svg" alt="Logo"></a></figure>
         <div class="box">
-          <nav class="desktop">
-            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
+          <!-- 로그인 성공 시 desktop 클래스 태그에 logined 클래스를 추가-->
+          <nav class="desktop logined">
             <ul>
-              <li class="active"><a href="/index.html">Mypage</a></li>
-              <li><a href="/html/wallet.html">Wallet</a></li>
+              <li class="active"><a href="/html/wallet.html">Wallet</a></li>
             </ul>
+                <div class="telegram-login-component">
+                  <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
+                  <div class="login-wrapper"></div>
+                  <!-- 로그인 후-->
+                  <figure class="profile-wrapper"><img src="" alt="">
+                    <figcaption>UserName</figcaption>
+                  </figure>
+                </div><a class="log-out" href="">로그아웃</a>
           </nav>
           <div class="hamburger">
             <div></div>
@@ -66,14 +73,19 @@
           </div>
           <div class="mobile-nav-back"></div>
           <div class="mobile-nav"><img class="close" src="/assets/images/symbols/chevron-right-orange.svg" alt="back">
-            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
-                <div class="telegram-login-component">
-                  <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
-                  <div class="login-wrapper"></div>
-                </div>
+            <!-- 로그인 성공 시 sign-wrapper 클래스 태그에 logined 클래스를 추가-->
+            <div class="sign-wrapper logined">
+                  <div class="telegram-login-component">
+                    <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
+                    <div class="login-wrapper"></div>
+                    <!-- 로그인 후-->
+                    <figure class="profile-wrapper"><img src="" alt="">
+                      <figcaption>UserName</figcaption>
+                    </figure>
+                  </div><a class="log-out" href="">로그아웃</a>
+            </div>
             <ul>
-              <li class="active"><a href="/index.html">Mypage</a></li>
-              <li><a href="/html/wallet.html">Wallet</a></li>
+              <li class="active"><a href="/html/wallet.html">Wallet</a></li>
             </ul>
           </div>
         </div>
@@ -99,67 +111,11 @@
             </div>
           </div>
         </div>
-        <div class="member-container">
-          <h3>Member</h3>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"> 
-                <figure><img src="/assets/images/main/member-bg-01.svg" alt="CEO">
-                  <figcaption>김동범</figcaption>
-                </figure>
-                <p>CEO</p>
-              </div>
-              <div class="swiper-slide"> 
-                <figure><img class="two" src="/assets/images/main/member-bg-02.svg" alt="CEO">
-                  <figcaption>윤서로</figcaption>
-                </figure>
-                <p>Developer</p>
-              </div>
-              <div class="swiper-slide"> 
-                <figure><img class="three" src="/assets/images/main/member-bg-03.svg" alt="CEO">
-                  <figcaption>안민용</figcaption>
-                </figure>
-                <p>Developer</p>
-              </div>
-            </div>
-            <button class="carousel-button-prev" type="button"></button>
-            <button class="carousel-button-next" type="button"></button>
-          </div>
-        </div>
-        <div class="contact-container">
-          <h3>Contact</h3>
-          <form action="">
-            <div class="group">
-              <label class="inputbox--component" for="">
-                <input type="text" placeholder="이름을 입력하세요."/>
-              </label>
-            </div>
-            <div class="group"> 
-              <p>연락처</p>
-              <label class="inputbox--component" for="">
-                <input type="text" placeholder="텔레그램 아이디"/>
-              </label>
-              <label class="inputbox--component" for="">
-                <input type="email" placeholder="이메일"/>
-              </label>
-              <label class="inputbox--component" for="">
-                <input type="text" placeholder="전화번호"/>
-              </label>
-            </div>
-            <div class="group">
-              <p>문의</p>
-              <textarea class="textarea--component" name="" rows="10"></textarea>
-            </div>
-            <div class="group">
-              <input class="send-button" type="submit" value="Send">
-            </div>
-          </form>
-        </div>
       </section>
     </main><a class="top-btn" href="#swup" data-no-swup></a>
     <footer>
       <div class="rest">
-        <p class="copy-right">Copyright © Free TON. All rights Reserved.</p>
+        <p class="copy-right">Copyright © Firston. All rights Reserved.</p>
       </div>
     </footer>
     <!-- 출금하기 페이지에서 send 클래스를 스테이킹 참여페이지에서 staking 클래스를 붙여준다.-->

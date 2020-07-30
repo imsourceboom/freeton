@@ -2,7 +2,7 @@ mixin slideHeader(title)
     .slide-header&attributes(attributes)
         - var href
         if title == '스테이킹' || title == '출금하기'
-            - var href = '/index'
+            - var href = '/html/wallet'
             a(href=`${href}.html`).back
                 img(src="/assets/images/symbols/chevron-left.svg", alt="뒤로가기")
             h4.title= title

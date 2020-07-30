@@ -2,10 +2,10 @@ include ../components/telegramLogin
 
 -
     var menus = [
-        {
-            name: 'Mypage',
-            path: 'mypage'
-        }, 
+        //- {
+        //-     name: 'Mypage',
+        //-     path: 'mypage'
+        //- }, 
         {
             name: 'Wallet',
             path: 'wallet'
@@ -13,20 +13,18 @@ include ../components/telegramLogin
     ]
 header
     .wrapper
-        figure
+        figure.logo
             a(href="/index.html")
                 img(src="/assets/images/firston.svg" alt="Logo")
         .box
-            nav.desktop
-                // 해당 페이지 li 태그에 active 클래스 추가
+            // 로그인 성공 시 desktop 클래스 태그에 logined 클래스를 추가
+            nav.desktop.logined
                 ul
                     each m in menus
-                        if m.name == menus[0].name
-                            li(class=`active`)
-                                a(href="/index.html")= m.name
-                        else
-                            li
-                                a(href=`/html/${m.path}.html`)= m.name
+                        li(class=`active`)
+                            a(href=`/html/${m.path}.html`)= m.name
+                +telegramLogin()
+                a(href="").log-out 로그아웃
             .hamburger
                 div
                 div
@@ -35,13 +33,11 @@ header
             .mobile-nav
                 //- div.close
                 img(src="/assets/images/symbols/chevron-right-orange.svg" alt="back").close
-                // 해당 페이지 li 태그에 active 클래스 추가
-                +telegramLogin()
+                // 로그인 성공 시 sign-wrapper 클래스 태그에 logined 클래스를 추가
+                .sign-wrapper.logined
+                    +telegramLogin()
+                    a(href="").log-out 로그아웃
                 ul
                     each m in menus
-                        if m.name == menus[0].name
-                            li(class=`active`)
-                                a(href=`/index.html`)= m.name
-                        else
-                            li
-                                a(href=`/html/${m.path}.html`)= m.name
+                        li(class=`active`)
+                            a(href=`/html/${m.path}.html`)= m.name

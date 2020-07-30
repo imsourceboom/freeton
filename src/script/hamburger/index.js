@@ -1,7 +1,3 @@
-// import {
-//     header
-// } from '../elements'
-
 export function hamburger() {
   const header = document.querySelector("body > header");
   const hamburger = document.querySelector(".hamburger");

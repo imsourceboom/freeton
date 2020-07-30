@@ -1,5 +1,5 @@
 extends ../_layout
-include ../components/slideHeader
+//- include ../components/slideHeader
 
 block title
     - var page = '스테이킹'
@@ -8,7 +8,7 @@ block main
     section#staking.transition-slide
         //- 스테이킹
         .staking-container
-            +slideHeader('스테이킹').staking#staking-top
+            //- +slideHeader('스테이킹').staking#staking-top
             .wrap-dashboard
                 dl.staked
                     dt 스테이킹 참여 수량

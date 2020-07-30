@@ -49,14 +49,21 @@
   <body id="body">
     <header>
       <div class="wrapper">
-        <figure><a href="/index.html"><img src="/assets/images/firston.svg" alt="Logo"></a></figure>
+        <figure class="logo"><a href="/index.html"><img src="/assets/images/firston.svg" alt="Logo"></a></figure>
         <div class="box">
-          <nav class="desktop">
-            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
+          <!-- 로그인 성공 시 desktop 클래스 태그에 logined 클래스를 추가-->
+          <nav class="desktop logined">
             <ul>
-              <li class="active"><a href="/index.html">Mypage</a></li>
-              <li><a href="/html/wallet.html">Wallet</a></li>
+              <li class="active"><a href="/html/wallet.html">Wallet</a></li>
             </ul>
+                <div class="telegram-login-component">
+                  <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
+                  <div class="login-wrapper"></div>
+                  <!-- 로그인 후-->
+                  <figure class="profile-wrapper"><img src="" alt="">
+                    <figcaption>UserName</figcaption>
+                  </figure>
+                </div><a class="log-out" href="">로그아웃</a>
           </nav>
           <div class="hamburger">
             <div></div>
@@ -65,14 +72,19 @@
           </div>
           <div class="mobile-nav-back"></div>
           <div class="mobile-nav"><img class="close" src="/assets/images/symbols/chevron-right-orange.svg" alt="back">
-            <!-- 해당 페이지 li 태그에 active 클래스 추가-->
-                <div class="telegram-login-component">
-                  <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
-                  <div class="login-wrapper"></div>
-                </div>
+            <!-- 로그인 성공 시 sign-wrapper 클래스 태그에 logined 클래스를 추가-->
+            <div class="sign-wrapper logined">
+                  <div class="telegram-login-component">
+                    <!-- 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)-->
+                    <div class="login-wrapper"></div>
+                    <!-- 로그인 후-->
+                    <figure class="profile-wrapper"><img src="" alt="">
+                      <figcaption>UserName</figcaption>
+                    </figure>
+                  </div><a class="log-out" href="">로그아웃</a>
+            </div>
             <ul>
-              <li class="active"><a href="/index.html">Mypage</a></li>
-              <li><a href="/html/wallet.html">Wallet</a></li>
+              <li class="active"><a href="/html/wallet.html">Wallet</a></li>
             </ul>
           </div>
         </div>
@@ -88,7 +100,7 @@
     </main><a class="top-btn" href="#swup" data-no-swup></a>
     <footer>
       <div class="rest">
-        <p class="copy-right">Copyright © Free TON. All rights Reserved.</p>
+        <p class="copy-right">Copyright © Firston. All rights Reserved.</p>
       </div>
     </footer>
     <!-- 출금하기 페이지에서 send 클래스를 스테이킹 참여페이지에서 staking 클래스를 붙여준다.-->
