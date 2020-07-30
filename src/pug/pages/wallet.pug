@@ -36,9 +36,10 @@ block main
             //-     a(href="/html/staking.html" data-swup-preload) 스테이킹
 
         //- 거래내역
+        //거래 내역이 존재하지 않는다면 transaction-list 클래스 태그에 empty 클래스를 붙여준다.
         .transaction-list.empty
             .comment 거래내역이 존재하지 않습니다.
-            //- ul
+            ul
                 - for(var i = 0; i < 10; i++)
                     if i % 2 == 0
                         li.withdraw-card
@@ -68,5 +69,5 @@ block main
                             dl
                                 dt 거래ID
                                 dd cbcf590b806ad3669c7b8d07274897e426391a5504121385f5bc5c349c3a48ba
-            //- button(type="button").more-btn + 더보기
+            button(type="button").more-btn + 더보기
 
