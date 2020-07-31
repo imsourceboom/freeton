@@ -6,6 +6,7 @@ if (loadingText !== null) {
     // "암호화 설정 중입니다.",
     "지갑을 생성 중입니다.",
   ];
+
   loadingText.textContent = comments[0];
 
   // setTimeout(() => {
