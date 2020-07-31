@@ -1,11 +1,11 @@
-export default (f, interval = 30) => {
-    let now = null;
+export default (f, interval = 50) => {
+  let now = null;
 
-    return (...param) => {
-        if (now) clearTimeout(now);
+  return (...param) => {
+    if (now) clearTimeout(now);
 
-        now = setTimeout(() => {
-            f(...param);
-        }, interval);
-    };
+    now = setTimeout(() => {
+      f(...param);
+    }, interval);
+  };
 };

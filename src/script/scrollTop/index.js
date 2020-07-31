@@ -1,10 +1,10 @@
-import { throttliing } from "../function";
+import { throttling } from "../function";
 const button = document.querySelector(".top-btn");
 
 if (button !== null) {
   window.addEventListener(
     "scroll",
-    throttliing(() => {
+    throttling(() => {
       const top = document.body.getBoundingClientRect().top;
       if (top < 0) {
         button.style.display = "block";

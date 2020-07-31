@@ -1,3 +1,4 @@
+import { debounce } from "../function";
 export const listHeight = () => {
   const walletSection = document.querySelector("section#wallet");
 
@@ -28,3 +29,5 @@ export const listHeight = () => {
 };
 
 listHeight();
+
+window.addEventListener("resize", debounce(listHeight));
