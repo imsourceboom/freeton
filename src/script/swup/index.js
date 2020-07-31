@@ -13,6 +13,7 @@ import { amountMax } from "../amountMax";
 import { agree } from "../agreeCheckBtn";
 import { accordionFunc } from "../accordion";
 import { listHeight } from "../listHeight";
+import { loadingText } from "../loading";
 // import { carousel } from "../swiper";
 
 export const swup = new Swup({
@@ -36,4 +37,5 @@ swup.on("contentReplaced", amountMax);
 swup.on("contentReplaced", agree);
 swup.on("contentReplaced", accordionFunc);
 swup.on("contentReplaced", listHeight);
+swup.on("contentReplaced", loadingText);
 // swup.on("contentReplaced", carousel);

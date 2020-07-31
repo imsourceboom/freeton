@@ -4,7 +4,6 @@ import "./swup";
 // import "./smoothscroll";
 // import "./header";
 // import "./slideContainer";
-import "./loading";
 // import "./clipboard";
 // import "./accordion";
 // import "./withDraw";
