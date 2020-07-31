@@ -75,12 +75,12 @@
     img {
       width: 21px;
       height: 21px;
+      object-fit: cover;
       margin-right: 5px;
-      background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png");
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      overflow: hidden;
+      // background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png");
+      // background-size: contain;
+      // background-position: center;
+      // background-repeat: no-repeat;
       border-radius: 100%;
     }
 
