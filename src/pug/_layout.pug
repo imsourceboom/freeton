@@ -69,9 +69,20 @@ html(lang="ko")
 
         a(href="#swup" data-no-swup).top-btn
         include layout/footer
-        // 출금하기 페이지에서 send 클래스를 스테이킹 참여페이지에서 staking 클래스를 붙여준다.
+        //- // 출금하기 페이지에서 send 클래스를 스테이킹 참여페이지에서 staking 클래스를 붙여준다.
         .loading-cover
-            .withdraw-page
-                .loading-pulse
-                p.send-comment 송금 중입니다
-                p.staking-comment 신청 중입니다
+            .wrapper
+                //- .loading-pulse
+                .triangles
+                    .tri.invert
+                    .tri.invert
+                    .tri
+                    .tri.invert
+                    .tri.invert
+                    .tri
+                    .tri.invert
+                    .tri
+                    .tri.invert
+                p.comment.sending 송금 중입니다
+                //- p.comment.staking 신청 중입니다
+                h2 송금이 완료되었습니다
