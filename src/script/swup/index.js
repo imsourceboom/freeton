@@ -4,17 +4,17 @@ import SwupHeadPlugin from "@swup/head-plugin";
 import SwupScrollPlugin from "@swup/scroll-plugin";
 import SwupPreloadPlugin from "@swup/preload-plugin";
 
-import { scroll } from "../smoothscroll";
-import { commaFunc } from "../nanoSplit";
-import { copied } from "../clipboard";
-import { amountMax } from "../amountMax";
-import { agree } from "../agreeCheckBtn";
-import { listHeight } from "../listHeight";
-import { loadingText } from "../loading";
-// import { stakingLinkFunc } from "../rewardJoinCancelList";
-// import { joinCancel } from "../joinCancel";
-// import { accordionFunc } from "../accordion";
-// import { carousel } from "../swiper";
+import { scroll } from "../smoothscroll"; // 모든 페이지 - 페이지 상단 이동 버튼
+import { commaFunc } from "../nanoSplit"; // 모든 페이지 - nano 클래스를 가진 그램 숫자들 소수점과 콤마
+import { copied } from "../clipboard"; // wallet - 복사하기
+import { amountMax } from "../amountMax"; // withdraw, staking-apply - 최대 수량 버튼
+import { agree } from "../agreeCheckBtn"; // withdraw, staking-apply - 동의 하기 체크박스
+import { listHeight } from "../listHeight"; // wallet, staking - 리스트 내역 wrapper height 자동 감지
+import { loadingText } from "../loading"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
+// import { stakingLinkFunc } from "../rewardJoinCancelList"; // staking - 보상, 참여/취소 내역
+// import { joinCancel } from "../joinCancel"; // staking-apply - 참여 하기, 참여 취소하기
+// import { accordionFunc } from "../accordion"; // staking-info - 아코디언 애니메이션
+// import { carousel } from "../swiper"; // main - 멤버소개
 
 export const swup = new Swup({
   plugins: [
