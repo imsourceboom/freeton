@@ -1,3 +1,4 @@
+// 참여하기 취소하기
 export function joinCancel() {
   const ul = document.querySelector(".participation-set ul");
   const joinNav = document.querySelector(".participation-set ul li.join-btn");

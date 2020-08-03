@@ -1,3 +1,4 @@
+// 보상 내역, 참여/취소 내역
 export function stakingLinkFunc() {
   const rewardBtn = document.querySelector(
     ".reward-set .title strong.reward-btn"

@@ -5,15 +5,15 @@ import SwupScrollPlugin from "@swup/scroll-plugin";
 import SwupPreloadPlugin from "@swup/preload-plugin";
 
 import { scroll } from "../smoothscroll";
-import { stakingLinkFunc } from "../rewardJoinCancelList";
 import { commaFunc } from "../nanoSplit";
-import { joinCancel } from "../joinCancel";
 import { copied } from "../clipboard";
 import { amountMax } from "../amountMax";
 import { agree } from "../agreeCheckBtn";
-import { accordionFunc } from "../accordion";
 import { listHeight } from "../listHeight";
 import { loadingText } from "../loading";
+// import { stakingLinkFunc } from "../rewardJoinCancelList";
+// import { joinCancel } from "../joinCancel";
+// import { accordionFunc } from "../accordion";
 // import { carousel } from "../swiper";
 
 export const swup = new Swup({
@@ -30,12 +30,12 @@ export const swup = new Swup({
 
 swup.on("contentReplaced", commaFunc);
 swup.on("contentReplaced", scroll);
-swup.on("contentReplaced", stakingLinkFunc);
-swup.on("contentReplaced", joinCancel);
 swup.on("contentReplaced", copied);
 swup.on("contentReplaced", amountMax);
 swup.on("contentReplaced", agree);
-swup.on("contentReplaced", accordionFunc);
 swup.on("contentReplaced", listHeight);
 swup.on("contentReplaced", loadingText);
+// swup.on("contentReplaced", stakingLinkFunc);
+// swup.on("contentReplaced", joinCancel);
+// swup.on("contentReplaced", accordionFunc);
 // swup.on("contentReplaced", carousel);
