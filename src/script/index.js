@@ -29,8 +29,6 @@ import "./hamburger";
 // import "./telegramBtn";
 // import "./menu";
 
-alert(navigator.userAgent.toLocaleLowerCase());
-
 // if ('serviceWorker' in navigator) {
 //     window.addEventListener('load', function() {
 //         navigator.serviceWorker.register('/sw.js').then(

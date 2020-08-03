@@ -3,15 +3,13 @@
   align-items: center;
   // margin-right: 25px;
 
-  @media (min-width: 1024px) {
-    // margin-right: 40px;
-  }
+  // @media (min-width: 1024px) {
+  // margin-right: 40px;
+  // }
 
   .login-wrapper {
     width: 172px;
     height: 36px;
-    // width: 100px;
-    // height: 28px;
     position: relative;
     display: flex;
     justify-content: center;
@@ -51,10 +49,10 @@
       color: #0088cc;
       // margin-top: 4px;
 
-      @media (min-width: 768px) {
-        font-size: 14px;
-        // margin-top: 7px;
-      }
+      // @media (min-width: 768px) {
+      // font-size: 14px;
+      // margin-top: 7px;
+      // }
     }
 
     & > iframe {
@@ -63,6 +61,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: 5;
     }
   }
 
