@@ -9,16 +9,24 @@
 
   .login-wrapper {
     width: 172px;
-    height: 36px;
+    height: 30px;
     position: relative;
+    right: -10px;
+    top: -3px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #0088cc;
     border-radius: 100px;
-    background-color: #ffffff;
+    // background-color: #ffffff;
     // background-color: #039be5;
     cursor: pointer;
+
+    @media (min-width: 768px) {
+      height: 36px;
+      right: initial;
+      top: initial;
+    }
 
     $size: 24;
     &::before {

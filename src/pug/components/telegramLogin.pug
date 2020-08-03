@@ -1,8 +1,14 @@
-mixin telegramLogin()
+mixin telegramLogin(profile)
     .telegram-login-component&attributes(attributes)
-        // 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)
-        .login-wrapper
-        // 로그인 후
-        figure.profile-wrapper
-            img(src="/assets/images/sns/telegram.svg", alt="")
-            figcaption UserName
+        if profile == "profile"
+            // 로그인 후
+            figure.profile-wrapper
+                img(src="/assets/images/sns/telegram.svg", alt="")
+                figcaption UserName
+        else
+            // 로그인 전 (telegram login script를 login-wrapper 클래스 안에 넣는다)
+            .login-wrapper
+            // 로그인 후
+            figure.profile-wrapper
+                img(src="/assets/images/sns/telegram.svg", alt="")
+                figcaption UserName
