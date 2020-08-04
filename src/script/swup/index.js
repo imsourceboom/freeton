@@ -7,9 +7,9 @@ import SwupPreloadPlugin from "@swup/preload-plugin";
 import { scroll } from "../smoothscroll"; // 모든 페이지 - 페이지 상단 이동 버튼
 import { commaFunc } from "../nanoSplit"; // 모든 페이지 - nano 클래스를 가진 그램 숫자들 소수점과 콤마
 import { copied } from "../clipboard"; // wallet - 복사하기
-import { withdrawPossibleCalculate } from "../withdrawPossible"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
+import { withdrawPossibleCalculate } from "../withdrawPossible"; // walle증, staking-apply - 출금가능 수량, 수수료 계산 및 표시
 import { amountMax } from "../amountMax"; // withdraw, staking-apply - 최대 수량 버튼
-import { amountInputVerify } from "../amountInputVerify"; // withdraw, staking-apply - 최대 수량 버튼
+import { amountInputVerify } from "../amountInputVerify"; // withdraw, staking-apply - input 입력 값 검증
 import { agree } from "../agreeCheckBtn"; // withdraw, staking-apply - 동의 하기 체크박스
 import { listHeight } from "../listHeight"; // wallet, staking - 리스트 내역 wrapper height 자동 감지
 import { loadingText } from "../loading"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지

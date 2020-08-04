@@ -67,7 +67,12 @@ section#home {
 
         h3 {
           font-size: 22px;
-          margin-bottom: 25px;
+          margin-bottom: 30px;
+
+          @media (min-width: 768px) {
+            font-size: 28px;
+            margin-bottom: 35px;
+          }
 
           b.freedom {
             color: #e3ad62;
@@ -79,143 +84,148 @@ section#home {
 
         p {
           font-size: 18px;
-        }
-      }
-    }
-  }
 
-  .member-container,
-  .contact-container {
-    h3 {
-      color: #e3ad62;
-      font-size: 25px;
-      text-align: center;
-      margin-bottom: 60px;
-    }
-  }
-
-  .member-container {
-    position: relative;
-    padding: 150px 0 250px;
-
-    .swiper-container {
-      width: 100%;
-      max-width: 600px;
-      margin: 0 auto;
-      overflow: hidden;
-      padding: 0;
-      z-index: 1;
-
-      .swiper-slide {
-        position: relative;
-        width: 200px;
-        height: calc(200px / 1.2);
-        font-size: 18px;
-        opacity: 0.3;
-
-        &.swiper-slide-active {
-          opacity: 1;
-        }
-
-        figure {
-          position: relative;
-          height: min-content;
-
-          img {
-            margin: 0 auto;
-
-            &.two {
-              margin-top: -11px;
-            }
-            &.three {
-              margin-top: 11px;
-            }
-          }
-
-          figcaption {
-            @include centered();
-          }
-
-          figcaption {
-            color: #fff;
+          span.m-b {
+            display: block;
+            height: 13px;
           }
         }
-
-        p {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
-    }
-
-    .carousel-button-prev,
-    .carousel-button-next {
-      $size: 50;
-      z-index: 1;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: $size + px;
-      height: $size + px;
-      background-color: rgba(0, 0, 0, 0);
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      border: none;
-      opacity: 0.5;
-      cursor: pointer;
-    }
-    .carousel-button-prev {
-      left: 16px;
-      background-image: url("/assets/images/symbols/chevron-left.svg");
-    }
-    .carousel-button-next {
-      right: 16px;
-      background-image: url("/assets/images/symbols/chevron-right.svg");
-    }
-  }
-
-  .contact-container {
-    padding: 60px 1rem;
-    background-color: #23698c;
-
-    .group {
-      padding-bottom: 25px;
-      max-width: 380px;
-      margin: 0 auto;
-
-      p {
-        color: #fff;
-        font-size: 16px;
-        margin-bottom: 16px;
-      }
-
-      label {
-        margin-bottom: 16px;
-      }
-
-      textarea {
-        border-radius: 11px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-        font-size: 16px;
-        resize: none;
-        height: 200px;
-      }
-
-      input[type="submit"] {
-        width: 150px;
-        height: 40px;
-        color: white;
-        background-color: $orange;
-        font-size: 17px;
-        font-weight: bold;
-        border-radius: 11px;
-        display: block;
-        margin: 20px auto 0;
-        cursor: pointer;
       }
     }
   }
+
+  // .member-container,
+  // .contact-container {
+  //   h3 {
+  //     color: #e3ad62;
+  //     font-size: 25px;
+  //     text-align: center;
+  //     margin-bottom: 60px;
+  //   }
+  // }
+
+  // .member-container {
+  //   position: relative;
+  //   padding: 150px 0 250px;
+
+  //   .swiper-container {
+  //     width: 100%;
+  //     max-width: 600px;
+  //     margin: 0 auto;
+  //     overflow: hidden;
+  //     padding: 0;
+  //     z-index: 1;
+
+  //     .swiper-slide {
+  //       position: relative;
+  //       width: 200px;
+  //       height: calc(200px / 1.2);
+  //       font-size: 18px;
+  //       opacity: 0.3;
+
+  //       &.swiper-slide-active {
+  //         opacity: 1;
+  //       }
+
+  //       figure {
+  //         position: relative;
+  //         height: min-content;
+
+  //         img {
+  //           margin: 0 auto;
+
+  //           &.two {
+  //             margin-top: -11px;
+  //           }
+  //           &.three {
+  //             margin-top: 11px;
+  //           }
+  //         }
+
+  //         figcaption {
+  //           @include centered();
+  //         }
+
+  //         figcaption {
+  //           color: #fff;
+  //         }
+  //       }
+
+  //       p {
+  //         position: absolute;
+  //         bottom: 0;
+  //         left: 50%;
+  //         transform: translateX(-50%);
+  //       }
+  //     }
+  //   }
+
+  //   .carousel-button-prev,
+  //   .carousel-button-next {
+  //     $size: 50;
+  //     z-index: 1;
+  //     position: absolute;
+  //     top: 50%;
+  //     transform: translateY(-50%);
+  //     width: $size + px;
+  //     height: $size + px;
+  //     background-color: rgba(0, 0, 0, 0);
+  //     background-size: contain;
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     border: none;
+  //     opacity: 0.5;
+  //     cursor: pointer;
+  //   }
+  //   .carousel-button-prev {
+  //     left: 16px;
+  //     background-image: url("/assets/images/symbols/chevron-left.svg");
+  //   }
+  //   .carousel-button-next {
+  //     right: 16px;
+  //     background-image: url("/assets/images/symbols/chevron-right.svg");
+  //   }
+  // }
+
+  // .contact-container {
+  //   padding: 60px 1rem;
+  //   background-color: #23698c;
+
+  //   .group {
+  //     padding-bottom: 25px;
+  //     max-width: 380px;
+  //     margin: 0 auto;
+
+  //     p {
+  //       color: #fff;
+  //       font-size: 16px;
+  //       margin-bottom: 16px;
+  //     }
+
+  //     label {
+  //       margin-bottom: 16px;
+  //     }
+
+  //     textarea {
+  //       border-radius: 11px;
+  //       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  //       font-size: 16px;
+  //       resize: none;
+  //       height: 200px;
+  //     }
+
+  //     input[type="submit"] {
+  //       width: 150px;
+  //       height: 40px;
+  //       color: white;
+  //       background-color: $orange;
+  //       font-size: 17px;
+  //       font-weight: bold;
+  //       border-radius: 11px;
+  //       display: block;
+  //       margin: 20px auto 0;
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
 }
