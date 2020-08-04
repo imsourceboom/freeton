@@ -7,6 +7,7 @@ import SwupPreloadPlugin from "@swup/preload-plugin";
 import { scroll } from "../smoothscroll"; // 모든 페이지 - 페이지 상단 이동 버튼
 import { commaFunc } from "../nanoSplit"; // 모든 페이지 - nano 클래스를 가진 그램 숫자들 소수점과 콤마
 import { copied } from "../clipboard"; // wallet - 복사하기
+import { withdrawPossibleCalculate } from "../withdrawPossible"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
 import { amountMax } from "../amountMax"; // withdraw, staking-apply - 최대 수량 버튼
 import { amountInputVerify } from "../amountInputVerify"; // withdraw, staking-apply - 최대 수량 버튼
 import { agree } from "../agreeCheckBtn"; // withdraw, staking-apply - 동의 하기 체크박스
@@ -32,6 +33,7 @@ export const swup = new Swup({
 swup.on("contentReplaced", commaFunc);
 swup.on("contentReplaced", scroll);
 swup.on("contentReplaced", copied);
+swup.on("contentReplaced", withdrawPossibleCalculate);
 swup.on("contentReplaced", amountMax);
 swup.on("contentReplaced", amountInputVerify);
 swup.on("contentReplaced", agree);
