@@ -1,6 +1,7 @@
 const setCookie = (key, value, expiredays) => {
   const date = new Date();
-  date.setDate(date.getDate() + expiredays * 24 * 60 * 60 * 1000);
+  //   date.setDate(date.getDate() + expiredays * 24 * 60 * 60 * 1000);
+  date.setDate(date.getDate() + expiredays);
   document.cookie = `${key}=${value}; path=/; expires=${date.toUTCString()};`;
 };
 
@@ -65,8 +66,8 @@ const createPopup = () => {
 
   title.textContent = "베타 테스트 안내";
   content.textContent =
-    "현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
-  checkComment.textContent = `하루 동안 보이지 않기`;
+    "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
+  checkComment.textContent = `7일 동안 보이지 않기`;
 
   container.style.cssText = `
     position: fixed;
@@ -185,7 +186,7 @@ export const cookieCheck = () => {
 
     close.addEventListener("click", (e) => {
       if (checkBox.checked) {
-        setCookie("mainpopup", "false", 1);
+        setCookie("mainpopup", "false", 7);
       }
       container.parentElement.removeChild(container);
     });
