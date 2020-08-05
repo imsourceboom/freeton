@@ -3,9 +3,10 @@ section#home {
   padding-bottom: 0 !important;
   padding-top: 0;
 
+  $introduceHeight: 200;
   .introduce-container {
     position: relative;
-    height: 200vh;
+    height: $introduceHeight + vh;
     overflow: hidden;
 
     img.bg {
@@ -20,8 +21,8 @@ section#home {
         right: -10%;
       }
       &.three {
-        top: 55%;
-        left: -45%;
+        top: 46%;
+        left: -80%;
       }
       &.four {
         top: 85%;
@@ -39,7 +40,8 @@ section#home {
         }
         &.three {
           width: 45vw;
-          left: 0;
+          top: 55%;
+          left: -5%;
         }
         &.four {
           width: 25vw;
@@ -52,7 +54,7 @@ section#home {
     .wrapper {
       position: relative;
       z-index: 2;
-      height: 100vh;
+      height: $introduceHeight / 2 + vh;
       display: flex;
       align-items: center;
       justify-content: center;
