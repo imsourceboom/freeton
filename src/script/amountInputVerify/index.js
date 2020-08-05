@@ -5,7 +5,7 @@ function removeChar(event) {
   var keyID = event.which ? event.which : event.keyCode;
   if (keyID == 8 || keyID == 46 || keyID == 37 || keyID == 39) return;
   //숫자와 소수점만 입력가능
-  else event.target.value = event.target.value.replace(/[^-\.0-9]/g, "");
+  else event.target.value = event.target.value.replace(/[^\.0-9]/g, "");
 }
 //콤마 찍기
 function comma(obj) {

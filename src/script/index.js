@@ -1,6 +1,7 @@
 import "./polyfill";
 import "./ieBlockPage";
 import "./swup";
+import "./popup";
 // import "./smoothscroll";
 // import "./header";
 // import "./slideContainer";

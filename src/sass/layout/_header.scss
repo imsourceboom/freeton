@@ -43,7 +43,34 @@ header {
     // }
 
     figure.logo {
+      position: relative;
       cursor: pointer;
+
+      &::after {
+        content: "BETA";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translate3d(117%, 2%, 0);
+        display: block;
+        padding: 1px 4px 2px;
+        border-radius: 3px;
+        letter-spacing: 0.05em;
+        background-color: rgba(55, 128, 163, 1);
+        color: #fff;
+        font-size: 10px;
+        opacity: 0.6;
+        animation: backpulse 2s infinite alternate;
+
+        @keyframes backpulse {
+          from {
+            opacity: 0.6;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
 
       img {
         width: 75px;

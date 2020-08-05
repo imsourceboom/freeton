@@ -20,10 +20,14 @@ block main
                         .input-group
                             input(type="text" placeholder="수량입력").max-input
                             p.amount-max 최대
-                        //- ul.fee-group
-                        //-     li
-                        //-         dt 수수료
-                        //-         dd 0.02
+                        ul.fee-group
+                            li
+                                dt 수수료
+                                    span
+                                dd 0.02
+                            li
+                                dt 총 출금 수량 (수수료 포함)
+                                dd 0.0
 
                     .label-group
                         p.title 출금 주소

@@ -45,10 +45,7 @@ section#withdraw {
     form {
       .label-group {
         margin-bottom: 1.8rem;
-
-        @media (min-width: 768px) {
-          margin-bottom: 2.2rem;
-        }
+        margin-bottom: 2.5rem;
 
         &:first-of-type {
           input {
@@ -148,10 +145,81 @@ section#withdraw {
         color: $orange;
       }
     }
+
+    ul.fee-group {
+      margin-top: 8px;
+      padding: 0 3px;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: rgb(84, 89, 97);
+        height: 18px;
+        line-height: 1;
+
+        dt,
+        dd {
+          display: flex;
+          align-items: center;
+        }
+
+        dt {
+          span {
+            position: relative;
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-left: 4px;
+            cursor: pointer;
+            background-image: url("https://icongr.am/clarity/help.svg?size=12&color=545961");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            &:hover {
+              &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate3d(130%, -50%, 0);
+                width: 0;
+                height: 0;
+                border-top: 10px solid transparent;
+                border-right: 10px solid rgba(0, 0, 0, 0.73);
+                border-bottom: 10px solid transparent;
+              }
+
+              &::after {
+                content: "출금 수수료는 출금 시 화면에 표기된 금액으로 고정 부과됩니다. 단, 실제 블록체인 네트워크 지불 수수료는 가변적이므로, 네트워크 상태에 따라 표기 수수료와 다를 수 있습니다";
+                display: block;
+                width: 180px;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate3d(106.37%, -50%, 0);
+                font-size: 11px;
+                line-height: 1.6;
+                text-align: center;
+                padding: 9px 12px;
+                border-radius: 3px;
+                color: #ddd;
+                background-color: rgba(0, 0, 0, 0.73);
+                box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.16);
+              }
+            }
+          }
+        }
+        dd {
+        }
+      }
+    }
   }
 
   .caution-box {
-    // @media (min-width: 768px) {
+    // @media (min-width: 7610px) {
     //   padding-left: 20px;
     // }
 
