@@ -1,6 +1,6 @@
 section#home {
   overflow-x: hidden;
-  padding-bottom: 0 !important;
+  padding-bottom: 70px !important;
   padding-top: 0;
 
   $introduceHeight: 200;
@@ -21,8 +21,8 @@ section#home {
         right: -10%;
       }
       &.three {
-        top: 46%;
-        left: -80%;
+        top: 48%;
+        left: -85%;
       }
       &.four {
         top: 85%;
@@ -58,6 +58,15 @@ section#home {
       display: flex;
       align-items: center;
       justify-content: center;
+
+      &.second {
+        padding-bottom: 30px;
+        height: $introduceHeight / 2 + vh;
+
+        .box {
+          padding-top: 70px;
+        }
+      }
 
       .box {
         text-align: center;
