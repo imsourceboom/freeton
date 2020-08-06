@@ -1,3 +1,5 @@
+import { comma, convertNumber } from "../amountInputVerify";
+
 export function amountMax() {
   const maxBtn = Array.from(document.querySelectorAll(".amount-max"));
   const withdrawPossibles = Array.from(
@@ -10,6 +12,7 @@ export function amountMax() {
 
   if (maxBtn !== null) {
     let possibleAmount;
+    let totalAmount;
 
     maxBtn.map((btn, i) => {
       btn.addEventListener("click", () => {
@@ -23,9 +26,15 @@ export function amountMax() {
             target.value = possibleAmount;
           }
         });
+
+        totalAmount = convertNumber(possibleAmount);
+        totalAmount = totalAmount + 0.02;
+        totalAmount = totalAmount.toString();
+        totalAmount = comma(totalAmount);
+
         totalPlusFee.map((target, j) => {
           if (i == j) {
-            target.textContent = possibleAmount;
+            target.textContent = totalAmount;
           }
         });
       });

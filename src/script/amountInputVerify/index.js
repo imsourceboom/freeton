@@ -8,7 +8,7 @@ function removeChar(event) {
   else event.target.value = event.target.value.replace(/[^\.0-9]/g, "");
 }
 //콤마 찍기
-function comma(obj) {
+export function comma(obj) {
   var regx = new RegExp(/(-?\d+)(\d{3})/);
   var bExists = obj.indexOf(".", 0); //0번째부터 .을 찾는다.
   var strArr = obj.split(".");
@@ -29,13 +29,13 @@ function comma(obj) {
 }
 
 //콤마 풀기
-function uncomma(str) {
+export function uncomma(str) {
   str = "" + str.replace(/,/gi, ""); // 콤마 제거
   str = str.replace(/(^\s*)|(\s*$)/g, ""); // trim()공백,문자열 제거
   return new Number(str); //문자열을 숫자로 반환
 }
 
-function convertNumber(value) {
+export function convertNumber(value) {
   const existDot = value.indexOf(".", 0);
   const splitArr = value.split(".");
   splitArr[0] = uncomma(splitArr[0]);
