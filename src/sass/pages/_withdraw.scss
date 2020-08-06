@@ -164,7 +164,7 @@ section#withdraw {
           align-items: center;
         }
 
-        dt {
+        &.fee {
           span {
             position: relative;
             display: inline-block;
@@ -211,8 +211,6 @@ section#withdraw {
               }
             }
           }
-        }
-        dd {
         }
       }
     }

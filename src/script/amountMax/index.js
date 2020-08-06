@@ -1,11 +1,33 @@
 export function amountMax() {
   const maxBtn = Array.from(document.querySelectorAll(".amount-max"));
+  const withdrawPossibles = Array.from(
+    document.querySelectorAll(".withdraw-possible")
+  );
+  const maxInputs = Array.from(document.querySelectorAll(".max-input"));
+  const totalPlusFee = Array.from(
+    document.querySelectorAll(".total-plus-fee dd")
+  );
 
   if (maxBtn !== null) {
-    maxBtn.map((btn) => {
+    let possibleAmount;
+
+    maxBtn.map((btn, i) => {
       btn.addEventListener("click", () => {
-        btn.previousElementSibling.value =
-          btn.parentElement.parentElement.parentElement.previousElementSibling.children[1].textContent;
+        withdrawPossibles.map((target, j) => {
+          if (i == j) {
+            possibleAmount = target.textContent;
+          }
+        });
+        maxInputs.map((target, j) => {
+          if (i == j) {
+            target.value = possibleAmount;
+          }
+        });
+        totalPlusFee.map((target, j) => {
+          if (i == j) {
+            target.textContent = possibleAmount;
+          }
+        });
       });
     });
   }

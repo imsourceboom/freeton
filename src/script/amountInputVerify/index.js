@@ -35,7 +35,7 @@ function uncomma(str) {
   return new Number(str); //문자열을 숫자로 반환
 }
 
-function maxValue(value) {
+function convertNumber(value) {
   const existDot = value.indexOf(".", 0);
   const splitArr = value.split(".");
   splitArr[0] = uncomma(splitArr[0]);
@@ -55,13 +55,17 @@ export const amountInputVerify = () => {
     document.querySelectorAll(".withdraw-possible")
   );
   const maxInputs = Array.from(document.querySelectorAll(".max-input"));
+  const totalPlusFee = Array.from(
+    document.querySelectorAll(".total-plus-fee dd")
+  );
 
   if (maxInputs !== null) {
     maxInputs.map((input, i) => {
-      let inputValue;
-      let numberInputValue;
-      let maxAmount;
-      let numberMaxAmount;
+      let inputValue; //input value 오리지날
+      let numberInputValue; // input value 콤마 제거 (number 화)
+      let maxAmount; //출금 가능 수량 오리지날
+      let numberMaxAmount; // 출금 가능 수얀 콤마 제거 (number 화)
+      let totalAmount; // input value + 수수료
 
       withdrawPossibles.map((withdraw, j) => {
         if (i == j) {
@@ -71,17 +75,35 @@ export const amountInputVerify = () => {
       });
 
       input.addEventListener(
-        "input",
+        "keydown",
         debounce((e) => {
           removeChar(e);
           e.target.value = comma(e.target.value);
 
           inputValue = e.target.value;
-          numberInputValue = maxValue(inputValue);
+          numberInputValue = convertNumber(inputValue);
+
+          totalAmount = numberInputValue + 0.02;
 
           if (numberInputValue > numberMaxAmount) {
             e.target.value = maxAmount;
+            totalAmount = numberMaxAmount + 0.02;
           }
+
+          if (inputValue == "") {
+            totalAmount = "0.0";
+          }
+
+          totalAmount = totalAmount.toString();
+          totalAmount = comma(totalAmount);
+
+          totalPlusFee.map((target, j) => {
+            if (i == j) {
+              const input = target.nextElementSibling;
+              target.textContent = totalAmount;
+              input.value = totalAmount;
+            }
+          });
         })
       );
     });
