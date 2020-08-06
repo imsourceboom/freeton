@@ -4,7 +4,7 @@ import SwupHeadPlugin from "@swup/head-plugin";
 import SwupScrollPlugin from "@swup/scroll-plugin";
 import SwupPreloadPlugin from "@swup/preload-plugin";
 
-import { cookieCheck } from "../popup"; // 모든 페이지 - 페이지 상단 이동 버튼
+import { cookieCheck } from "../cookie"; // 모든 페이지 - 페이지 상단 이동 버튼
 import { scroll } from "../smoothscroll"; // 모든 페이지 - 페이지 상단 이동 버튼
 import { commaFunc } from "../nanoSplit"; // 모든 페이지 - nano 클래스를 가진 그램 숫자들 소수점과 콤마
 import { copied } from "../clipboard"; // wallet - 복사하기
