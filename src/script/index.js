@@ -1,3 +1,5 @@
+"use strict";
+
 import "./polyfill";
 import "./ieBlockPage";
 import "./swup";

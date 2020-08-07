@@ -1,14 +1,30 @@
 export const loadingText = () => {
+  const loadingSection = document.querySelector("#loading");
   const loadingText = document.querySelector("#loading .text");
 
-  if (loadingText !== null) {
-    const comments = [
-      // "시드키를 생성 중입니다.",
-      // "암호화 설정 중입니다.",
-      "지갑을 생성 중입니다.",
-    ];
+  const comments = {
+    create: "지갑을 생성 중입니다.",
+    active: "지갑을 활성화 중입니다.",
+  };
 
-    loadingText.textContent = comments[0];
+  if (loadingSection !== null) {
+    let className = loadingSection.getAttribute("class");
+
+    switch (className) {
+      case "create-wallet":
+        loadingText.textContent = comments.create;
+        break;
+
+      case "active-wallet":
+        loadingText.textContent = comments.active;
+        break;
+
+      default:
+        break;
+    }
+    // if (loadingText.classList.contains("create-wallet")) {
+    //   loadingText.textContent = comments.create;
+    // }
 
     // setTimeout(() => {
     //   loadingText.textContent = comments[1];
