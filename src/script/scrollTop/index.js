@@ -5,8 +5,9 @@ if (button !== null) {
   window.addEventListener(
     "scroll",
     throttling(() => {
-      const top = document.body.getBoundingClientRect().top;
-      if (top < 0) {
+      const top = window.pageYOffset;
+
+      if (top > 0) {
         button.style.display = "block";
       } else {
         button.style.display = "none";
