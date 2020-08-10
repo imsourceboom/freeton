@@ -1,3 +1,12 @@
+body {
+  &.load-and-inspect {
+    & > header,
+    & > footer {
+      display: none;
+    }
+  }
+}
+
 main {
   position: relative;
 

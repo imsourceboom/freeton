@@ -1,7 +1,7 @@
 export const hideHeaderAndFooter = () => {
-  const header = document.querySelector("body > header");
-  const footer = document.querySelector("body > footer");
+  document.body.classList.add("load-and-inspect");
+};
 
-  header.style.display = "none";
-  footer.style.display = "none";
+export const showHeaderAndFooter = () => {
+  document.body.classList.remove("load-and-inspect");
 };

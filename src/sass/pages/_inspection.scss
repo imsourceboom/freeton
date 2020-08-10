@@ -14,7 +14,7 @@ section#inspection {
     max-width: 500px;
   }
 
-  @keyframes spin {
+  @keyframes spinY {
     0% {
       transform: rotateY(0deg) rotateZ(20deg);
     }
@@ -25,7 +25,7 @@ section#inspection {
   img {
     width: 100px;
     margin: 0 auto 40px;
-    animation: spin 5s infinite;
+    animation: spinY 5s infinite;
   }
 
   h1 {
