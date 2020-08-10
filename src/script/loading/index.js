@@ -1,13 +1,17 @@
+import { hideHeaderAndFooter } from "../hideHeaderAndFooter";
+
 export const loadingText = () => {
   const loadingSection = document.querySelector("#loading");
-  const loadingText = document.querySelector("#loading .text");
-
-  const comments = {
-    create: "지갑을 생성 중입니다.",
-    active: "지갑을 활성화 중입니다.",
-  };
 
   if (loadingSection !== null) {
+    hideHeaderAndFooter();
+    const loadingText = document.querySelector("#loading .text");
+
+    const comments = {
+      create: "지갑을 생성 중입니다.",
+      active: "지갑을 활성화 중입니다.",
+    };
+
     let className = loadingSection.getAttribute("class");
 
     switch (className) {
@@ -22,6 +26,7 @@ export const loadingText = () => {
       default:
         break;
     }
+
     // if (loadingText.classList.contains("create-wallet")) {
     //   loadingText.textContent = comments.create;
     // }

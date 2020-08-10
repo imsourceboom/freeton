@@ -1,0 +1,65 @@
+section#inspection {
+  position: relative;
+  background-color: rgb(39, 39, 49);
+  color: rgb(243, 235, 235);
+  text-align: center;
+  white-space: nowrap;
+
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 100%;
+    max-width: 500px;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotateY(0deg) rotateZ(20deg);
+    }
+    100% {
+      transform: rotateY(360deg) rotateZ(20deg);
+    }
+  }
+  img {
+    width: 100px;
+    margin: 0 auto 40px;
+    animation: spin 5s infinite;
+  }
+
+  h1 {
+    position: relative;
+    margin-bottom: 60px;
+    font-size: 28px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate3d(-50%, 30px, 0);
+      width: 250px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      br.control {
+        display: none;
+      }
+    }
+  }
+}
