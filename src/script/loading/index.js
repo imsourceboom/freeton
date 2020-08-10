@@ -1,10 +1,7 @@
-import { hideHeaderAndFooter } from "../hideHeaderAndFooter";
-
 export const loadingText = () => {
   const loadingSection = document.querySelector("#loading");
 
   if (loadingSection !== null) {
-    hideHeaderAndFooter();
     const loadingText = document.querySelector("#loading .text");
 
     const comments = {
