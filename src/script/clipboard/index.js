@@ -13,7 +13,7 @@ export function copied() {
 
       setTimeout(() => {
         clipButton.classList.remove("modal");
-      }, 1000);
+      }, 1300);
     };
 
     address.on("success", modal);
