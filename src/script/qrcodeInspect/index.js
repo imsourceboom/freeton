@@ -8,9 +8,7 @@ export const qrcodeInspect = () => {
       str = str.substr(1);
       str = str.split("=");
 
-      const withDrawAddressInput = document.querySelector(
-        "#withdraw-address-input"
-      );
+      const withDrawAddressInput = document.querySelector("#trans_you_address");
 
       withDrawAddressInput.value = str[1];
     }
