@@ -133,15 +133,15 @@
       .box {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         #address {
-          width: 94%;
           word-break: break-all;
           padding-right: 10px;
+          cursor: pointer;
         }
 
         .copy-icon {
-          flex: 1;
           position: relative;
           cursor: pointer;
 

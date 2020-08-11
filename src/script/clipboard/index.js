@@ -1,25 +1,30 @@
 import Clipboard from "Clipboard";
 
 export function copied() {
+  const clipAddress = document.querySelector("#address");
   const clipButton = document.querySelector(".copy-icon");
 
-  if (clipButton !== null) {
-    const clipboard = new Clipboard(clipButton);
+  if (clipAddress !== null) {
+    const address = new Clipboard(clipAddress);
+    const button = new Clipboard(clipButton);
 
-    clipboard.on("success", function (e) {
-      //   console.log("복사!");
-    });
+    const modal = () => {
+      clipButton.classList.add("modal");
 
-    clipboard.on("error", function (e) {
-      console.error("실패!");
-    });
-
-    clipButton.addEventListener("click", function (e) {
-      e.currentTarget.classList.add("modal");
       setTimeout(() => {
         clipButton.classList.remove("modal");
       }, 1000);
-    });
+    };
+
+    address.on("success", modal);
+    // address.on("error", function (e) {
+    //   console.error("실패!");
+    // });
+
+    button.on("success", modal);
+    // button.on("error", function (e) {
+    //   console.error("실패!");
+    // });
   }
 }
 
