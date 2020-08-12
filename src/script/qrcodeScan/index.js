@@ -24,6 +24,9 @@ export const qrcodeScan = () => {
         width: 100%;
         height: 100vh;
         background-color: rgba(255, 255, 255, 0.1);
+        -webkit-backdrop-filter: blur(3px);
+        -moz-backdrop-filter: blur(3px);
+        -o-backdrop-filter: blur(3px);
         backdrop-filter: blur(3px);
       `;
 
