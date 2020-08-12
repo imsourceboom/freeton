@@ -5,7 +5,6 @@ block title
     - var page = '출금하기'
 
 block addCDN
-    script(src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js")
 
 block main
     section#withdraw.transition-slide
@@ -35,12 +34,47 @@ block main
 
                     .label-group
                         p.title 출금 주소
-                            input#qr-input-file(type="file" accept="image/*" capture)
-                            div#reader
+                            //- input#qr-input-file(type="file" accept="image/*" capture)
+                            span.scan-video-controller QR code 스캔하기
+                        video#qr-scan
                         .input-group
                             input#trans_you_address(type="text" placeholder="출금 주소를 입력하세요").input-value
                             //- p 수량
                     span.annotation 입력한 주소가 정확한지 반드시 확인바랍니다
+                    script(data-swup-reload-script).
+                        var controller = document.querySelector("span.scan-video-controller");
+                        var scanVideo = document.querySelector("video#qr-scan");
+                        var scanner = new Instascan.Scanner({ video: document.getElementById('qr-scan') });
+
+                        document.querySelector('body > header figure.logo a').addEventListener("click", function (e) {
+                            scanner.stop();
+                        })
+                        document.querySelector('body > header .desktop ul a').addEventListener("click", function (e) {
+                            scanner.stop();
+                        })
+                        document.querySelector('body > header .mobile-nav ul a').addEventListener("click", function (e) {
+                            scanner.stop();
+                        })
+                        controller.addEventListener("click", function (e) {
+                            if (scanVideo.classList.contains("enable")) {
+                                scanVideo.classList.remove("enable");
+                                scanner.stop()
+                            } else {
+                                scanVideo.classList.add("enable");
+                                scanner.addListener('scan', function (content) {
+                                    console.log('Wow ', content);
+                                });
+                                Instascan.Camera.getCameras().then(function (cameras) {
+                                    if (cameras.length > 0) {
+                                    scanner.start(cameras[0]);
+                                    } else {
+                                    console.error('No cameras found.');
+                                    }
+                                }).catch(function (e) {
+                                    console.error(e);
+                                });
+                            }
+                        });
             .caution-box
                 .bundle
                     p.title 출금 주의사항
@@ -59,28 +93,32 @@ block main
                     input(type='checkbox' id="agree" hidden)
                     label(for="agree")
                 button(type='button' disabled).withdraw-btn 출금하기
-block bodyScript
-    script.
-        console.log('hi')
-        var html5QrCode = new Html5Qrcode(/* element id */ "reader");
+//- block bodyScript
+    script(data-swup-reload-script).
+        var withDrawSection = document.querySelector("section#withdraw");
+        var controller = document.querySelector("span.scan-video-controller");
+        var scanVideo = document.querySelector("video#qr-scan");
 
-        // File based scanning
-        var fileinput = document.getElementById('qr-input-file');
-        fileinput.addEventListener('change', e => {
-        if (e.target.files.length == 0) {
-            // No file selected, ignore 
-            return;
+        if (withDrawSection !== null) {
+                var scanner = new Instascan.Scanner({ video: document.getElementById('qr-scan') });
+
+            controller.addEventListener("click", (e) => {
+            scanVideo.classList.toggle("enable");
+            if (e.currentTarget.classList.contains("enable")) {
+                    scanner.stop();
+            } else {
+                scanner.addListener('scan', function (content) {
+                    console.log('Wow ', content);
+                });
+                Instascan.Camera.getCameras().then(function (cameras) {
+                    if (cameras.length > 0) {
+                    scanner.start(cameras[0]);
+                    } else {
+                    console.error('No cameras found.');
+                    }
+                }).catch(function (e) {
+                    console.error(e);
+                });
+            }
+            });
         }
-
-        // Use the first item in the list
-        var imageFile = e.target.files[0];
-        html5QrCode.scanFile(imageFile, /* showImage= */true)
-        .then(qrCodeMessage => {
-            // success, use qrCodeMessage
-            console.log(qrCodeMessage);
-        })
-        .catch(err => {
-            // failure, handle it.
-            console.log(`Error scanning file. Reason: ${err}`)
-        });
-        });

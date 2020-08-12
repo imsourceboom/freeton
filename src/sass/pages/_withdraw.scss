@@ -327,4 +327,19 @@ section#withdraw {
       }
     }
   }
+
+  span.scan-video-controller {
+    float: right;
+    color: #4b7bec;
+    cursor: pointer;
+  }
+
+  video#qr-scan {
+    width: 100%;
+    display: none;
+
+    &.enable {
+      display: block;
+    }
+  }
 }
