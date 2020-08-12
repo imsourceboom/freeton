@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&amp;display=swap" as="font" crossorigin="crossorigin">
     <link href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+    <script src="https://raw.githubusercontent.com/mebjas/html5-qrcode/master/minified/html5-qrcode.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es5,es6,es7&amp;flags=gated" async defer> </script>
     <script src="/js/app.js" defer></script>
   </head>
@@ -116,7 +117,8 @@
               </div>
               <div class="label-group">
                 <p class="title">출금 주소
-                  <input type="file" accept="image/*" capture="camera">
+                  <input id="qr-input-file" type="file" accept="image/*" capture>
+                  <div id="reader"></div>
                 </p>
                 <div class="input-group">
                   <input class="input-value" id="trans_you_address" type="text" placeholder="출금 주소를 입력하세요">
@@ -165,5 +167,30 @@
         <h2>송금이 완료되었습니다</h2>
       </div>
     </div>
+    <script>
+      console.log('hi')
+      var html5QrCode = new Html5Qrcode(/* element id */ "reader");
+      
+      // File based scanning
+      var fileinput = document.getElementById('qr-input-file');
+      fileinput.addEventListener('change', e => {
+      if (e.target.files.length == 0) {
+          // No file selected, ignore 
+          return;
+      }
+      
+      // Use the first item in the list
+      var imageFile = e.target.files[0];
+      html5QrCode.scanFile(imageFile, /* showImage= */true)
+      .then(qrCodeMessage => {
+          // success, use qrCodeMessage
+          console.log(qrCodeMessage);
+      })
+      .catch(err => {
+          // failure, handle it.
+          console.log(`Error scanning file. Reason: ${err}`)
+      });
+      });
+    </script>
   </body>
 </html>
