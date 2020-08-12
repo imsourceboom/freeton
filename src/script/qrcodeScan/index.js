@@ -9,6 +9,7 @@ export const qrcodeScan = () => {
     const video = document.createElement("video");
     const canvas = canvasElement.getContext("2d");
     const btnScanQR = document.querySelector(".scan-video-controller");
+    const input = document.querySelector("#trans_you_address");
     const container = document.createElement("div");
     const comment = document.createElement("h2");
     let outputData;
@@ -41,9 +42,15 @@ export const qrcodeScan = () => {
       document.body.appendChild(container);
     };
 
+    const valueFilter = (res) => {
+      let index = res.indexOf("?") + 1;
+      let slice = res.substr(index);
+      let value = slice.split("=");
+      return value[1];
+    };
+
     qrcode.callback = (res) => {
       if (res) {
-        // outputData.innerText = res;
         outputData = res;
         scanning = false;
 
@@ -57,6 +64,8 @@ export const qrcodeScan = () => {
         setTimeout(() => {
           document.body.removeChild(container);
         }, 1500);
+
+        input.value = valueFilter(outputData);
       }
     };
 
@@ -78,7 +87,7 @@ export const qrcodeScan = () => {
     });
 
     function tick() {
-      canvasElement.height = video.videoWidth * 0.74;
+      canvasElement.height = video.videoHeight;
       canvasElement.width = video.videoWidth;
       canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
 
