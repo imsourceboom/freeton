@@ -125,7 +125,7 @@
               <script data-swup-reload-script>
                 var controller = document.querySelector("span.scan-video-controller");
                 var scanVideo = document.querySelector("video#qr-scan");
-                var scanner = new Instascan.Scanner({ video: document.getElementById('qr-scan') });
+                var scanner = new Instascan.Scanner({ video: document.getElementById('qr-scan'), mirror: false });
                 
                 document.querySelector('body > header figure.logo a').addEventListener("click", function (e) {
                     scanner.stop();
@@ -147,7 +147,9 @@
                         });
                         Instascan.Camera.getCameras().then(function (cameras) {
                             if (cameras.length > 0) {
-                            scanner.start(cameras[2]);
+                            console.log(cameras)
+                            alert(JSON.stringify(cameras))
+                            scanner.start(cameras[0]);
                             } else {
                             console.error('No cameras found.');
                             }
