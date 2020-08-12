@@ -10,7 +10,7 @@ import { scroll } from "../smoothscroll"; // 모든 페이지 - 페이지 상단
 import { commaFunc } from "../nanoSplit"; // 모든 페이지 - nano 클래스를 가진 그램 숫자들 소수점과 콤마
 import { qrcode } from "../qrcode"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
 import { qrcodeInspect } from "../qrcodeInspect"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
-// import { qrcodeScan } from "../qrcodeScan"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
+import { qrcodeScan } from "../qrcodeScan"; // wallet - 월렛 메뉴 첫 진입 시 나오는 로딩 페이지
 import { copied } from "../clipboard"; // wallet - 복사하기
 import { withdrawPossibleCalculate } from "../withdrawPossible"; // walle증, staking-apply - 출금가능 수량, 수수료 계산 및 표시
 import { amountMax } from "../amountMax"; // withdraw, staking-apply - 최대 수량 버튼
@@ -41,7 +41,7 @@ swup.on("contentReplaced", scroll);
 swup.on("contentReplaced", commaFunc);
 swup.on("contentReplaced", qrcode);
 swup.on("contentReplaced", qrcodeInspect);
-// swup.on("contentReplaced", qrcodeScan);
+swup.on("contentReplaced", qrcodeScan);
 swup.on("contentReplaced", copied);
 swup.on("contentReplaced", withdrawPossibleCalculate);
 swup.on("contentReplaced", amountMax);

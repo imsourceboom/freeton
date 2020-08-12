@@ -334,6 +334,10 @@ section#withdraw {
     cursor: pointer;
   }
 
+  canvas#qr-canvas {
+    width: 100%;
+  }
+
   video#qr-scan {
     width: 100%;
     display: none;
