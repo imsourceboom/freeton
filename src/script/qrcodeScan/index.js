@@ -21,10 +21,9 @@ export const qrcodeScan = () => {
     let outputData;
     let scanning = false;
 
-    console.log(osCheck());
-    console.log(browserCheck());
     const os = osCheck();
     const browser = browserCheck();
+    alert(`${os} - ${browser}`);
 
     if (os == "mac" || os == "windows") {
       btnScanQR.hidden = true;
