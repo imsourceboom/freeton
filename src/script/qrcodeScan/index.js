@@ -63,6 +63,8 @@ export const qrcodeScan = () => {
 
         scanComplete();
         canvasElement.hidden = true;
+        btnScanQR.textContent = "QR code 스캔하기";
+        btnScanQR.classList.remove("on");
 
         setTimeout(() => {
           document.body.removeChild(container);
@@ -73,20 +75,33 @@ export const qrcodeScan = () => {
     };
 
     btnScanQR.addEventListener("click", () => {
-      navigator.mediaDevices
-        .getUserMedia({ video: { facingMode: "environment" } })
-        .then(function (stream) {
-          scanning = true;
-          // qrResult.hidden = true;
-          // btnScanQR.hidden = true;
-          canvasElement.hidden = false;
-          canvasElement.style.marginBottom = "6px";
-          video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-          video.srcObject = stream;
-          video.play();
-          tick();
-          scan();
+      if (btnScanQR.classList.contains("on")) {
+        btnScanQR.classList.remove("on");
+        btnScanQR.textContent = "QR code 스캔하기";
+
+        video.srcObject.getTracks().forEach((track) => {
+          track.stop();
         });
+
+        canvasElement.hidden = true;
+      } else {
+        btnScanQR.classList.add("on");
+        btnScanQR.textContent = "QR code 스캔종료";
+        navigator.mediaDevices
+          .getUserMedia({ video: { facingMode: "environment" } })
+          .then(function (stream) {
+            scanning = true;
+            // qrResult.hidden = true;
+            // btnScanQR.hidden = true;
+            canvasElement.hidden = false;
+            canvasElement.style.marginBottom = "6px";
+            video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+            video.srcObject = stream;
+            video.play();
+            tick();
+            scan();
+          });
+      }
     });
 
     function tick() {
