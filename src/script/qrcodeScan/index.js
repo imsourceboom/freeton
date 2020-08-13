@@ -1,4 +1,5 @@
 import { qrcode } from "./jsqrcode";
+import { osCheck, browserCheck } from "../agentCheck";
 
 export const qrcodeScan = () => {
   const canvasElement = document.getElementById("qr-canvas");
@@ -20,22 +21,32 @@ export const qrcodeScan = () => {
     let outputData;
     let scanning = false;
 
-    // (() => {
-    navigator.mediaDevices
-      .enumerateDevices()
-      .then((devices) => {
-        const arr = devices.map((device) => {
-          return device.kind;
-        });
+    console.log(osCheck());
+    console.log(browserCheck());
+    const os = osCheck();
+    const browser = browserCheck();
 
-        const result = arr.includes("videoinput");
-
-        btnScanQR.hidden = !result;
-      })
-      .catch(() => {
+    if (os == "mac" || os == "windows") {
+      btnScanQR.hidden = true;
+    } else if (os == "iPhone" || os == "iPad") {
+      if (!browser == "safari") {
         btnScanQR.hidden = true;
-      });
-    // })();
+      }
+    }
+    // navigator.mediaDevices
+    //   .enumerateDevices()
+    //   .then((devices) => {
+    //     const arr = devices.map((device) => {
+    //       return device.kind;
+    //     });
+
+    //     const result = arr.includes("videoinput");
+
+    //     btnScanQR.hidden = !result;
+    //   })
+    //   .catch(() => {
+    //     btnScanQR.hidden = true;
+    //   });
 
     const scanComplete = () => {
       container.style.cssText = `
