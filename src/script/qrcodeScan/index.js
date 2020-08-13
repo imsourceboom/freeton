@@ -1,8 +1,7 @@
 import { qrcode } from "./jsqrcode";
+import { osCheck, browserCheck } from "../agentCheck";
 
 export const qrcodeScan = () => {
-  // const jsqrcode = qrcode;
-
   const canvasElement = document.getElementById("qr-canvas");
 
   if (canvasElement !== null) {
@@ -14,6 +13,22 @@ export const qrcodeScan = () => {
     const comment = document.createElement("h2");
     let outputData;
     let scanning = false;
+
+    (() => {
+      navigator.mediaDevices
+        .enumerateDevices()
+        .then((devices) => {
+          console.log("있다");
+          devices.forEach(function (device) {
+            alert(
+              device.kind + ": " + device.label + " id = " + device.deviceId
+            );
+          });
+        })
+        .catch(() => {
+          alert("없다");
+        });
+    })();
 
     const scanComplete = () => {
       container.style.cssText = `
@@ -91,8 +106,6 @@ export const qrcodeScan = () => {
           .getUserMedia({ video: { facingMode: "environment" } })
           .then(function (stream) {
             scanning = true;
-            // qrResult.hidden = true;
-            // btnScanQR.hidden = true;
             canvasElement.hidden = false;
             canvasElement.style.marginBottom = "6px";
             video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
