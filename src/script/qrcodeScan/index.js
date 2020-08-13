@@ -20,22 +20,22 @@ export const qrcodeScan = () => {
     let outputData;
     let scanning = false;
 
-    (() => {
-      navigator.mediaDevices
-        .enumerateDevices()
-        .then((devices) => {
-          const arr = devices.map((device) => {
-            return device.kind;
-          });
-
-          const result = arr.includes("videoinput");
-
-          btnScanQR.hidden = !result;
-        })
-        .catch(() => {
-          btnScanQR.hidden = true;
+    // (() => {
+    navigator.mediaDevices
+      .enumerateDevices()
+      .then((devices) => {
+        const arr = devices.map((device) => {
+          return device.kind;
         });
-    })();
+
+        const result = arr.includes("videoinput");
+
+        btnScanQR.hidden = !result;
+      })
+      .catch(() => {
+        btnScanQR.hidden = true;
+      });
+    // })();
 
     const scanComplete = () => {
       container.style.cssText = `
