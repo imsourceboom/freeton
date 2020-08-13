@@ -49,9 +49,12 @@ header {
       &::after {
         content: "BETA";
         position: absolute;
+        // right: 0;
+        // bottom: 0;
+        // transform: translate3d(117%, 2%, 0);
         right: 0;
-        bottom: 0;
-        transform: translate3d(117%, 2%, 0);
+        top: 50%;
+        transform: translate3d(110%, -50%, 0);
         display: block;
         padding: 1px 4px 2px;
         border-radius: 3px;
@@ -73,12 +76,20 @@ header {
       }
 
       img {
-        width: 75px;
-        height: 20.109px;
+        // width: 75px;
+        // height: 20.109px;
+
+        // @media (min-width: 768px) {
+        //   width: 85px;
+        //   height: 22.797px;
+        // }
+
+        width: 35px;
+        // height: 20.109px;
 
         @media (min-width: 768px) {
-          width: 85px;
-          height: 22.797px;
+          width: 40px;
+          // height: 22.797px;
         }
       }
     }
