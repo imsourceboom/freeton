@@ -23,12 +23,13 @@ export const qrcodeScan = () => {
 
     const os = osCheck();
     const browser = browserCheck();
-    alert(`${os} - ${browser}`);
+
+    // alert(`${os} - ${browser}`);
 
     if (os == "mac" || os == "windows") {
       btnScanQR.hidden = true;
     } else if (os == "iPhone" || os == "iPad") {
-      if (!browser == "safari") {
+      if (browser !== "safari") {
         btnScanQR.hidden = true;
       }
     }
