@@ -30,7 +30,9 @@ export const qrcodeScan = () => {
       btnScanQR.hidden = true;
     }
     if (os == "iPhone" || os == "iPad") {
-      btnScanQR.hidden = false;
+      if (browser == "safari") {
+        btnScanQR.hidden = false;
+      }
       if (
         browser == "kakaotalk" ||
         browser == "naver" ||

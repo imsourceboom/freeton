@@ -69,8 +69,12 @@ section#home {
         text-align: center;
 
         img {
-          width: 120px;
+          width: 100px;
           margin: 20px auto 0;
+
+          @media (min-width: 768px) {
+            width: 120px;
+          }
         }
 
         h3 {
