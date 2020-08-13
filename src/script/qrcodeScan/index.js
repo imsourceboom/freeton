@@ -28,7 +28,8 @@ export const qrcodeScan = () => {
 
     if (os == "mac" || os == "windows") {
       btnScanQR.hidden = true;
-    } else if (os == "iPhone" || os == "iPad") {
+    }
+    if (os == "iPhone" || os == "iPad") {
       if (
         browser == "kakaotalk" ||
         browser == "naver" ||
