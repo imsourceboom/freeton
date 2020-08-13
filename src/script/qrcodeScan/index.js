@@ -120,12 +120,15 @@ export const qrcodeScan = () => {
       btnScanQR.classList.remove("on");
       btnScanQR.textContent = "QR code 스캔하기";
 
-      video.srcObject.getTracks().forEach((track) => {
-        track.stop();
-      });
+      if (os == "iPhone" || os == "iPad" || os == "android") {
+        video.srcObject.getTracks().forEach((track) => {
+          track.stop();
+        });
+      }
 
       canvasElement.hidden = true;
     };
+
     logo.addEventListener("click", cameraOff);
     mobileMenu.map((menu) => {
       menu.addEventListener("click", cameraOff);
