@@ -33,5 +33,16 @@ export const browserCheck = () => {
   else return agent;
 };
 
+export const iosBrowser = () => {
+  const agent = navigator.userAgent.toLocaleLowerCase();
+
+  if (agent.indexOf("kakaotalk") >= 0) return "kakaotalk";
+  else if (agent.indexOf("naver") >= 0) return "naver";
+  else if (agent.indexOf("crios") >= 0) return "chrome";
+  else if (agent.indexOf("safari") >= 0) return "safari";
+  else if (agent.indexOf("opt") >= 0) return "opera";
+  else return agent;
+};
+
 // console.log(osCheck());
 // console.log(browserCheck());

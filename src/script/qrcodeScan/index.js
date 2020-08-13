@@ -1,5 +1,5 @@
 import { qrcode } from "./jsqrcode";
-import { osCheck, browserCheck } from "../agentCheck";
+import { osCheck, browserCheck, iosBrowser } from "../agentCheck";
 
 export const qrcodeScan = () => {
   const canvasElement = document.getElementById("qr-canvas");
@@ -22,14 +22,19 @@ export const qrcodeScan = () => {
     let scanning = false;
 
     const os = osCheck();
-    const browser = browserCheck();
+    const browser = iosBrowser();
 
-    alert(`${navigator.userAgent.toLocaleLowerCase()}`);
+    // alert(`${navigator.userAgent.toLocaleLowerCase()}`);
 
     if (os == "mac" || os == "windows") {
       btnScanQR.hidden = true;
     } else if (os == "iPhone" || os == "iPad") {
-      if (browser !== "safari") {
+      if (
+        browser == "kakaotalk" ||
+        browser == "naver" ||
+        browser == "chrome" ||
+        browser == "opera"
+      ) {
         btnScanQR.hidden = true;
       }
     }
