@@ -1,5 +1,4 @@
 import { qrcode } from "./jsqrcode";
-import { osCheck, browserCheck } from "../agentCheck";
 
 export const qrcodeScan = () => {
   const canvasElement = document.getElementById("qr-canvas");
@@ -11,6 +10,13 @@ export const qrcodeScan = () => {
     const input = document.querySelector("#trans_you_address");
     const container = document.createElement("div");
     const comment = document.createElement("h2");
+    const logo = document.querySelector("body > header");
+    const mobileMenu = Array.from(
+      document.querySelectorAll("body > header nav.desk ul li")
+    );
+    const deskMenu = Array.from(
+      document.querySelectorAll("body > header .mobile-nav ul li")
+    );
     let outputData;
     let scanning = false;
 
@@ -18,15 +24,16 @@ export const qrcodeScan = () => {
       navigator.mediaDevices
         .enumerateDevices()
         .then((devices) => {
-          console.log("있다");
-          devices.forEach(function (device) {
-            alert(
-              device.kind + ": " + device.label + " id = " + device.deviceId
-            );
+          const arr = devices.map((device) => {
+            return device.kind;
           });
+
+          const result = arr.includes("videoinput");
+
+          btnScanQR.hidden = !result;
         })
         .catch(() => {
-          alert("없다");
+          btnScanQR.hidden = true;
         });
     })();
 
@@ -89,16 +96,27 @@ export const qrcodeScan = () => {
       }
     };
 
+    const cameraOff = () => {
+      btnScanQR.classList.remove("on");
+      btnScanQR.textContent = "QR code 스캔하기";
+
+      video.srcObject.getTracks().forEach((track) => {
+        track.stop();
+      });
+
+      canvasElement.hidden = true;
+    };
+    logo.addEventListener("click", cameraOff);
+    mobileMenu.map((menu) => {
+      menu.addEventListener("click", cameraOff);
+    });
+    deskMenu.map((menu) => {
+      menu.addEventListener("click", cameraOff);
+    });
+
     btnScanQR.addEventListener("click", () => {
       if (btnScanQR.classList.contains("on")) {
-        btnScanQR.classList.remove("on");
-        btnScanQR.textContent = "QR code 스캔하기";
-
-        video.srcObject.getTracks().forEach((track) => {
-          track.stop();
-        });
-
-        canvasElement.hidden = true;
+        cameraOff();
       } else {
         btnScanQR.classList.add("on");
         btnScanQR.textContent = "QR code 스캔종료";
