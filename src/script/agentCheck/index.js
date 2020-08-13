@@ -2,7 +2,7 @@ export const osCheck = () => {
   const agent = navigator.userAgent.toLocaleLowerCase();
   // OS 식별
   if (agent.indexOf("windows") >= 0) return "windows";
-  else if (agent.indexOf("mac") >= 0) return "mac";
+  else if (agent.indexOf("macintosh") >= 0) return "mac";
   else if (agent.indexOf("android") >= 0) return "android";
   else if (agent.indexOf("iphone") >= 0) return "iPhone";
   else if (agent.indexOf("ipad") >= 0) return "iPad";
