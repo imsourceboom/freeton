@@ -24,7 +24,7 @@ export const qrcodeScan = () => {
     const os = osCheck();
     const browser = browserCheck();
 
-    alert(`${os} - ${browser}`);
+    alert(`${navigator.userAgent.toLocaleLowerCase()}`);
 
     if (os == "mac" || os == "windows") {
       btnScanQR.hidden = true;
