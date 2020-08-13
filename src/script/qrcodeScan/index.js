@@ -1,5 +1,5 @@
 import { qrcode } from "./jsqrcode";
-import { osCheck, browserCheck, iosBrowser } from "../agentCheck";
+import { osCheck, iosBrowser } from "../agentCheck";
 
 export const qrcodeScan = () => {
   const canvasElement = document.getElementById("qr-canvas");
