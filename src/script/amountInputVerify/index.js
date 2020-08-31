@@ -101,7 +101,7 @@ export const amountInputVerify = () => {
             if (i == j) {
               const input = target.nextElementSibling;
               target.textContent = totalAmount;
-              input.value = totalAmount;
+              input.value = convertNumber(totalAmount);
             }
           });
         })
