@@ -1,3 +1,3 @@
-if (document.location.protocol == 'http:') {
-    document.location.href = document.location.href.replace('http:', 'https:');
+if (window.location.protocol == 'http:') {
+    window.location.href = window.location.href.replace('http:', 'https:');
 }
