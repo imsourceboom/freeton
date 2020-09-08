@@ -1,5 +1,6 @@
 "use strict";
 
+import "./https"
 import "./polyfill";
 import "./ieBlockPage";
 import "./swup";
