@@ -41,3 +41,12 @@ select {
     display: none;
   }
 }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-size: 1em;
+}

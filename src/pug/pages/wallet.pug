@@ -31,13 +31,22 @@ block main
                 .qrcode
                     p QR 코드
                     img#qrcode
+        
+        .report
+            .title 🚨 신고접수안내
+            .description
+                p 최근 퍼스트톤 관계자 등으로 사칭하는 <br/>피해 사례가 발생하고 있습니다.
+                p 자세한 제보를 기다립니다.
+                p 감사합니다.
+            button
+                a(href="https://forms.gle/kCY27jFn1rE3Wxes5" target="_blank" rel="noreferrer noopner") ⚠️ 신고하기
 
         //- 버튼
         ul.tab
             li.withdraw-btn
                 a(href='/html/withdraw.html' data-swup-preload) 출금하기
             //- li.staking-btn
-            //-     a(href="/html/staking.html" data-swup-preload) 스테이킹
+                a(href="/html/staking.html" data-swup-preload) 스테이킹
 
         //- 거래내역
         //거래 내역이 존재하지 않는다면 transaction-list 클래스 태그에 empty 클래스를 붙여준다.

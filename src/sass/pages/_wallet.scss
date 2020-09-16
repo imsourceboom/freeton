@@ -4,4 +4,42 @@ section#wallet {
   @import "../article/topContainer";
   @import "../article/tab";
   @import "../article/transactionList";
+
+  .report {
+    text-align: center;
+    padding-top: 40px;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.15em;
+      margin-bottom: 0.7em;
+    }
+
+    .description {
+      line-height: 1.4;
+
+      br {
+        display: block;
+      }
+
+      @media (min-width: 768px) {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    button {
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.29);
+      width: 120px;
+      height: 33px;
+      border-radius: 4px;
+      margin-top: 1.2em;
+      font-size: 1.1em;
+
+      @media (min-width: 768px) {
+        font-size: 1em;
+      }
+    }
+  }
 }
