@@ -41,18 +41,18 @@ export const createPopup = () => {
   input.setAttribute("hidden", "");
   label.setAttribute("for", "popup-check");
 
-  // title.textContent = "베타 테스트 안내";
-  // content.textContent =
-  //   "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
-  title.textContent = "🚨 신고접수안내";
-  content.innerHTML = `
-    <p>최근 퍼스트톤 관계자 등으로 사칭하는 </p>
-    <p>피해 사례가 발생하고 있습니다.</p>
-    <p>자세한 제보를 기다립니다.</p>
-    <p style="margin-bottom: 1.2em;">감사합니다.</p>
-    <button style="box-shadow: 0 1px 5px rgba(0,0,0,0.29); font-size: 1.05em; width: 120px;
-    height: 33px; border-radius: 4px; matgin-top: 1.2em;"><a href="https://forms.gle/kCY27jFn1rE3Wxes5" target="_blank" rel="noreferrer noopner">⚠️ 신고하기</a></button>
-    `;
+  title.textContent = "베타 테스트 안내";
+  content.textContent =
+    "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
+  // title.textContent = "🚨 신고접수안내";
+  // content.innerHTML = `
+  //   <p>최근 퍼스트톤 관계자 등으로 사칭하는 </p>
+  //   <p>피해 사례가 발생하고 있습니다.</p>
+  //   <p>자세한 제보를 기다립니다.</p>
+  //   <p style="margin-bottom: 1.2em;">감사합니다.</p>
+  //   <button style="box-shadow: 0 1px 5px rgba(0,0,0,0.29); font-size: 1.05em; width: 120px;
+  //   height: 33px; border-radius: 4px; matgin-top: 1.2em;"><a href="https://forms.gle/kCY27jFn1rE3Wxes5" target="_blank" rel="noreferrer noopner">⚠️ 신고하기</a></button>
+  //   `;
   checkComment.textContent = `7일 동안 보이지 않기`;
 
   container.style.cssText = `
