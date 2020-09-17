@@ -1,6 +1,6 @@
 "use strict";
 
-import "./https";
+// import "./https"; // 개발 시에는 주석 처리
 import "./polyfill";
 import "./ieBlockPage";
 import "./swup";
