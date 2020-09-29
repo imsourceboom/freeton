@@ -139,6 +139,12 @@
               color: $orange;
             }
           }
+          &.server {
+            &::after {
+              content: "•블록체인 서버와의 연결이 실패하였습니다";
+              color: red;
+            }
+          }
         }
 
         dd {
