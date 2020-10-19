@@ -35,6 +35,7 @@ export function amountMax() {
         totalPlusFee.map((target, j) => {
           if (i == j) {
             target.textContent = totalAmount;
+            target.nextElementSibling.value = convertNumber(totalAmount);
           }
         });
       });
