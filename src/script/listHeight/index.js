@@ -1,4 +1,5 @@
-import { debounce } from "../function";
+import { throttling } from "../function";
+
 export const listHeight = () => {
   const walletSection = document.querySelector("section#wallet");
 
@@ -28,6 +29,6 @@ export const listHeight = () => {
   }
 };
 
-listHeight();
+// listHeight();
 
-window.addEventListener("resize", debounce(listHeight));
+window.addEventListener("resize", throttling(listHeight, 10));

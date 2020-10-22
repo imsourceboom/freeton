@@ -1,64 +1,64 @@
 import { qrcode } from "./jsqrcode";
 import { osCheck, iosBrowser } from "../agentCheck";
 
-export const qrcodeScan = () => {
-  const canvasElement = document.getElementById("qr-canvas");
+// export const qrcodeScan = () => {
+const canvasElement = document.getElementById("qr-canvas");
 
-  if (canvasElement !== null) {
-    const video = document.createElement("video");
-    const canvas = canvasElement.getContext("2d");
-    const btnScanQR = document.querySelector(".scan-video-controller");
-    const input = document.querySelector("#trans_you_address");
-    const container = document.createElement("div");
-    const comment = document.createElement("h2");
-    const logo = document.querySelector("body > header");
-    const mobileMenu = Array.from(
-      document.querySelectorAll("body > header nav.desk ul li")
-    );
-    const deskMenu = Array.from(
-      document.querySelectorAll("body > header .mobile-nav ul li")
-    );
-    let outputData;
-    let scanning = false;
+if (canvasElement !== null) {
+  const video = document.createElement("video");
+  const canvas = canvasElement.getContext("2d");
+  const btnScanQR = document.querySelector(".scan-video-controller");
+  const input = document.querySelector("#trans_you_address");
+  const container = document.createElement("div");
+  const comment = document.createElement("h2");
+  const logo = document.querySelector("body > header");
+  const mobileMenu = Array.from(
+    document.querySelectorAll("body > header nav.desk ul li")
+  );
+  const deskMenu = Array.from(
+    document.querySelectorAll("body > header .mobile-nav ul li")
+  );
+  let outputData;
+  let scanning = false;
 
-    const os = osCheck();
-    const browser = iosBrowser();
+  const os = osCheck();
+  const browser = iosBrowser();
 
-    // alert(`${navigator.userAgent.toLocaleLowerCase()}`);
+  // alert(`${navigator.userAgent.toLocaleLowerCase()}`);
 
-    if (os == "mac" || os == "windows") {
+  if (os == "mac" || os == "windows") {
+    btnScanQR.hidden = true;
+  }
+  if (os == "iPhone" || os == "iPad") {
+    if (browser == "safari") {
+      btnScanQR.hidden = false;
+    }
+    if (
+      browser == "kakaotalk" ||
+      browser == "naver" ||
+      browser == "chrome" ||
+      browser == "opera"
+    ) {
       btnScanQR.hidden = true;
     }
-    if (os == "iPhone" || os == "iPad") {
-      if (browser == "safari") {
-        btnScanQR.hidden = false;
-      }
-      if (
-        browser == "kakaotalk" ||
-        browser == "naver" ||
-        browser == "chrome" ||
-        browser == "opera"
-      ) {
-        btnScanQR.hidden = true;
-      }
-    }
-    // navigator.mediaDevices
-    //   .enumerateDevices()
-    //   .then((devices) => {
-    //     const arr = devices.map((device) => {
-    //       return device.kind;
-    //     });
+  }
+  // navigator.mediaDevices
+  //   .enumerateDevices()
+  //   .then((devices) => {
+  //     const arr = devices.map((device) => {
+  //       return device.kind;
+  //     });
 
-    //     const result = arr.includes("videoinput");
+  //     const result = arr.includes("videoinput");
 
-    //     btnScanQR.hidden = !result;
-    //   })
-    //   .catch(() => {
-    //     btnScanQR.hidden = true;
-    //   });
+  //     btnScanQR.hidden = !result;
+  //   })
+  //   .catch(() => {
+  //     btnScanQR.hidden = true;
+  //   });
 
-    const scanComplete = () => {
-      container.style.cssText = `
+  const scanComplete = () => {
+    container.style.cssText = `
         position: fixed;
         top: 0;
         left: 0;
@@ -72,7 +72,7 @@ export const qrcodeScan = () => {
         backdrop-filter: blur(3px);
       `;
 
-      comment.style.cssText = `
+    comment.style.cssText = `
         position: absolute;
         top: 50%;
         left: 50%;
@@ -82,98 +82,98 @@ export const qrcodeScan = () => {
         margin-top: -7px;
       `;
 
-      comment.textContent = "스캔이 완료되었습니다";
-      container.appendChild(comment);
-      document.body.appendChild(container);
-    };
+    comment.textContent = "스캔이 완료되었습니다";
+    container.appendChild(comment);
+    document.body.appendChild(container);
+  };
 
-    const valueFilter = (res) => {
-      let index = res.indexOf("?") + 1;
-      let slice = res.substr(index);
-      let value = slice.split("=");
-      return value[1];
-    };
+  const valueFilter = (res) => {
+    let index = res.indexOf("?") + 1;
+    let slice = res.substr(index);
+    let value = slice.split("=");
+    return value[1];
+  };
 
-    qrcode.callback = (res) => {
-      if (res) {
-        outputData = res;
-        scanning = false;
+  qrcode.callback = (res) => {
+    if (res) {
+      outputData = res;
+      scanning = false;
 
-        video.srcObject.getTracks().forEach((track) => {
-          track.stop();
-        });
+      video.srcObject.getTracks().forEach((track) => {
+        track.stop();
+      });
 
-        scanComplete();
-        canvasElement.hidden = true;
-        btnScanQR.textContent = "QR code 스캔하기";
-        btnScanQR.classList.remove("on");
-
-        setTimeout(() => {
-          document.body.removeChild(container);
-        }, 1500);
-
-        input.value = valueFilter(outputData);
-      }
-    };
-
-    const cameraOff = () => {
-      btnScanQR.classList.remove("on");
-      btnScanQR.textContent = "QR code 스캔하기";
-
-      if (os == "iPhone" || os == "iPad" || os == "android") {
-        video.srcObject.getTracks().forEach((track) => {
-          track.stop();
-        });
-      }
-
+      scanComplete();
       canvasElement.hidden = true;
-    };
+      btnScanQR.textContent = "QR code 스캔하기";
+      btnScanQR.classList.remove("on");
 
-    logo.addEventListener("click", cameraOff);
-    mobileMenu.map((menu) => {
-      menu.addEventListener("click", cameraOff);
-    });
-    deskMenu.map((menu) => {
-      menu.addEventListener("click", cameraOff);
-    });
+      setTimeout(() => {
+        document.body.removeChild(container);
+      }, 1500);
 
-    btnScanQR.addEventListener("click", () => {
-      if (btnScanQR.classList.contains("on")) {
-        cameraOff();
-      } else {
-        btnScanQR.classList.add("on");
-        btnScanQR.textContent = "QR code 스캔종료";
-        navigator.mediaDevices
-          .getUserMedia({ video: { facingMode: "environment" } })
-          .then(function (stream) {
-            scanning = true;
-            canvasElement.hidden = false;
-            canvasElement.style.marginBottom = "6px";
-            video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-            video.srcObject = stream;
-            video.play();
-            tick();
-            scan();
-          });
-      }
-    });
+      input.value = valueFilter(outputData);
+    }
+  };
 
-    function tick() {
-      canvasElement.height = video.videoHeight;
-      canvasElement.width = video.videoWidth;
-      canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+  const cameraOff = () => {
+    btnScanQR.classList.remove("on");
+    btnScanQR.textContent = "QR code 스캔하기";
 
-      scanning && requestAnimationFrame(tick);
+    if (os == "iPhone" || os == "iPad" || os == "android") {
+      video.srcObject.getTracks().forEach((track) => {
+        track.stop();
+      });
     }
 
-    function scan() {
-      try {
-        qrcode.decode();
-      } catch (e) {
-        setTimeout(scan, 300);
-      }
+    canvasElement.hidden = true;
+  };
+
+  logo.addEventListener("click", cameraOff);
+  mobileMenu.map((menu) => {
+    menu.addEventListener("click", cameraOff);
+  });
+  deskMenu.map((menu) => {
+    menu.addEventListener("click", cameraOff);
+  });
+
+  btnScanQR.addEventListener("click", () => {
+    if (btnScanQR.classList.contains("on")) {
+      cameraOff();
+    } else {
+      btnScanQR.classList.add("on");
+      btnScanQR.textContent = "QR code 스캔종료";
+      navigator.mediaDevices
+        .getUserMedia({ video: { facingMode: "environment" } })
+        .then(function (stream) {
+          scanning = true;
+          canvasElement.hidden = false;
+          canvasElement.style.marginBottom = "6px";
+          video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
+          video.srcObject = stream;
+          video.play();
+          tick();
+          scan();
+        });
+    }
+  });
+
+  function tick() {
+    canvasElement.height = video.videoHeight;
+    canvasElement.width = video.videoWidth;
+    canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
+
+    scanning && requestAnimationFrame(tick);
+  }
+
+  function scan() {
+    try {
+      qrcode.decode();
+    } catch (e) {
+      setTimeout(scan, 300);
     }
   }
-};
+}
+// };
 
-qrcodeScan();
+// qrcodeScan();

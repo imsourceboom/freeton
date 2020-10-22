@@ -50,64 +50,65 @@ export function convertNumber(value) {
   return realValue;
 }
 
-export const amountInputVerify = () => {
-  const withdrawPossibles = Array.from(
-    document.querySelectorAll(".withdraw-possible")
-  );
-  const maxInputs = Array.from(document.querySelectorAll(".max-input"));
-  const totalPlusFee = Array.from(
-    document.querySelectorAll(".total-plus-fee dd")
-  );
+// export const amountInputVerify = () => {
+const withdrawPossibles = Array.from(
+  document.querySelectorAll(".withdraw-possible")
+);
+const maxInputs = Array.from(document.querySelectorAll(".max-input"));
+const totalPlusFee = Array.from(
+  document.querySelectorAll(".total-plus-fee dd")
+);
 
-  if (maxInputs !== null) {
-    maxInputs.map((input, i) => {
-      let inputValue; //input value 오리지날
-      let numberInputValue; // input value 콤마 제거 (number 화)
-      let maxAmount; //출금 가능 수량 오리지날
-      let numberMaxAmount; // 출금 가능 수얀 콤마 제거 (number 화)
-      let totalAmount; // input value + 수수료
+if (maxInputs !== null) {
+  maxInputs.map((input, i) => {
+    let inputValue; //input value 오리지날
+    let numberInputValue; // input value 콤마 제거 (number 화)
+    let maxAmount; //출금 가능 수량 오리지날
+    let numberMaxAmount; // 출금 가능 수얀 콤마 제거 (number 화)
+    let totalAmount; // input value + 수수료
 
-      withdrawPossibles.map((withdraw, j) => {
-        if (i == j) {
-          maxAmount = withdraw.textContent;
-          numberMaxAmount = parseFloat(maxAmount.replace(/,/gi, ""));
-        }
-      });
-
-      input.addEventListener(
-        "keydown",
-        debounce((e) => {
-          removeChar(e);
-          e.target.value = comma(e.target.value);
-
-          inputValue = e.target.value;
-          numberInputValue = convertNumber(inputValue);
-
-          totalAmount = numberInputValue + 0.02;
-
-          if (numberInputValue > numberMaxAmount) {
-            e.target.value = maxAmount;
-            totalAmount = numberMaxAmount + 0.02;
-          }
-
-          if (inputValue == "") {
-            totalAmount = "0.0";
-          }
-
-          totalAmount = totalAmount.toString();
-          totalAmount = comma(totalAmount);
-
-          totalPlusFee.map((target, j) => {
-            if (i == j) {
-              const input = target.nextElementSibling;
-              target.textContent = totalAmount;
-              input.value = convertNumber(totalAmount);
-            }
-          });
-        })
-      );
+    withdrawPossibles.map((withdraw, j) => {
+      if (i == j) {
+        maxAmount = withdraw.textContent;
+        numberMaxAmount = parseFloat(maxAmount.replace(/,/gi, ""));
+      }
     });
-  }
-};
 
-amountInputVerify();
+    input.addEventListener(
+      "keyup",
+      debounce((e) => {
+        removeChar(e);
+        e.target.value = comma(e.target.value);
+
+        inputValue = e.target.value;
+        console.log(inputValue);
+        numberInputValue = convertNumber(inputValue);
+
+        totalAmount = numberInputValue + 0.02;
+
+        if (numberInputValue > numberMaxAmount) {
+          e.target.value = maxAmount;
+          totalAmount = numberMaxAmount + 0.02;
+        }
+
+        if (inputValue == "") {
+          totalAmount = "0.0";
+        }
+
+        totalAmount = totalAmount.toString();
+        totalAmount = comma(totalAmount);
+
+        totalPlusFee.map((target, j) => {
+          if (i == j) {
+            const input = target.nextElementSibling;
+            target.textContent = totalAmount;
+            input.value = convertNumber(totalAmount);
+          }
+        });
+      })
+    );
+  });
+}
+// };
+
+// amountInputVerify();
