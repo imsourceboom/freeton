@@ -30,20 +30,44 @@ export const createPopup = () => {
   header.appendChild(title);
   header.appendChild(close);
   body.appendChild(content);
-  footer.appendChild(checkGroup);
-  checkGroup.appendChild(input);
-  checkGroup.appendChild(label);
-  label.appendChild(labelBundle);
-  labelBundle.appendChild(checkImage);
-  labelBundle.appendChild(checkComment);
-  input.setAttribute("type", "checkbox");
-  input.setAttribute("id", "popup-check");
-  input.setAttribute("hidden", "");
-  label.setAttribute("for", "popup-check");
+  // footer.appendChild(checkGroup);
+  // checkGroup.appendChild(input);
+  // checkGroup.appendChild(label);
+  // label.appendChild(labelBundle);
+  // labelBundle.appendChild(checkImage);
+  // labelBundle.appendChild(checkComment);
+  // input.setAttribute("type", "checkbox");
+  // input.setAttribute("id", "popup-check");
+  // input.setAttribute("hidden", "");
+  // label.setAttribute("for", "popup-check");
 
-  title.textContent = "베타 테스트 안내";
-  content.textContent =
-    "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
+  // title.textContent = "베타 테스트 안내";
+  // content.textContent =
+  //   "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
+  title.textContent = "로그인 오류 안내";
+  content.innerHTML = `
+      <p>
+    ∙ 현재 다음과 같은 현상이 발생하여 문제를 확인 중에 있습니다.
+      </p>
+      <br/>
+      <p style="padding-left: 14px;">
+      - 퍼스트톤 로그인 불가
+      </p>
+      <br/>
+      <p style="padding-left: 14px;">
+      퍼스트톤에 보관된 자금은 어떠한 경우에도 안전하게 보전될 것 입니다.
+      </p>
+      <br/>
+      <p style="padding-left: 14px;">
+      더불어 최대한 빠른 원인 파악 및 정상화를 위해 최선을 다할 것이며
+      정상화까지의 현황을 지속적으로 전달 드리겠습니다.
+      </p>
+      <br/>
+      <p style="padding-left: 14px;">
+      이용에 불편을 드린 점 진심으로 사과 드립니다.
+      감사합니다.
+      </p>
+    `;
   // title.textContent = "🚨 신고접수안내";
   // content.innerHTML = `
   //   <p>최근 퍼스트톤 관계자 등으로 사칭하는 </p>
@@ -112,7 +136,7 @@ export const createPopup = () => {
   content.style.cssText = `
     line-height: 1.8;
 
-    text-align: center;
+    // text-align: center;
   `;
 
   footer.style.cssText = `
