@@ -1,0 +1,216 @@
+section#cookie-guide {
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  hgroup {
+    text-align: center;
+    padding: 5em 0 5.5em;
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  ul.os-tab {
+    display: flex;
+
+    li {
+      flex: 1;
+      border-top: 4px solid lightgrey;
+      border-bottom: 4px solid lightgrey;
+      background-color: lightgrey;
+      height: 4em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &.active {
+        background-color: white;
+        border: 0;
+        border-top: 4px solid cornflowerblue;
+        border-bottom: 4px solid white;
+        font-weight: bold;
+        font-size: 1.02em;
+      }
+    }
+  }
+
+  ul.os-box {
+    & > li {
+      display: none;
+
+      &.active {
+        display: block;
+
+        nav.browser-tab {
+          display: flex;
+          justify-content: center;
+          padding: 3.5em 0;
+
+          figure {
+            text-align: center;
+            cursor: pointer;
+
+            &:first-child {
+              margin-right: 4em;
+            }
+
+            &.on {
+              img {
+                &.on {
+                  display: block;
+                }
+
+                &.off {
+                  display: none;
+                }
+              }
+
+              figcaption {
+                color: black;
+              }
+              &:hover {
+                figcaption {
+                  color: black;
+                }
+              }
+            }
+
+            &:hover {
+              figcaption {
+                color: grey;
+              }
+            }
+
+            img {
+              width: 40px;
+              margin: 0 auto 0.85em;
+
+              &.on {
+                display: none;
+              }
+
+              &.off {
+                display: block;
+              }
+            }
+
+            figcaption {
+              color: lightgrey;
+            }
+          }
+        }
+
+        article {
+          display: none;
+
+          &.on {
+            display: block;
+          }
+
+          ol.text-order {
+            margin-bottom: 3.5em;
+
+            @media (max-width: 768px) {
+              padding: 0 1em;
+            }
+
+            li {
+              margin-bottom: 0.6em;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              b {
+                color: dodgerblue;
+                font-weight: bold;
+              }
+            }
+          }
+
+          ul.images-order {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @media (min-width: 768px) {
+              flex-direction: row;
+              align-items: flex-start;
+
+              li {
+                margin-right: 1em;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+              }
+            }
+
+            li {
+              margin-bottom: 1.5em;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+            img {
+              width: 100%;
+              max-width: 330px;
+              border: 1px solid lightgrey;
+            }
+          }
+        }
+      }
+
+      &.pc {
+        article {
+          ul.images-order {
+            @media (min-width: 768px) {
+              flex-wrap: wrap;
+              justify-content: center;
+
+              li {
+                margin-right: 0;
+
+                img {
+                  width: 100%;
+                  max-width: none;
+                  margin: 0 auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    margin: 5em 0 3em;
+    padding: 3em 1em;
+    background-color: #74baff4b;
+
+    @media (min-width: 768px) {
+      padding: 2em;
+    }
+
+    p {
+      margin-bottom: 1.2em;
+      line-height: 1.6;
+
+      &:first-child {
+        font-weight: bold;
+        color: #3867d6;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

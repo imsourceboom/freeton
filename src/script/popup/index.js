@@ -10,7 +10,7 @@ export const createPopup = () => {
   const box = createElement("div", "box");
   const header = createElement("div", "header");
   const title = createElement("div", "title");
-  const close = createElement("div", "close");
+  const close = createElement("button", "close");
   const body = createElement("div", "body");
   const content = createElement("div", "content");
   const footer = createElement("div", "footer");
@@ -44,30 +44,55 @@ export const createPopup = () => {
   // title.textContent = "베타 테스트 안내";
   // content.textContent =
   //   "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
-  title.textContent = "로그인 오류 안내";
+  title.textContent = "쿠키 삭제 안내";
   content.innerHTML = `
+      <p style="color:#4b7bec;">
+      캐시 및 쿠키를 삭제하면, 웹사이트 이용 시 발생하는 로그인 문제를 해결할 수 있습니다.
+      </p>
+      <br/>
       <p>
-    ∙ 현재 다음과 같은 현상이 발생하여 문제를 확인 중에 있습니다.
+      브라우저를 사용할 때 웹사이트 정보는 캐시 및 쿠키 형태로 저장되는데,
+      캐시는 다음 방문 시 페이지를 더 빠르게 열 수 있도록 페이지의 일부를 저장하여 기억합니다.
+      쿠키는 내가 방문하는 사이트에서 만들어내는 파일로 인터넷 사용기록을 저장하여 인터넷을 쉽게 사용할 수 있도록 합니다.
       </p>
       <br/>
-      <p style="padding-left: 14px;">
-      - 퍼스트톤 로그인 불가
+      <p>
+      캐시와 쿠키 형태의 웹사이트 정보 저장은 자연스러운 현상이나 저장된 이력들은 접속한 사이트의 기능이 업데이트 될 때 문제의
+      원인이 되기도 합니다.
       </p>
       <br/>
-      <p style="padding-left: 14px;">
-      퍼스트톤에 보관된 자금은 어떠한 경우에도 안전하게 보전될 것 입니다.
+      <p>
+      이용에 불편을 드려 대단히 죄송합니다.H
       </p>
       <br/>
-      <p style="padding-left: 14px;">
-      더불어 최대한 빠른 원인 파악 및 정상화를 위해 최선을 다할 것이며
-      정상화까지의 현황을 지속적으로 전달 드리겠습니다.
-      </p>
       <br/>
-      <p style="padding-left: 14px;">
-      이용에 불편을 드린 점 진심으로 사과 드립니다.
-      감사합니다.
-      </p>
+      <a href="/cookieGuide.do" style="display: block; width: 200px; margin: 0 auto; padding: 13px 10px; text-align: center; background-color: #4b7bec; color: #fff; border-radius: 4px;">안내 페이지로 이동</a>
+
     `;
+  // title.textContent = "로그인 오류 안내";
+  // content.innerHTML = `
+  //     <p>
+  //   ∙ 현재 다음과 같은 현상이 발생하여 문제를 확인 중에 있습니다.
+  //     </p>
+  //     <br/>
+  //     <p style="padding-left: 14px;">
+  //     - 퍼스트톤 로그인 불가
+  //     </p>
+  //     <br/>
+  //     <p style="padding-left: 14px;">
+  //     퍼스트톤에 보관된 자금은 어떠한 경우에도 안전하게 보전될 것 입니다.
+  //     </p>
+  //     <br/>
+  //     <p style="padding-left: 14px;">
+  //     더불어 최대한 빠른 원인 파악 및 정상화를 위해 최선을 다할 것이며
+  //     정상화까지의 현황을 지속적으로 전달 드리겠습니다.
+  //     </p>
+  //     <br/>
+  //     <p style="padding-left: 14px;">
+  //     이용에 불편을 드린 점 진심으로 사과 드립니다.
+  //     감사합니다.
+  //     </p>
+  //   `;
   // title.textContent = "🚨 신고접수안내";
   // content.innerHTML = `
   //   <p>최근 퍼스트톤 관계자 등으로 사칭하는 </p>

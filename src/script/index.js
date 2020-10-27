@@ -34,6 +34,7 @@ import "./loading";
 // import "./join";
 // import "./scrollreveal";
 import "./hamburger";
+import "./cookieGuide";
 // import "./languageSelect";
 // import "./detail";
 // import "./checkBox";

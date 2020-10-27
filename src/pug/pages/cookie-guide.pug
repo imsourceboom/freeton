@@ -1,0 +1,157 @@
+extends ../_layout
+
+block main
+    section#cookie-guide
+        .container
+            .wrapper
+                hgroup
+                    h1 쿠키삭제안내
+                    p 서비스 이용시 발생하는 문제 해결을 위해 캐시 및 쿠키를 삭제하세요
+                ul.os-tab
+                    li.android.active 안드로이드
+                    li.ios 아이폰
+                    li.pc PC
+                ul.os-box
+                    li.android.active
+                        .wrap
+                            nav.browser-tab
+                                figure.odd.on
+                                    img.on(src="/assets/images/cookie/browser-icon/chrome-on.jpg", alt="chrome browser icon")
+                                    img.off(src="/assets/images/cookie/browser-icon/chrome-off.jpg", alt="chrome browser icon")
+                                    figcaption 크롬 브라우저
+                                figure.even
+                                    img.on(src="/assets/images/cookie/browser-icon/samsung-on.jpg", alt="samsung browser icon")
+                                    img.off(src="/assets/images/cookie/browser-icon/samsung-off.jpg", alt="samsung browser icon")
+                                    figcaption 삼성 브라우저
+                            article.contents.on
+                                ol.text-order
+                                    li 
+                                        | 01. 브라우저 우측 상단에 <b>더보기</b> 클릭
+                                    li
+                                        | 02. <b>방문기록 > 인터넷 사용 기록 삭제</b>로 이동
+                                    li
+                                        | 03. <b>캐시 및 쿠키</b> 등 체크 후 <b>인터넷 사용 기록 삭제</b>
+                                ul.images-order
+                                    li
+                                        img(src="/assets/images/cookie/android/chrome-001.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/android/chrome-002.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/android/chrome-003.jpg", alt="")
+                            article.contents
+                                ol.text-order
+                                    li 
+                                        | 01. 브라우저 우측 하단에 <b>더보기</b> 클릭
+                                    li
+                                        | 02. <b>설정 > 개인정보 보호 및 보안</b>으로 이동 
+                                    li
+                                        | 03. <b>검색 데이터 삭제</b>로 이동
+                                    li
+                                        | 04. <b>캐시, 쿠키 및 사이트 데이터</b> 체크 후 삭제
+                                ul.images-order
+                                    li
+                                        img(src="/assets/images/cookie/android/samsung-001.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/android/samsung-002.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/android/samsung-003.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/android/samsung-004.jpg", alt="")
+
+                    li.ios
+                        .wrap
+                            nav.browser-tab
+                                figure.odd.on
+                                    img.on(src="/assets/images/cookie/browser-icon/safari-on.jpg", alt="safari browser icon")
+                                    img.off(src="/assets/images/cookie/browser-icon/safari-off.jpg", alt="safari browser icon")
+                                    figcaption 사파리 브라우저
+                                figure.even
+                                    img.on(src="/assets/images/cookie/browser-icon/chrome-on.jpg", alt="chrome browser icon")
+                                    img.off(src="/assets/images/cookie/browser-icon/chrome-off.jpg", alt="chrome browser icon")
+                                    figcaption 크롬 브라우저
+                            article.contents.on
+                                ol.text-order
+                                    li 
+                                        | 01. 홈 화면에서 <b>설정 앱 실행</b> 후 <b>Safari 앱</b> 선택
+                                    li
+                                        | 02. <b>크로스 사이트 추적 방지</b> 해제 후 <b>방문 기록 및 웹 사이트 데이터 지우기</b>로 이동
+                                    li
+                                        | 03. <b>방문 기록 및 웹 사이트 데이터 지우기</b> 실행
+                                ul.images-order
+                                    li
+                                        img(src="/assets/images/cookie/ios/safari-001.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/ios/safari-002.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/ios/safari-003.jpg", alt="")
+                            article.contents
+                                ol.text-order
+                                    li 
+                                        | 01. 브라우저 우측 하단에 <b>더보기</b> 클릭
+                                    li
+                                        | 02. <b>설정 > 방문기록 > 인터넷 사용 기록 삭제</b>로 이동
+                                    li
+                                        | 03. <b>캐시, 쿠키</b> 등 체크 후 <b>인터넷 사용 기록 삭제</b> 실행
+                                ul.images-order
+                                    li
+                                        img(src="/assets/images/cookie/ios/chrome-001.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/ios/chrome-002.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/ios/chrome-003.jpg", alt="")
+
+                    li.pc
+                        .wrap
+                            nav.browser-tab
+                                figure.odd.on
+                                    img.on(src="/assets/images/cookie/browser-icon/chrome-on.jpg", alt="chrome browser icon")
+                                    img.off(src="/assets/images/cookie/browser-icon/chrome-off.jpg", alt="chrome browser icon")
+                                    figcaption 크롬 브라우저
+                                figure.even
+                                    img.on(src="/assets/images/cookie/browser-icon/safari-on.jpg", alt="ie browser icon")
+                                    img.off(src="/assets/images/cookie/browser-icon/safari-off.jpg", alt="ie browser icon")
+                                    figcaption 사파리 브라우저
+                            article.contents
+                                ol.text-order
+                                    li 
+                                        | 01. 브라우저 우측 상단에 <b>더보기</b>를 클릭
+                                    li
+                                        | 02. <b>설정 > 도구 더보기 > 인터넷 사용 기록 삭제</b> 클릭
+                                    li
+                                        | 03. <b>캐시, 쿠키</b> 선택 후 <b>인터넷 사용 기록 삭제</b> 실행
+                                ul.images-order
+                                    li
+                                        img(src="/assets/images/cookie/pc/chrome-001.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/pc/chrome-002.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/pc/chrome-003.jpg", alt="")
+                            article.contents.on
+                                ol.text-order
+                                    li 
+                                        | 01. 브라우저 좌측 상단에 <b>Safari</b> 클릭, <b>환경설정</b> 클릭
+                                    li
+                                        | 02. <b>개인 정보 보호</b>로 이동
+                                    li
+                                        | 03. <b>크로스 사이트 추적 방지</b> 해제 후 <b>웹 사이트 데이터 관리</b>로 이동
+                                    li
+                                        | 04. <b>모두 제거</b> 실행 후 <b>완료</b>
+                                ul.images-order
+                                    li
+                                        img(src="/assets/images/cookie/pc/safari-001.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/pc/safari-002.jpg", alt="")
+                                    li
+                                        img(src="/assets/images/cookie/pc/safari-003.jpg", alt="")
+
+                .description
+                    p 캐시 및 쿠키를 삭제하면, 웹사이트 이용 시 발생하는 일부 문제를 해결할 수 있습니다.
+
+                    p 
+                        | 브라우저를 사용할 때 웹사이트 정보는 캐시 및 쿠키 형태로 저장되는데,
+                        | 캐시는 다음 방문 시 페이지를 더 빠르게 열 수 있도록 페이지의 일부를 저장하여 기억합니다.
+                        | 쿠키는 내가 방문하는 사이트에서 만들어내는 파일로 인터넷 사용기록을 저장하여 인터넷을 쉽게 사용할 수 있도록 합니다.
+
+                    p
+                        | 캐시와 쿠키 형태의 웹사이트 정보 저장은 자연스러운 현상이나 저장된 이력들은 접속한 사이트의 기능이 업데이트 될 때 문제의
+                        | 원인이 되기도 합니다.
