@@ -62,7 +62,7 @@ export const createPopup = () => {
       </p>
       <br/>
       <p>
-      이용에 불편을 드려 대단히 죄송합니다.H
+      이용에 불편을 드려 대단히 죄송합니다.
       </p>
       <br/>
       <br/>
