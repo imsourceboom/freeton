@@ -1,25 +1,25 @@
 const createElement = (element, className) => {
   const tag = document.createElement(element);
-  tag.setAttribute("class", `popup-${className}`);
+  tag.setAttribute('class', `popup-${className}`);
   return tag;
 };
 
 export const createPopup = () => {
-  const container = createElement("div", "container");
-  const wrapper = createElement("div", "wrapper");
-  const box = createElement("div", "box");
-  const header = createElement("div", "header");
-  const title = createElement("div", "title");
-  const close = createElement("button", "close");
-  const body = createElement("div", "body");
-  const content = createElement("div", "content");
-  const footer = createElement("div", "footer");
-  const checkGroup = createElement("div", "check-group");
-  const input = createElement("input", "check-input");
-  const label = createElement("label", "check-label");
-  const labelBundle = createElement("div", "check-label-bundle");
-  const checkImage = createElement("span", "check-image");
-  const checkComment = createElement("p", "check-comment");
+  const container = createElement('div', 'container');
+  const wrapper = createElement('div', 'wrapper');
+  const box = createElement('div', 'box');
+  const header = createElement('div', 'header');
+  const title = createElement('div', 'title');
+  const close = createElement('button', 'close');
+  const body = createElement('div', 'body');
+  const content = createElement('div', 'content');
+  const footer = createElement('div', 'footer');
+  const checkGroup = createElement('div', 'check-group');
+  const input = createElement('input', 'check-input');
+  const label = createElement('label', 'check-label');
+  const labelBundle = createElement('div', 'check-label-bundle');
+  const checkImage = createElement('span', 'check-image');
+  const checkComment = createElement('p', 'check-comment');
 
   document.body.appendChild(container);
   container.appendChild(wrapper);
@@ -44,20 +44,54 @@ export const createPopup = () => {
   // title.textContent = "베타 테스트 안내";
   // content.textContent =
   //   "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
-  title.textContent = "쿠키 삭제 안내";
+  /*
+    Kilox Wallet 설치 안내
+  */
+  title.textContent = 'Kilox Wallet 앱 설치 안내';
   content.innerHTML = `
-      <p style="color:#4b7bec;">
-      캐시 및 쿠키를 삭제하면, 웹사이트 이용 시 발생하는 로그인 문제를 해결할 수 있습니다.
+      <p style="color:#5352ed;">
+      Kilox Wallet 애플리케이션이 출시가 되었습니다.
       </p>
       <br/>
       <p>
-      이용에 불편을 드려 대단히 죄송합니다.
+      더욱 쾌적하고 원활한 서비스 이용을 위해 최적화된 애플리케이션을 출시하게 되었습니다.
+      </p>
+      <br/>
+      <p>
+      전용 애플리케이션을 설치 하시고 Firston Wallet에 있는 자산을 Kilox Wallet으로 옮기셔서 이용해 주시면 감사하겠습니다.
       </p>
       <br/>
       <br/>
-      <a href="/cookieGuide.do" style="display: block; width: 200px; margin: 0 auto; padding: 13px 10px; text-align: center; background-color: #4b7bec; color: #fff; border-radius: 4px;">안내 페이지로 이동</a>
-
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <a href="https://play.google.com/store/apps/details?id=com.kilox.app&hl=ko" style="">
+          <img style="width: 4em; border-radius: 14.6%; box-shadow: 1px 1px 5px rgba(0,0,0,0.6);" src="data:image/webp;base64,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" />
+        </a>
+        <span style="margin: 0 2em;">for</span>
+        <img style="width: 13em; height: auto;" src="https://cdn.worldvectorlogo.com/logos/google-play-4.svg" />
+      </div>
+      <br/>
+      <br/>
+      <p style="font-size: 0.85em; opacity: 0.6;">* iOS 버전은 준비 중에 있습니다. 빠른 시일 안에 출시하겠습니다.</p>
     `;
+  /*
+    쿠키 삭제 안내 팝업
+  */
+  // title.textContent = '쿠키 삭제 안내';
+  // content.innerHTML = `
+  //     <p style="color:#4b7bec;">
+  //     캐시 및 쿠키를 삭제하면, 웹사이트 이용 시 발생하는 로그인 문제를 해결할 수 있습니다.
+  //     </p>
+  //     <br/>
+  //     <p>
+  //     이용에 불편을 드려 대단히 죄송합니다.
+  //     </p>
+  //     <br/>
+  //     <br/>
+  //     <a href="/cookieGuide.do" style="display: block; width: 200px; margin: 0 auto; padding: 13px 10px; text-align: center; background-color: #4b7bec; color: #fff; border-radius: 4px;">안내 페이지로 이동</a>
+  //   `;
+  /*
+      로그인 오류 안내
+    */
   // title.textContent = "로그인 오류 안내";
   // content.innerHTML = `
   //     <p>
