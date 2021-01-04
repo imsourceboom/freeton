@@ -83,6 +83,7 @@ export const createPopup = () => {
         감사합니다.
       </p>
       <br/>
+      <br/>
       <div style="display: flex; align-items: center; justify-content: center;">
         <a href="https://play.google.com/store/apps/details?id=com.kilox.app&hl=ko" style="">
           <img style="width: 4em; border-radius: 14.6%; box-shadow: 1px 1px 5px rgba(0,0,0,0.6);" src="data:image/webp;base64,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" />
@@ -203,26 +204,50 @@ export const createPopup = () => {
     background-color: rgba(0,0,0,.7);
   `;
 
-  wrapper.style.cssText = `
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-  `;
+  if (matchMedia('screen and (min-width: 768px)').matches) {
+    wrapper.style.cssText = `
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+    `;
 
-  box.style.cssText = `
-    background-color: #fff;
-    width: 90vw;
-    max-width: 500px;
-    border-radius: 5px;
-    padding: 5px 0;
-  `;
+    box.style.cssText = `
+      background-color: #fff;
+      width: 90vw;
+      max-width: 500px;
+      border-radius: 5px;
+      padding: 5px 0;
+    `;
 
-  header.style.cssText = `
-    position: relative;
-    padding: 22px 0;
-    text-align: center;
-  `;
+    header.style.cssText = `
+      position: relative;
+      padding: 22px 0;
+      text-align: center;
+    `;
+  } else {
+    wrapper.style.cssText = `
+      position: absolute;
+      width: 100%;
+      min-height: 100vh;
+      top: 0;
+      left: 0;
+    `;
+
+    box.style.cssText = `
+      background-color: #fff;
+      width: 100vw;
+      min-height: 100vh;
+      border-radius: 5px;
+      padding: 5px 0;
+    `;
+
+    header.style.cssText = `
+      position: relative;
+      padding: 32px 0;
+      text-align: center;
+    `;
+  }
 
   title.style.cssText = `
     font-weight: bold;
