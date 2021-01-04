@@ -77,7 +77,7 @@ export const createPopup = () => {
       <br/>
       <p>
         해당 종료 일자 전까지 
-        전용 애플리케이션을 설치하시고 Firston Wallet에 있는 자산을 Kilox Wallet으로 옮기셔서 이용해 주시기 바랍니다.
+        전용 애플리케이션을 설치하시고 Firston Wallet에 있는 자산을 KiloX Wallet으로 옮기셔서 이용해 주시기 바랍니다.
       </p>
       <p>
         감사합니다.
