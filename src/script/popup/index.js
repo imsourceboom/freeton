@@ -44,23 +44,44 @@ export const createPopup = () => {
   // title.textContent = "베타 테스트 안내";
   // content.textContent =
   //   "∙ 현재 퍼스트톤 지갑은 보다 원활한 서비스를 제공하기 위해 베타서비스를 진행하고 있음을 알려드립니다.";
+
   /*
     Kilox Wallet 설치 안내
   */
-  title.textContent = 'Kilox Wallet 앱 설치 안내';
+  title.textContent = '서비스 종료 안내';
   content.innerHTML = `
-      <p style="color:#5352ed;">
-      Kilox Wallet 애플리케이션이 출시가 되었습니다.
+      <p>
+        <h3 style="display: inline-block; color: #e74c3c; text-decoration: underline; margin-right: 5px;">
+          Firston Wallet
+        </h3>
+        <span>
+          서비스가 종료됩니다.
+        </span>
+      </p>
+      <br/>
+      <p style="">
+        먼저 Firston Wallet 이용자 여러분께 진심으로 감사의 말씀을 드리며,
+        Firston Wallet 서비스를 종료하게 되었음을 안내해드립니다.
       </p>
       <br/>
       <p>
-      더욱 쾌적하고 원활한 서비스 이용을 위해 최적화된 애플리케이션을 출시하게 되었습니다.
+        안정적인 서비스 제공을 위해 KiloX Wallet 서비스에 집중하기로 결정하게 되었습니다.
       </p>
+      <br/>
+      <ul>
+        <li>
+          <b style="font-weight: bold; color: #d35400; margin-right: 30px;">종료 일자</b>
+          <span><b style="font-weight: bold;">2020</b>년 <b style="font-weight: bold;">2</b>월 <b style="font-weight: bold;">5</b>일</span>
+        </li>
+      </ul>
       <br/>
       <p>
-      전용 애플리케이션을 설치 하시고 Firston Wallet에 있는 자산을 Kilox Wallet으로 옮기셔서 이용해 주시면 감사하겠습니다.
+        해당 종료 일자 전까지 
+        전용 애플리케이션을 설치하시고 Firston Wallet에 있는 자산을 Kilox Wallet으로 옮기셔서 이용해 주시기 바랍니다.
       </p>
-      <br/>
+      <p>
+        감사합니다.
+      </p>
       <br/>
       <div style="display: flex; align-items: center; justify-content: center;">
         <a href="https://play.google.com/store/apps/details?id=com.kilox.app&hl=ko" style="">
@@ -69,7 +90,6 @@ export const createPopup = () => {
         <span style="margin: 0 2em;">for</span>
         <img style="width: 13em; height: auto;" src="https://cdn.worldvectorlogo.com/logos/google-play-4.svg" />
       </div>
-      <br/>
       <br/>
       <div style="display: flex; align-items: center; justify-content: center;">
         <a href="https://kilox.io/guide/ios/install" style="" target="_blank">
@@ -80,6 +100,44 @@ export const createPopup = () => {
       </div>
       <p style="font-size: 0.85em; margin-top: 0.8em; text-align: center; color: rgb(212, 72, 85); ">* iOS용은 현재 테스트 버전입니다.</p>
     `;
+
+  /*
+    Kilox Wallet 설치 안내
+  */
+  // title.textContent = 'Kilox Wallet 앱 설치 안내';
+  // content.innerHTML = `
+  //     <p style="color:#5352ed;">
+  //     Kilox Wallet 애플리케이션이 출시가 되었습니다.
+  //     </p>
+  //     <br/>
+  //     <p>
+  //     더욱 쾌적하고 원활한 서비스 이용을 위해 최적화된 애플리케이션을 출시하게 되었습니다.
+  //     </p>
+  //     <br/>
+  //     <p>
+  //     전용 애플리케이션을 설치 하시고 Firston Wallet에 있는 자산을 Kilox Wallet으로 옮기셔서 이용해 주시면 감사하겠습니다.
+  //     </p>
+  //     <br/>
+  //     <br/>
+  //     <div style="display: flex; align-items: center; justify-content: center;">
+  //       <a href="https://play.google.com/store/apps/details?id=com.kilox.app&hl=ko" style="">
+  //         <img style="width: 4em; border-radius: 14.6%; box-shadow: 1px 1px 5px rgba(0,0,0,0.6);" src="data:image/webp;base64,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" />
+  //       </a>
+  //       <span style="margin: 0 2em;">for</span>
+  //       <img style="width: 13em; height: auto;" src="https://cdn.worldvectorlogo.com/logos/google-play-4.svg" />
+  //     </div>
+  //     <br/>
+  //     <br/>
+  //     <div style="display: flex; align-items: center; justify-content: center;">
+  //       <a href="https://kilox.io/guide/ios/install" style="" target="_blank">
+  //         <img style="width: 4em; border-radius: 14.6%; box-shadow: 1px 1px 5px rgba(0,0,0,0.6);" src="data:image/webp;base64,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" />
+  //       </a>
+  //       <span style="margin: 0 2em;">for</span>
+  //       <img style="width: 13em; height: auto;" src="https://cdn.worldvectorlogo.com/logos/available-on-the-app-store.svg" />
+  //     </div>
+  //     <p style="font-size: 0.85em; margin-top: 0.8em; text-align: center; color: rgb(212, 72, 85); ">* iOS용은 현재 테스트 버전입니다.</p>
+  //   `;
+
   /*
     쿠키 삭제 안내 팝업
   */
@@ -96,6 +154,7 @@ export const createPopup = () => {
   //     <br/>
   //     <a href="/cookieGuide.do" style="display: block; width: 200px; margin: 0 auto; padding: 13px 10px; text-align: center; background-color: #4b7bec; color: #fff; border-radius: 4px;">안내 페이지로 이동</a>
   //   `;
+
   /*
       로그인 오류 안내
     */
