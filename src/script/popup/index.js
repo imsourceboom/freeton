@@ -71,7 +71,7 @@ export const createPopup = () => {
       <ul>
         <li>
           <b style="font-weight: bold; color: #d35400; margin-right: 30px;">종료 일자</b>
-          <span><b style="font-weight: bold;">2020</b>년 <b style="font-weight: bold;">2</b>월 <b style="font-weight: bold;">5</b>일</span>
+          <span><b style="font-weight: bold;">2021</b>년 <b style="font-weight: bold;">2</b>월 <b style="font-weight: bold;">5</b>일</span>
         </li>
       </ul>
       <br/>
