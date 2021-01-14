@@ -112,7 +112,7 @@
           font-weight: bold;
 
           &::after {
-            content: "•미생성";
+            content: '•미생성';
             display: inline-block;
             position: relative;
             top: -1px;
@@ -123,25 +123,25 @@
           }
           &.uninit {
             &::after {
-              content: "•비활성화";
+              content: '•비활성화';
               color: #40739e;
             }
           }
           &.active {
             &::after {
-              content: "•활성화";
+              content: '•활성화';
               color: #1dd1a1;
             }
           }
           &.frozen {
             &::after {
-              content: "•휴면";
+              content: '•휴면';
               color: $orange;
             }
           }
           &.server {
             &::after {
-              content: "•잠시 후 다시 시도해 주세요";
+              content: '•잠시 후 다시 시도해 주세요';
               color: #ff5252;
             }
           }
@@ -150,7 +150,7 @@
         dd {
           font-size: 33px;
           font-weight: 400;
-          font-family: "Spoqa Han KR", sans-serif;
+          font-family: 'Spoqa Han KR', sans-serif;
         }
       }
     }
@@ -194,7 +194,7 @@
 
           &.modal {
             &::before {
-              content: "✅ 복사 완료";
+              content: '✅ 복사 완료';
               position: absolute;
               top: 0;
               left: 50%;
@@ -220,6 +220,7 @@
     }
 
     .qrcode {
+      display: none;
       font-size: 13px;
       color: #969696;
 
